@@ -1,14 +1,20 @@
-﻿/*Building menu get componets
- * Optimize Building Click
- * Ar Map
- * Spawning in Ar map
- * Camera shift Upgrade Menu pass( buildings as object)
- * Animation
- * 
- * 
- * 
- * bug fix -->upgrade building open another building menu close it uprade bar stays
- * 
- * 
- */
+﻿/*
  
+ -----Current Implementations-----
+ Camera Bug Fixes
+ Resource Bars and other canvas buttons
+ Upgrade Menu COmplete
+ Settings Menu complete
+ Details menu
+ Building Enter menu Complete(Castle Alliance Storage Mine Hero Ground)
+
+
+
+ -----Future Implementations------
+ Ar Map
+ Spawning in Ar map
+ Animation
+ 
+
+ 
+ */

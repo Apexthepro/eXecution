@@ -14,108 +14,135 @@ public class Pinch2Zoom : MonoBehaviour
     Vector2 firstTouchPrevPos, secondTouchPrevPos;
 
     [SerializeField]
-    float zoomModifierSpeed = 0.1f;
+    float zoomModifierSpeed = 0.001f;
 
     [SerializeField]
     Text text;//pan script end
 
     //swipe script start
     public float minSwipeDistY;
-    public float panSpeed = 0.01f;
+    public float panSpeed = 0.1f;
     public float minSwipeDistX;
     public float xpos;
     public float ypos;
     public float zpos;
     private Vector2 startPos;//swipe script end
+    Vector3 pos;
     public UiCanvasScript UiCanvasScript;
     // Use this for initialization
+
+
+
+    private Vector3 fp;   //First touch position
+    private Vector3 lp;   //Last touch position
+    private float dragDistance;  //minimum distance for a swipe to be registered
     void Start()
     {
         //xpos = transform.position.x;
         //ypos = transform.position.y;
         //zpos = transform.position.z;
         mainCamera = GetComponent<Camera>();
+        dragDistance = Screen.height * 5 / 100; //dragDistance is 15% height of the screen
         //transform.position = new Vector3(xpos,ypos , zpos);
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
-        Vector3 pos = transform.position;
+        
         //swipe script start
         if (UiCanvasScript.activeMenus == null)
         {
-            if (Input.touchCount == 1)
+            /* if (Input.touchCount == 1 || Input.GetMouseButtonDown(0))
+             {
+                 print("MouseX" + Input.GetAxis("Mouse X"));
+
+                 if (Input.GetAxis("Mouse X") < 0)//-1
+                 {
+                     pos.x += panSpeed * (Time.deltaTime / 3);
+                     print("Mouse moved left" + pos.x);
+                 }
+                 if (Input.GetAxis("Mouse X") > 0)//1
+                 {
+                     pos.x -= panSpeed * (Time.deltaTime / 3);
+                     print("Mouse moved left" + pos.x);
+                 }
+                 if (Input.GetAxis("Mouse Y") < 0)//-1
+                 {
+                     pos.y += panSpeed * (Time.deltaTime / 3);
+                     print("Mouse moved down" + pos.y);
+                 }
+                 if (Input.GetAxis("Mouse Y") > 0)//1
+                 {
+                     pos.y -= panSpeed * (Time.deltaTime / 3);
+                     print("Mouse moved up" + pos.y);
+                 }
+
+                 pos.x = Mathf.Clamp(pos.x, -3f, +3f);
+                 pos.y = Mathf.Clamp(pos.y, -3f, +3f);
+                 transform.position = pos;
+             }
+
+             */
+            if (Input.touchCount == 1) // user is touching the screen with a single touch
             {
-                print("MouseX" + Input.GetAxis("Mouse X"));
-
-                if (Input.GetAxis("Mouse X") < -1)
+                Touch touch = Input.GetTouch(0); // get the touch
+                if (touch.phase == TouchPhase.Began) //check for the first touch
                 {
-                    pos.x += panSpeed * (Time.deltaTime / 3);
-                    print("Mouse moved left" + pos.x);
+                    fp = touch.position;
+                    lp = touch.position;
                 }
-                if (Input.GetAxis("Mouse X") > 1)
+                else if (touch.phase == TouchPhase.Moved) // update the last position based on where they moved
                 {
-                    pos.x -= panSpeed * (Time.deltaTime / 3);
-                    print("Mouse moved left" + pos.x);
-                }
-                if (Input.GetAxis("Mouse Y") < -1)
-                {
-                    pos.y += panSpeed * (Time.deltaTime / 3);
-                    print("Mouse moved down" + pos.y);
-                }
-                if (Input.GetAxis("Mouse Y") > 1)
-                {
-                    pos.y -= panSpeed * (Time.deltaTime / 3);
-                    print("Mouse moved up" + pos.y);
-                }
-
-                pos.x = Mathf.Clamp(pos.x, -3f, +3f);
-                pos.y = Mathf.Clamp(pos.y, -3f, +3f);
-                transform.position = pos;
-            }
-            /*
-            if (Input.GetMouseButtonDown(0))//enter if touch detected
-            {
-                Vector3 pos = transform.position;
-                Touch touch = Input.touches[0];
-                error("Touch detected");
-                startPos = touch.position;
-
-                if(Input.m)
-                    case TouchPhase.Moved:
-                        float swipeDistVertical = (new Vector3(0, touch.position.y, 0) - new Vector3(0, startPos.y, 0)).magnitude;
-                        error("pos.x "+ pos.x);
-                        float swipeValue = Mathf.Sign(touch.position.y - startPos.y);
-                        if (swipeDistVertical > 1f)
-
-                        {
-
-                            if (swipeValue > 0)//up swipe
-                                pos.y -= panSpeed * Time.deltaTime;
-                            else if (swipeValue < 0)//down swipe
-                                pos.y += panSpeed * Time.deltaTime;
+                    pos = transform.position;
+                    lp = touch.position;
+                    //Check if drag distance is greater than 20% of the screen height
+                    error("posx"+pos.x);
+                    if (Mathf.Abs(lp.x - fp.x) > dragDistance || Mathf.Abs(lp.y - fp.y) > dragDistance)
+                    {//It's a drag
+                     //check if the drag is vertical or horizontal
+                        if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y))
+                        {   //If the horizontal movement is greater than the vertical movement...
+                            if ((lp.x > fp.x))  //If the movement was to the right)
+                            {   //Right swipe
+                                pos.x -= panSpeed * (Time.deltaTime / 3);
+                                error("Right Swipe");
+                            }
+                            else
+                            {   //Left swipe
+                                pos.x += panSpeed * (Time.deltaTime / 3);
+                                error("Left Swipe");
+                            }
                         }
-                        float swipeDistHorizontal = (new Vector3(touch.position.x, 0, 0) - new Vector3(startPos.x, 0, 0)).magnitude;
-                        error("posx " + pos.x);
-                        if (swipeDistHorizontal > minSwipeDistX)
-
-                        {
-
-                            swipeValue = Mathf.Sign(touch.position.x - startPos.x);
-                            if (swipeValue > 0)//right swipe
-                                pos.x += panSpeed * Time.deltaTime;
-                            else if (swipeValue < 0)//left swipe
-                                pos.x -= panSpeed * Time.deltaTime;
+                        else
+                        {   //the vertical movement is greater than the horizontal movement
+                            if (lp.y > fp.y)  //If the movement was up
+                            {   //Up swipe
+                                pos.y -= panSpeed * (Time.deltaTime / 3);
+                                error("Up Swipe");
+                            }
+                            else
+                            {   //Down swipe
+                                pos.y += panSpeed * (Time.deltaTime / 3);
+                                error("Down Swipe");
+                            }
                         }
-                        pos.x = Mathf.Clamp(pos.x, -3f, +3f);
-                        pos.y = Mathf.Clamp(pos.y, -3f, +3f);
+                        pos.x = Mathf.Clamp(pos.x, -30f, +30f);
+                        pos.y = Mathf.Clamp(pos.y, -30f, +30f);
                         transform.position = pos;
-                        break;
+                    }
+                    else
+                    {   //It's a tap as the drag distance is less than 20% of the screen height
+                        error("Tap");
+                    }
+                }
+                else if (touch.phase == TouchPhase.Ended) //check if the finger is removed from the screen
+                {
+                    lp = touch.position;  //last touch position. Ommitted if you use list
+
+                   
                 }
             }
-            */
-
 
             //Pinch script start
             if (Input.touchCount == 2)
@@ -136,7 +163,7 @@ public class Pinch2Zoom : MonoBehaviour
                     mainCamera.orthographicSize += zoomModifier;
                 if (touchesPrevPosDifference < touchesCurPosDifference)
                     mainCamera.orthographicSize -= zoomModifier;
-                mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize, 2.5f, 8f);
+                mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize, 2.30f, 5.8f);
                 //mainCamera.transform.position = new Vector3(10f,0f,0f);
                 text.text = "Camera size " + mainCamera.orthographicSize;
             }
