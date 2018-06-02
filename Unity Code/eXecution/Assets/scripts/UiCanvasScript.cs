@@ -43,7 +43,7 @@ public class UiCanvasScript : MonoBehaviour {
         {
             print("BuildingsGlobalScript.currentBuilding.transform.position" + TestBuilding.transform.position);
             PreviousCameraPosition = MainCamera.transform.position;
-            MainCamera.transform.position = TestBuilding.transform.position;
+            MainCamera.transform.position = BuildingsGlobalScript.BuildingsArr[BuildingsGlobalScript.CurrentBuildingIndex].transform.position + new Vector3(2.0f,-0.7f,-1f);
             PreviousOrthographicSize = MainCamera.orthographicSize;
             MainCamera.orthographicSize = 3.1f;
         }

@@ -18,7 +18,7 @@ public class BuildingInput : MonoBehaviour
     void OnMouseUp()
     {
        // error("Input detected ");
-        if (!EventSystem.current.IsPointerOverGameObject() /*&& UiCanvasScript.activeMenus == null*/)
+        if (!EventSystem.current.IsPointerOverGameObject() && UiCanvasScript.activeMenus == null)
         {
             BuildingsGlobalScript.ShowMenu(name);
         }
