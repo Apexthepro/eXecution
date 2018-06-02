@@ -85,7 +85,7 @@ public class BuildingsGlobalScript : MonoBehaviour {
     public void UpgradeMenu(string bldg)
     {
 
-        BuildingsArr[0].SetActive(false);
+        
 
         error("Opening Upgrade Menu for " + bldg);
         //GameObject.Find(previousBuilding).transform.GetChild(1).gameObject.SetActive(false);
@@ -94,8 +94,8 @@ public class BuildingsGlobalScript : MonoBehaviour {
 
     }
     public void UpgradeBuilding() {
-        print("--BuildingsArr[CurrentBuildingIndex].name "+ BuildingsArr[CurrentBuildingIndex].name);
-        UpgradeUIPanel = BuildingsArr[CurrentBuildingIndex].transform.GetChild(0).transform.GetChild(2).gameObject;
+        print("--BuildingsArr[CurrentBuildingIndex].name "+ BuildingsArr[CurrentBuildingIndex].transform.GetChild(0).transform.GetChild(1).name);
+        UpgradeUIPanel = BuildingsArr[CurrentBuildingIndex].transform.GetChild(0).transform.GetChild(1).gameObject;
         UpgradeUIPanel.SetActive(true);
         upgradetime = UpgradeUIPanel.transform.GetChild(0).GetComponent<Text>();
         LoadingBar = UpgradeUIPanel.transform.GetChild(1).GetComponent<Image>();

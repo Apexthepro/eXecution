@@ -13,7 +13,7 @@ public class BuildingInput : MonoBehaviour
     public UiCanvasScript UiCanvasScript;
     void Start()
     {
-        
+
     }
     void OnMouseUp()
     {

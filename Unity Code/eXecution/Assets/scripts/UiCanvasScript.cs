@@ -30,7 +30,7 @@ public class UiCanvasScript : MonoBehaviour {
 
         activeMenus = Menu.gameObject;
         activeMenus.SetActive(true);
-
+        BuildingsGlobalScript.BuildingsArr[0].SetActive(false);
         if (Menu.name == "SettingsMenu")
         {
             if (activePanels[currentPanel] != null)
@@ -43,7 +43,7 @@ public class UiCanvasScript : MonoBehaviour {
         {
             print("BuildingsGlobalScript.currentBuilding.transform.position" + TestBuilding.transform.position);
             PreviousCameraPosition = MainCamera.transform.position;
-            MainCamera.transform.position = TestBuilding.transform.position + new Vector3(2f,0,0);
+            MainCamera.transform.position = TestBuilding.transform.position;
             PreviousOrthographicSize = MainCamera.orthographicSize;
             MainCamera.orthographicSize = 3.1f;
         }
