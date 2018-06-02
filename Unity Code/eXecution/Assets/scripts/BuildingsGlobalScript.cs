@@ -94,6 +94,7 @@ public class BuildingsGlobalScript : MonoBehaviour {
 
     }
     public void UpgradeBuilding() {
+        print("--BuildingsArr[CurrentBuildingIndex].name "+ BuildingsArr[CurrentBuildingIndex].name);
         UpgradeUIPanel = BuildingsArr[CurrentBuildingIndex].transform.GetChild(0).transform.GetChild(2).gameObject;
         UpgradeUIPanel.SetActive(true);
         upgradetime = UpgradeUIPanel.transform.GetChild(0).GetComponent<Text>();
