@@ -46,18 +46,18 @@ public class LoadingScreenScript : MonoBehaviour {
     AsyncOperation asyncLoad;
     IEnumerator LoadYourAsyncScene()
     {
-        print("Before waiting");
+       // print("Before waiting");
         asyncLoad = SceneManager.LoadSceneAsync(1);
         asyncLoad.allowSceneActivation = false;
-        print("enter 1");
+        //print("enter 1");
         // Wait until the asynchronous scene fully loads
         while (asyncLoad.isDone == false)
         {
-            print("Still Loading.." + asyncLoad.progress);
+            //print("Still Loading.." + asyncLoad.progress);
             LoadingBar.fillAmount = asyncLoad.progress;
             if (asyncLoad.progress == 0.9f)
             {
-                print("Entred 3");
+            //    print("Entred 3");
                 LoadingBar.fillAmount = 1f;
                 asyncLoad.allowSceneActivation = true;
             }
