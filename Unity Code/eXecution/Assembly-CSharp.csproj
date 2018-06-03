@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LoadingSceneAssets\LoadingScreenScript.cs" />
     <Compile Include="Assets\scripts\BuildingInput.cs" />
     <Compile Include="Assets\scripts\BuildingsGlobalScript.cs" />
     <Compile Include="Assets\scripts\Pinch2Zoom.cs" />
