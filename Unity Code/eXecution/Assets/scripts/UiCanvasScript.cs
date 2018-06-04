@@ -88,4 +88,12 @@ public class UiCanvasScript : MonoBehaviour {
     {
         console.text = "\n --> " + msg;
     }
+    public void Toggle_BuildingNames(bool currentSetting) {
+  //      print("entred" + currentSetting);
+        for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
+        {
+            BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(currentSetting);
+//            print(BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).name);
+        }
+    }
 }

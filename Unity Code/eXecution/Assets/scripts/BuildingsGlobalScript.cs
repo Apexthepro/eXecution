@@ -67,7 +67,16 @@ public class BuildingsGlobalScript : MonoBehaviour {
             if (CurrentBuildingIndex != 0)//check if any other menu open
             {
                 //BuildingsArr[CurrentBuildingIndex].transform.GetChild(1).gameObject.SetActive(false);//hide open menus
-                BuildingsArr[0].transform.position = BuildingsArr[CurrentBuildingIndex].transform.position + new Vector3(0f,-1.4f,0f);
+
+                if (BuildingsArr[CurrentBuildingIndex].name == "My Castle")
+                {
+                    BuildingsArr[0].transform.position = BuildingsArr[CurrentBuildingIndex].transform.position + new Vector3(0f, -2.4f, 0f);
+
+                }
+                else {
+                    BuildingsArr[0].transform.position = BuildingsArr[CurrentBuildingIndex].transform.position + new Vector3(0f, -1.4f, 0f);
+
+                }
 
             }
             BuildingsArr[0].SetActive(true);
@@ -94,7 +103,7 @@ public class BuildingsGlobalScript : MonoBehaviour {
 
     }
     public void UpgradeBuilding() {
-        print("--BuildingsArr[CurrentBuildingIndex].name "+ BuildingsArr[CurrentBuildingIndex].transform.GetChild(0).transform.GetChild(1).name);
+        //print("--BuildingsArr[CurrentBuildingIndex].name "+ BuildingsArr[CurrentBuildingIndex].transform.GetChild(0).transform.GetChild(1).name);
         UpgradeUIPanel = BuildingsArr[CurrentBuildingIndex].transform.GetChild(0).transform.GetChild(1).gameObject;
         UpgradeUIPanel.SetActive(true);
         upgradetime = UpgradeUIPanel.transform.GetChild(0).GetComponent<Text>();
