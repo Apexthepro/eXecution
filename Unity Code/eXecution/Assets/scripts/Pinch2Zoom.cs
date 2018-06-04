@@ -163,7 +163,7 @@ public class Pinch2Zoom : MonoBehaviour
                     mainCamera.orthographicSize += zoomModifier;
                 if (touchesPrevPosDifference < touchesCurPosDifference)
                     mainCamera.orthographicSize -= zoomModifier;
-                mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize, 2.30f, 5.8f);
+                mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize, 2.30f, 5.3f);
                 //mainCamera.transform.position = new Vector3(10f,0f,0f);
                 text.text = "Camera size " + mainCamera.orthographicSize;
             }
