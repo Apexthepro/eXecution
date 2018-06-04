@@ -14,6 +14,7 @@ public class UiCanvasScript : MonoBehaviour {
     private float PreviousOrthographicSize;
     public BuildingsGlobalScript BuildingsGlobalScript;
     public GameObject TestBuilding;
+    public bool DisplayBuildingNames;
     // Use this for initialization
     void Start () {
         activePanels = new GameObject[25];
@@ -89,11 +90,18 @@ public class UiCanvasScript : MonoBehaviour {
         console.text = "\n --> " + msg;
     }
     public void Toggle_BuildingNames(bool currentSetting) {
-  //      print("entred" + currentSetting);
+        //      print("entred" + currentSetting);
+        DisplayBuildingNames = currentSetting;
         for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
         {
             BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(currentSetting);
 //            print(BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).name);
         }
+    }
+    public void Toggle_BackGroundMusic()
+    {
+        //      print("entred" + currentSetting);]
+        AudioListener.pause = !AudioListener.pause;
+        
     }
 }

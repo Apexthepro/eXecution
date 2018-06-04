@@ -26,6 +26,17 @@ public class SettingsMenuScript : MonoBehaviour {
     }
 
     public void Googlesigninclick() {
+        /*
+         *Integrate here 
+         * *Integrate here 
+         * *Integrate here 
+         * *Integrate here 
+         * *Integrate here 
+         * *Integrate here 
+         * *Integrate here 
+         * *Integrate here 
+         * 
+         */
         print("Access api here");
     }
 }

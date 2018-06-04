@@ -51,6 +51,8 @@ public class LoadingScreenScript : MonoBehaviour {
         asyncLoad.allowSceneActivation = false;
         //print("enter 1");
         // Wait until the asynchronous scene fully loads
+
+        LoadingBar.fillAmount = 0.2f;
         while (asyncLoad.isDone == false)
         {
             //print("Still Loading.." + asyncLoad.progress);

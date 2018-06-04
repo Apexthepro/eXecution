@@ -14,14 +14,14 @@ public class Pinch2Zoom : MonoBehaviour
     Vector2 firstTouchPrevPos, secondTouchPrevPos;
 
     [SerializeField]
-    float zoomModifierSpeed = 0.001f;
+    public float zoomModifierSpeed = 0.005f;
 
     [SerializeField]
     Text text;//pan script end
 
     //swipe script start
     public float minSwipeDistY;
-    public float panSpeed = 0.1f;
+    public float panSpeed;
     public float minSwipeDistX;
     public float xpos;
     public float ypos;
@@ -29,121 +29,79 @@ public class Pinch2Zoom : MonoBehaviour
     private Vector2 startPos;//swipe script end
     Vector3 pos;
     public UiCanvasScript UiCanvasScript;
-    // Use this for initialization
+    public BuildingsGlobalScript BuildingsGlobalScript;
+    public bool mouseDown;
 
-
-
-    private Vector3 fp;   //First touch position
-    private Vector3 lp;   //Last touch position
-    private float dragDistance;  //minimum distance for a swipe to be registered
     void Start()
     {
         //xpos = transform.position.x;
         //ypos = transform.position.y;
         //zpos = transform.position.z;
         mainCamera = GetComponent<Camera>();
-        dragDistance = Screen.height * 5 / 100; //dragDistance is 15% height of the screen
         //transform.position = new Vector3(xpos,ypos , zpos);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (UiCanvasScript.DisplayBuildingNames == false)
+            {
+                for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
+                {
+                    BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+                }
+            }
+            mouseDown = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (UiCanvasScript.DisplayBuildingNames == false)
+            {
+                for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
+                {
+                    BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+                }
+            }
+            mouseDown = false;
+        }
         //swipe script start
         if (UiCanvasScript.activeMenus == null)
         {
-            /* if (Input.touchCount == 1 || Input.GetMouseButtonDown(0))
+             if (mouseDown)
              {
-                 print("MouseX" + Input.GetAxis("Mouse X"));
+                pos = transform.position;
+                print("MouseX" + Input.GetAxis("Mouse X"));
 
-                 if (Input.GetAxis("Mouse X") < 0)//-1
+                 if (Input.GetAxis("Mouse X") < -1.3)//-1
                  {
-                     pos.x += panSpeed * (Time.deltaTime / 3);
+                    pos.x += panSpeed;//* (Time.deltaTime);
+                     print("Mouse moved right " + pos.x );
+                 }
+                 if (Input.GetAxis("Mouse X") > 1.3)//1
+                 {
+                     pos.x -= panSpeed ;
                      print("Mouse moved left" + pos.x);
                  }
-                 if (Input.GetAxis("Mouse X") > 0)//1
+                 if (Input.GetAxis("Mouse Y") < -1.3)//-1
                  {
-                     pos.x -= panSpeed * (Time.deltaTime / 3);
-                     print("Mouse moved left" + pos.x);
-                 }
-                 if (Input.GetAxis("Mouse Y") < 0)//-1
-                 {
-                     pos.y += panSpeed * (Time.deltaTime / 3);
+                     pos.y += panSpeed;
                      print("Mouse moved down" + pos.y);
                  }
-                 if (Input.GetAxis("Mouse Y") > 0)//1
+                 if (Input.GetAxis("Mouse Y") > 1.3)//1
                  {
-                     pos.y -= panSpeed * (Time.deltaTime / 3);
+                     pos.y -= panSpeed ;
                      print("Mouse moved up" + pos.y);
                  }
 
-                 pos.x = Mathf.Clamp(pos.x, -3f, +3f);
-                 pos.y = Mathf.Clamp(pos.y, -3f, +3f);
-                 transform.position = pos;
+                 pos.x = Mathf.Clamp(pos.x, -2.1f, +2.6f);
+                 pos.y = Mathf.Clamp(pos.y, -1.5f, +0.8f);
+                transform.position = pos;
              }
 
-             */
-            if (Input.touchCount == 1) // user is touching the screen with a single touch
-            {
-                Touch touch = Input.GetTouch(0); // get the touch
-                if (touch.phase == TouchPhase.Began) //check for the first touch
-                {
-                    fp = touch.position;
-                    lp = touch.position;
-                }
-                else if (touch.phase == TouchPhase.Moved) // update the last position based on where they moved
-                {
-                    pos = transform.position;
-                    lp = touch.position;
-                    //Check if drag distance is greater than 20% of the screen height
-                    error("posx"+pos.x);
-                    if (Mathf.Abs(lp.x - fp.x) > dragDistance || Mathf.Abs(lp.y - fp.y) > dragDistance)
-                    {//It's a drag
-                     //check if the drag is vertical or horizontal
-                        if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y))
-                        {   //If the horizontal movement is greater than the vertical movement...
-                            if ((lp.x > fp.x))  //If the movement was to the right)
-                            {   //Right swipe
-                                pos.x -= panSpeed * (Time.deltaTime / 3);
-                                error("Right Swipe");
-                            }
-                            else
-                            {   //Left swipe
-                                pos.x += panSpeed * (Time.deltaTime / 3);
-                                error("Left Swipe");
-                            }
-                        }
-                        else
-                        {   //the vertical movement is greater than the horizontal movement
-                            if (lp.y > fp.y)  //If the movement was up
-                            {   //Up swipe
-                                pos.y -= panSpeed * (Time.deltaTime / 3);
-                                error("Up Swipe");
-                            }
-                            else
-                            {   //Down swipe
-                                pos.y += panSpeed * (Time.deltaTime / 3);
-                                error("Down Swipe");
-                            }
-                        }
-                        pos.x = Mathf.Clamp(pos.x, -30f, +30f);
-                        pos.y = Mathf.Clamp(pos.y, -30f, +30f);
-                        transform.position = pos;
-                    }
-                    else
-                    {   //It's a tap as the drag distance is less than 20% of the screen height
-                        error("Tap");
-                    }
-                }
-                else if (touch.phase == TouchPhase.Ended) //check if the finger is removed from the screen
-                {
-                    lp = touch.position;  //last touch position. Ommitted if you use list
-
-                   
-                }
-            }
-
+             
+            
             //Pinch script start
             if (Input.touchCount == 2)
             {
