@@ -7001,6 +7001,16 @@ Prefab:
       propertyPath: m_Text
       value: Animation
       objectReference: {fileID: 0}
+    - target: {fileID: 114377303851030698, guid: 2b63f0792dfc6af45811ab1a1bc0388f,
+        type: 2}
+      propertyPath: m_IsOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114198353208368642, guid: 2b63f0792dfc6af45811ab1a1bc0388f,
+        type: 2}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b63f0792dfc6af45811ab1a1bc0388f, type: 2}
   m_IsPrefabParent: 0
@@ -9306,6 +9316,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1839577271402580, guid: 7e6fa825b2645b0459e2407a8d6fc9f2, type: 2}
+      propertyPath: m_Name
+      value: My Castle
+      objectReference: {fileID: 0}
     - target: {fileID: 114068879452516552, guid: 7e6fa825b2645b0459e2407a8d6fc9f2,
         type: 2}
       propertyPath: console
@@ -9321,10 +9335,6 @@ Prefab:
       propertyPath: UiCanvasScript
       value: 
       objectReference: {fileID: 1638549541}
-    - target: {fileID: 1839577271402580, guid: 7e6fa825b2645b0459e2407a8d6fc9f2, type: 2}
-      propertyPath: m_Name
-      value: My Castle
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e6fa825b2645b0459e2407a8d6fc9f2, type: 2}
   m_IsPrefabParent: 0
@@ -23791,6 +23801,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.756559
       objectReference: {fileID: 0}
+    - target: {fileID: 114198353208368642, guid: 2b63f0792dfc6af45811ab1a1bc0388f,
+        type: 2}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b63f0792dfc6af45811ab1a1bc0388f, type: 2}
   m_IsPrefabParent: 0
@@ -28832,7 +28847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1969866801
 MonoBehaviour:
   m_ObjectHideFlags: 0

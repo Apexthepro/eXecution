@@ -52,7 +52,7 @@ public class LoadingScreenScript : MonoBehaviour {
         //print("enter 1");
         // Wait until the asynchronous scene fully loads
 
-        LoadingBar.fillAmount = 0.2f;
+        yield return new WaitForSeconds(2.0f);
         while (asyncLoad.isDone == false)
         {
             //print("Still Loading.." + asyncLoad.progress);

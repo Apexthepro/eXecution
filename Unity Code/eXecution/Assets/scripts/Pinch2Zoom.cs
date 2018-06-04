@@ -46,13 +46,6 @@ public class Pinch2Zoom : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (UiCanvasScript.DisplayBuildingNames == false)
-            {
-                for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
-                {
-                    BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
-                }
-            }
             mouseDown = true;
         }
         if (Input.GetMouseButtonUp(0))
@@ -78,24 +71,52 @@ public class Pinch2Zoom : MonoBehaviour
                  {
                     pos.x += panSpeed;//* (Time.deltaTime);
                      print("Mouse moved right " + pos.x );
-                 }
+                    if (UiCanvasScript.DisplayBuildingNames == false)
+                    {
+                        for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
+                        {
+                            BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+                        }
+                    }
+                }
                  if (Input.GetAxis("Mouse X") > 1.3)//1
                  {
                      pos.x -= panSpeed ;
                      print("Mouse moved left" + pos.x);
-                 }
+                    if (UiCanvasScript.DisplayBuildingNames == false)
+                    {
+                        for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
+                        {
+                            BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+                        }
+                    }
+                }
                  if (Input.GetAxis("Mouse Y") < -1.3)//-1
                  {
                      pos.y += panSpeed;
                      print("Mouse moved down" + pos.y);
-                 }
+                    if (UiCanvasScript.DisplayBuildingNames == false)
+                    {
+                        for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
+                        {
+                            BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+                        }
+                    }
+                }
                  if (Input.GetAxis("Mouse Y") > 1.3)//1
                  {
                      pos.y -= panSpeed ;
                      print("Mouse moved up" + pos.y);
-                 }
+                    if (UiCanvasScript.DisplayBuildingNames == false)
+                    {
+                        for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
+                        {
+                            BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
+                        }
+                    }
+                }
 
-                 pos.x = Mathf.Clamp(pos.x, -2.1f, +2.6f);
+                 pos.x = Mathf.Clamp(pos.x, -2.1f, +2.55f);
                  pos.y = Mathf.Clamp(pos.y, -1.5f, +0.8f);
                 transform.position = pos;
              }
