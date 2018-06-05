@@ -77,12 +77,12 @@ public class BuildingsGlobalScript : MonoBehaviour {
                     BuildingsArr[0].transform.position = BuildingsArr[CurrentBuildingIndex].transform.position + new Vector3(0f, -1.4f, 0f);
 
                 }
-
             }
             BuildingsArr[0].SetActive(true);
         }
         else {
             BuildingsArr[0].SetActive(false);//If same building clicked hide menu for the building
+            UiCanvasScript.DisplayBuildinNames(false);
             CurrentBuildingIndex = 0;//reset previous variable
         }
     }

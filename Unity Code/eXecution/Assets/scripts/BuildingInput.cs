@@ -20,6 +20,7 @@ public class BuildingInput : MonoBehaviour
        // error("Input detected ");
         if (!EventSystem.current.IsPointerOverGameObject() && UiCanvasScript.activeMenus == null)
         {
+            UiCanvasScript.DisplayBuildinNames(true);
             BuildingsGlobalScript.ShowMenu(name);
         }
     }

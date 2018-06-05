@@ -1481,7 +1481,7 @@ AudioSource:
   m_Volume: 0.48
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -10627,7 +10627,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 773397320}
   m_OnClick:
     m_PersistentCalls:
@@ -23804,6 +23804,11 @@ Prefab:
     - target: {fileID: 114198353208368642, guid: 2b63f0792dfc6af45811ab1a1bc0388f,
         type: 2}
       propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114377303851030698, guid: 2b63f0792dfc6af45811ab1a1bc0388f,
+        type: 2}
+      propertyPath: m_IsOn
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

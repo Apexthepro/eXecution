@@ -104,4 +104,13 @@ public class UiCanvasScript : MonoBehaviour {
         AudioListener.pause = !AudioListener.pause;
         
     }
+    public void DisplayBuildinNames(bool setvalue) {
+        if (DisplayBuildingNames == false)
+        {
+            for (int i = 1; i < BuildingsGlobalScript.BuildingsArr.Length; i++)
+            {
+                BuildingsGlobalScript.BuildingsArr[i].transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(setvalue);
+            }
+        }
+    }
 }
