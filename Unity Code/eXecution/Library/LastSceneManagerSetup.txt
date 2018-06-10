@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ArMap.unity
+- path: Assets/Scenes/ArFightScene.unity
   isLoaded: 1
   isActive: 1

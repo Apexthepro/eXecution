@@ -10,6 +10,7 @@ TagManager:
   - Close
   - image1
   - settings
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -21,9 +22,9 @@ TagManager:
   - 
   - Building
   - Menu
-  - 
-  - 
-  - 
+  - Monster
+  - FireLayer
+  - Spell
   - 
   - 
   - 
