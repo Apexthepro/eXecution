@@ -7,12 +7,16 @@ using UnityEngine.SceneManagement;
 public class LoginScript : MonoBehaviour {
 
     // Use this for initialization
-    public Text id,pwd,error;
+    public InputField id, pwd;
+    public Text console;
+    public GameObject consolePanel;
     string sid = "", spwd = "";
     public Firebase.Auth.FirebaseAuth auth;
     Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
     public void Start()
     {
+        consolePanel.SetActive(false);
+        console.text = "";
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
             dependencyStatus = task.Result;
             if (dependencyStatus == Firebase.DependencyStatus.Available)
@@ -30,18 +34,21 @@ public class LoginScript : MonoBehaviour {
 
 
 	    public void loginClick(){
+
+        
         sid = id.text;
         spwd = pwd.text;
         print("Username is : " + sid + " Password is : " + spwd);
         auth.SignInWithEmailAndPasswordAsync(sid, spwd).ContinueWith(task => {
             if (task.IsCanceled)
             {
-                Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
+                error("SignInWithEmailAndPasswordAsync was canceled.");
                 return;
             }
             if (task.IsFaulted)
             {
-                Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                
+                error("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
                 return;
             }
 
@@ -52,11 +59,39 @@ public class LoginScript : MonoBehaviour {
         });
     }
 
+    public void onRegister()
+    {
+
+        sid = id.text;
+        spwd = pwd.text;
+        auth.CreateUserWithEmailAndPasswordAsync(sid, spwd).ContinueWith(task => {
+            if (task.IsCanceled)
+            {
+                error(" CreateUserWithEmailAndPasswordAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.Log(task.Exception);
+                error("CreateUserWithEmailAndPasswordAsync encountered an error: ");
+                return;
+            }
+
+            Firebase.Auth.FirebaseUser newUser = task.Result;
+            Debug.LogFormat("User Registered successfully: {0} ({1})",
+                newUser.DisplayName, newUser.UserId);
+            SceneManager.LoadScene("CastleScene");
+        });
+    }
+
     public void switchAccount() {
         SceneManager.LoadScene("LoginScene");
     }
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    private void error(string msg)
+    {
+        consolePanel.SetActive(true);
+        console.text = msg;
+    }
 }
