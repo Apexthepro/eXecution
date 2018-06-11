@@ -2,40 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 //using MySql.Data.MySqlClient;
 public class LoginScript : MonoBehaviour {
 
     // Use this for initialization
-    public Text id;
-    public Text pwd;
-    void Start () {
-        
-
-    }
-    public void submit()
+    public Text id,pwd,error;
+    string sid = "", spwd = "";
+    public Firebase.Auth.FirebaseAuth auth;
+    Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
+    public void Start()
     {
-        print("login clicked");
+        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
+            dependencyStatus = task.Result;
+            if (dependencyStatus == Firebase.DependencyStatus.Available)
+            {
+                // Handle initialization of the necessary firebase modules:
+                Debug.Log("Setting up Firebase Auth");
+                auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+            }
+            else {
+                Debug.LogError(
+                  "Could not resolve all Firebase dependencies: " + dependencyStatus);
+            }
+        });
     }
-	/* public void loginClick(){
-        print("Username is : "+id.text + " Password is : "+pwd.text);
-        string conn = "datasource=127.0.0.1;port=3306;database=game;username=root;password=;SslMode=none";
-        MySqlConnection mydbcon = new MySqlConnection(conn);
-        MySqlDataReader myreader = null;
-        mydbcon.Open();
-        string query = "select * from user where user_id='" + id + "' AND password='" + pwd + "' ;";
-        MySqlCommand cmd = new MySqlCommand(query, mydbcon);
-        myreader = cmd.ExecuteReader();
-        while (myreader.Read())
-        {
-            print(myreader.GetValue(0) + " - " + myreader.GetValue(1) + " - " + myreader.GetValue(2));
-        }
-        if (myreader.HasRows)
-            print("login Successfull");
-        else
-            print("Incorrect Login ID or Password");
+
+
+	    public void loginClick(){
+        sid = id.text;
+        spwd = pwd.text;
+        print("Username is : " + sid + " Password is : " + spwd);
+        auth.SignInWithEmailAndPasswordAsync(sid, spwd).ContinueWith(task => {
+            if (task.IsCanceled)
+            {
+                Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                return;
+            }
+
+            Firebase.Auth.FirebaseUser newUser = task.Result;
+            Debug.LogFormat("User signed in successfully: {0} ({1})",
+                newUser.DisplayName, newUser.UserId);
+            SceneManager.LoadSceneAsync("CastleScene");
+        });
     }
 	// Update is called once per frame
 	void Update () {
 		
-	}*/
+	}
 }

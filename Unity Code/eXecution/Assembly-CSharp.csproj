@@ -119,8 +119,10 @@
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\EffectShaderPropertyStr.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\RenderEffect.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\TransformExtension.cs" />
+     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
      <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\ChangeLog.txt" />
+     <None Include="Assets\Firebase\Plugins\link.xml" />
      <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Readme.txt" />
      <None Include="Assets\ArFightSceneAssets\Extra assets\3D Items - Wand Pack\Read Me.txt" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\emmision_particle.shader" />
@@ -131,11 +133,13 @@
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Blended Premmultiply.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticlePremultiplyBlend.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\READ ME.txt" />
+     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
      <None Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Online Documentation.txt" />
      <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\mesh_dissolve_particel.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddEffect.shader" />
      <None Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Readme.txt" />
+     <None Include="Assets\Firebase\Plugins\Http\link.xml" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\face_power_particle.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Additive.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleBlendEffect.shader" />
@@ -336,6 +340,30 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>G:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.App">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Auth">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Database">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Platform">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.MiniJson">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Sharpen">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Compat">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Tasks">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/furqa/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

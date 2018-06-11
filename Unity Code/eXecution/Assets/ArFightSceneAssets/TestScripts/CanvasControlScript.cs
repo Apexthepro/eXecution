@@ -54,7 +54,7 @@ public class CanvasControlScript : MonoBehaviour {
         
     }
     public void Back() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("CastleScene");
     }
     // Update is called once per frame
     public void CastSpell(int ButtonId) {

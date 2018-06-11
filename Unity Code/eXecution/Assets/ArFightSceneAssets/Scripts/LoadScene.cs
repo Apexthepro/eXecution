@@ -8,6 +8,6 @@ public class LoadScene : MonoBehaviour {
     public void OpenFight()
     {
         //SceneManager.LoadSceneAsync(0);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("ArFightScene");
     }
 }

@@ -1974,7 +1974,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiCanvasScript: {fileID: 1638549541}
   panel1: {fileID: 843855671}
-  webClientId: 100493588325-4i2jj4nbem22p2r87mo1afn0uhar670o.apps.googleusercontent.com
 --- !u!114 &96760802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3086,7 +3085,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2004890556}
-        m_MethodName: submit
+        m_MethodName: loginClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16141,7 +16140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiCanvasScript: {fileID: 1638549541}
   panel1: {fileID: 75612355}
-  webClientId: 100493588325-4i2jj4nbem22p2r87mo1afn0uhar670o.apps.googleusercontent.com
 --- !u!114 &1161027916
 MonoBehaviour:
   m_ObjectHideFlags: 0
