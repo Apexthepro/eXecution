@@ -29,7 +29,6 @@ public class UiCanvasScript : MonoBehaviour {
 
     public void OpenMenu(GameObject Menu) {
         print("Opening "+Menu);
-
         activeMenus = Menu.gameObject;
         activeMenus.SetActive(true);
         BuildingsGlobalScript.BuildingsArr[0].SetActive(false);
