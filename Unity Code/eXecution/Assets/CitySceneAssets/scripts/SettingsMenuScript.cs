@@ -21,6 +21,8 @@ public class SettingsMenuScript : MonoBehaviour {
 		
 	}
     public void MenuButtonClick(GameObject panel) {
+        UiCanvasScript.activePanels[0] = panel1.gameObject;
+       // print("->panel1.gameObject " + panel1.gameObject.name);
         UiCanvasScript.activePanels[UiCanvasScript.currentPanel].SetActive(false);
         UiCanvasScript.currentPanel++;
         UiCanvasScript.activePanels[UiCanvasScript.currentPanel] = panel.gameObject;
@@ -28,9 +30,9 @@ public class SettingsMenuScript : MonoBehaviour {
         UiCanvasScript.backbutton.gameObject.SetActive(true);
     }
     //private GoogleSignInConfiguration configuration;
-    public void Googlesigninclick() {
+   /* public void Googlesigninclick() {
   
         print("Access api here");
     }
-
+    */
 }

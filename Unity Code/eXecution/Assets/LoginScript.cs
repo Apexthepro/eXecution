@@ -51,6 +51,10 @@ public class LoginScript : MonoBehaviour {
             SceneManager.LoadScene("CastleScene");
         });
     }
+
+    public void switchAccount() {
+        SceneManager.LoadScene("LoginScene");
+    }
 	// Update is called once per frame
 	void Update () {
 		
