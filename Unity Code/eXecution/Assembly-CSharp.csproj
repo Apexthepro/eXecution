@@ -107,8 +107,10 @@
     <Compile Include="Assets\ArFightSceneAssets\TestScripts\SpellScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\BuildingInput.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\BuildingsGlobalScript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\Forge\Equipment.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\ForgeRecipie.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\forgerecipiescript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\Forge\Item.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\InventoryScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Pinch2Zoom.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\SettingsMenuScript.cs" />
