@@ -12,7 +12,10 @@ public class LoginScript : MonoBehaviour {
         
 
     }
-    
+    public void submit()
+    {
+        print("login clicked");
+    }
 	/* public void loginClick(){
         print("Username is : "+id.text + " Password is : "+pwd.text);
         string conn = "datasource=127.0.0.1;port=3306;database=game;username=root;password=;SslMode=none";

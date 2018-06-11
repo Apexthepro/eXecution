@@ -110,6 +110,7 @@
      <Compile Include="Assets\CitySceneAssets\scripts\Todolist.cs" />
      <Compile Include="Assets\CitySceneAssets\scripts\UiCanvasScript.cs" />
      <Compile Include="Assets\CitySceneAssets\scripts\UpgradeMenuScript.cs" />
+     <Compile Include="Assets\dbinitscript.cs" />
      <Compile Include="Assets\LoadingSceneAssets\Scripts\LoadingScreenScript.cs" />
      <Compile Include="Assets\LoginScript.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\CameraTarget.cs" />
