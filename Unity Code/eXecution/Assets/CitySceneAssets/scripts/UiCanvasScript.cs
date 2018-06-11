@@ -28,12 +28,13 @@ public class UiCanvasScript : MonoBehaviour {
     }
 
     public void OpenMenu(GameObject Menu) {
-        print("Opening "+Menu);
+       // print("Opening "+Menu);
         activeMenus = Menu.gameObject;
         activeMenus.SetActive(true);
         BuildingsGlobalScript.BuildingsArr[0].SetActive(false);
         if (Menu.name == "SettingsMenu")
         {
+            print("activePanels[currentPanel]" + activePanels[currentPanel]);
             if (activePanels[currentPanel] != null)
                 activePanels[currentPanel].SetActive(true);
         }
@@ -47,7 +48,7 @@ public class UiCanvasScript : MonoBehaviour {
         //UpgardeMenuStartScript
         if (Menu.name == "UpgradeMenu")
         {
-            print("BuildingsGlobalScript.currentBuilding.transform.position" + TestBuilding.transform.position);
+           // print("BuildingsGlobalScript.currentBuilding.transform.position" + TestBuilding.transform.position);
             PreviousCameraPosition = MainCamera.transform.position;
             MainCamera.transform.position = BuildingsGlobalScript.BuildingsArr[BuildingsGlobalScript.CurrentBuildingIndex].transform.position + new Vector3(2.0f,-0.7f,-1f);
             PreviousOrthographicSize = MainCamera.orthographicSize;
@@ -58,12 +59,12 @@ public class UiCanvasScript : MonoBehaviour {
     public void LoginClick()
     {
         //add to activemenu aray
-        error("Opening Settings");
+       // error("Opening Settings");
         GameObject.Find("LoginMenuContainer").gameObject.SetActive(true);
 
     }
     public void Close() {
-        print("Closing all menus");
+   //     print("Closing all menus");
         if (currentPanel > 0)
         {
             activePanels[currentPanel].SetActive(false);
@@ -74,7 +75,7 @@ public class UiCanvasScript : MonoBehaviour {
             MainCamera.transform.position = PreviousCameraPosition;
             MainCamera.orthographicSize = PreviousOrthographicSize;
         }
-       print("activeMenus.name " + activeMenus.name);
+     //  print("activeMenus.name " + activeMenus.name);
         activeMenus.SetActive(false);
         activeMenus = null;
         BuildingsGlobalScript.CurrentBuildingIndex = 0;
@@ -87,7 +88,7 @@ public class UiCanvasScript : MonoBehaviour {
         if (currentPanel == 0)
             backbutton.gameObject.SetActive(false);
         activePanels[currentPanel].SetActive(true);
-        error("Currrent Panel"+currentPanel);
+    //    error("Currrent Panel"+currentPanel);
 
     }
     private void error(string msg)//console error print function
