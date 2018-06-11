@@ -3000,7 +3000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a2677a34b8bf3459686e4a0c90292f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hero: {fileID: 11400000, guid: 06b6ffd6996957e4eb31191af98ebe9f, type: 2}
+  Hero: {fileID: 11400000, guid: a8b5f7911003e214b9e646679fa95b07, type: 2}
   CanvasControlScript: {fileID: 1367816586}
   attackspeed: 6
 --- !u!114 &1367816588
@@ -3635,7 +3635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e527166003fc28c4fb0743b11b24c579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Monster: {fileID: 11400000, guid: da67db35ec898dd43a81182c18e58578, type: 2}
+  Monster: {fileID: 11400000, guid: fddcd0b541c5a6f43b4dc8d1dd2fb2d4, type: 2}
   Health: 0
 --- !u!65 &1616200693
 BoxCollider:
