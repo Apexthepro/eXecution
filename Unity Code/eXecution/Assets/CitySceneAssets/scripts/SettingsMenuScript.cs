@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
-
-using System;
-
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingsMenuScript : MonoBehaviour {
     public UiCanvasScript UiCanvasScript;
     public GameObject panel1;
-    public string webClientId = "100493588325-4i2jj4nbem22p2r87mo1afn0uhar670o.apps.googleusercontent.com";
     // public GameObject panel2;
     // Use this for initialization
     void Start () {
