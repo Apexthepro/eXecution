@@ -32,27 +32,20 @@ public class UiCanvasScript : MonoBehaviour {
         activeMenus = Menu.gameObject;
         activeMenus.SetActive(true);
         BuildingsGlobalScript.BuildingsArr[0].SetActive(false);
-        if (Menu.name == "SettingsMenu")
-        {
-            print("activePanels[currentPanel]" + activePanels[currentPanel]);
-            if (activePanels[currentPanel] != null)
-                activePanels[currentPanel].SetActive(true);
-        }
-        if (Menu.name == "MineEnterMenu")
-        {
-            if (activePanels[currentPanel] != null)
-                activePanels[currentPanel].SetActive(true);
-        }
         backbutton.gameObject.SetActive(false);
 
         //UpgardeMenuStartScript
         if (Menu.name == "UpgradeMenu")
         {
-           // print("BuildingsGlobalScript.currentBuilding.transform.position" + TestBuilding.transform.position);
+            // print("BuildingsGlobalScript.currentBuilding.transform.position" + TestBuilding.transform.position);
             PreviousCameraPosition = MainCamera.transform.position;
-            MainCamera.transform.position = BuildingsGlobalScript.BuildingsArr[BuildingsGlobalScript.CurrentBuildingIndex].transform.position + new Vector3(2.0f,-0.7f,-1f);
+            MainCamera.transform.position = BuildingsGlobalScript.BuildingsArr[BuildingsGlobalScript.CurrentBuildingIndex].transform.position + new Vector3(2.0f, -0.7f, -1f);
             PreviousOrthographicSize = MainCamera.orthographicSize;
             MainCamera.orthographicSize = 3.1f;
+        }
+        else {
+            if (activePanels[currentPanel] != null)
+                activePanels[currentPanel].SetActive(true);
         }
     }
     

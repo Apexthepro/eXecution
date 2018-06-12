@@ -15,7 +15,7 @@ MonoBehaviour:
   description: Red-Haired Shanks - Strongest Haki
   ModelPrefab: {fileID: 138910, guid: a74b8142f61144d368e5dde7c70fe020, type: 2}
   Collider: {fileID: 0}
-  HeroIcon: {fileID: 0}
+  HeroIcon: {fileID: 21300000, guid: 6090ee72c61299e43b30f42eaa457fd4, type: 3}
   Health: 100
   HealthRegenpersecond: 5
   BaseArmour: 2
