@@ -111,14 +111,16 @@
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\ForgeRecipie.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\forgerecipiescript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\Item.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\IconInfoScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\InventoryScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Pinch2Zoom.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\SettingsMenuScript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\slideMoveScript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\slideScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Todolist.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\UiCanvasScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\UpgradeMenuScript.cs" />
     <Compile Include="Assets\dbinitscript.cs" />
-    <Compile Include="Assets\IconInfoScript.cs" />
     <Compile Include="Assets\LoadingSceneAssets\Scripts\LoadingScreenScript.cs" />
     <Compile Include="Assets\LoginScript.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\CameraTarget.cs" />
@@ -127,8 +129,6 @@
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\EffectShaderPropertyStr.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\RenderEffect.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\TransformExtension.cs" />
-    <Compile Include="Assets\slideMoveScript.cs" />
-    <Compile Include="Assets\slideScript.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\ChangeLog.txt" />

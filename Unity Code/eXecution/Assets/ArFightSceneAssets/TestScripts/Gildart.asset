@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8266a84455e021c4da635c2d8cff4edb, type: 3}
+  m_Name: Gildart
+  m_EditorClassIdentifier: 
+  name: Gildart
+  description: Red-Haired Shanks - Strongest Haki
+  ModelPrefab: {fileID: 138910, guid: a74b8142f61144d368e5dde7c70fe020, type: 2}
+  Collider: {fileID: 0}
+  HeroIcon: {fileID: 21300000, guid: c6b2c15acb1ea1c40b7da8027d266794, type: 3}
+  Type: 
+  Health: 123
+  HealthRegenpersecond: 213
+  BaseArmour: 213
+  BaseMana: 1233
+  currentMana: 123
+  ManaRegenpersecond: 10
+  BaseDamage: 300
+  Spells:
+  - {fileID: 11400000, guid: 18e0c5d812602054aa06d033fab11631, type: 2}
+  - {fileID: 11400000, guid: 370548afc9ba821438e0a90f7176b6ad, type: 2}
+  - {fileID: 11400000, guid: e50f3ed35e4e2da47b501dcd6c5f1a02, type: 2}
+  - {fileID: 11400000, guid: 1f430c2f5cb7574418417b5be9880862, type: 2}
+  SpellSpawn: {fileID: 1898804417709412, guid: 2b6972dac9476d04fb54d2ae231c399d, type: 2}

@@ -12,6 +12,7 @@ public class Hero : ScriptableObject
     public GameObject ModelPrefab;
     public Collider Collider;
     public Sprite HeroIcon;
+    public string Type;
     public int Health;
     public int HealthRegenpersecond;
     public int BaseArmour;
