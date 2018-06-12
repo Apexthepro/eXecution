@@ -30,9 +30,10 @@ public class SettingsMenuScript : MonoBehaviour {
         UiCanvasScript.backbutton.gameObject.SetActive(true);
     }
     //private GoogleSignInConfiguration configuration;
-   /* public void Googlesigninclick() {
-  
+    public void Googlesigninclick() {
+        
+        
         print("Access api here");
     }
-    */
+    
 }
