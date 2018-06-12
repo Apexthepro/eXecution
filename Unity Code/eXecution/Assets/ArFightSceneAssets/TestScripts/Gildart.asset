@@ -25,7 +25,7 @@ MonoBehaviour:
   ManaRegenpersecond: 10
   BaseDamage: 300
   Spells:
-  - {fileID: 11400000, guid: 18e0c5d812602054aa06d033fab11631, type: 2}
+  - {fileID: 11400000, guid: c476364e7ebffb04db78ee3a4a5ba5f8, type: 2}
   - {fileID: 11400000, guid: 370548afc9ba821438e0a90f7176b6ad, type: 2}
   - {fileID: 11400000, guid: e50f3ed35e4e2da47b501dcd6c5f1a02, type: 2}
   - {fileID: 11400000, guid: 1f430c2f5cb7574418417b5be9880862, type: 2}
