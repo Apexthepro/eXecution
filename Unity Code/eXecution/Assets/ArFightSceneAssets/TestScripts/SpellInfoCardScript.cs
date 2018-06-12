@@ -14,12 +14,14 @@ public class SpellInfoCardScript : MonoBehaviour {
     public Text spellmanaCost;
     public Text spelldamage;
     public Text spellCooldown;
+    public Text spellStunDuration;
     void Start () {
         spellName.text = spell.name;
         spellDescription.text = spell.description;
         spellmanaCost.text = spell.manaCost.ToString();
         spelldamage.text = spell.damage.ToString();
         spellCooldown.text = spell.Cooldown.ToString();
+        spellStunDuration.text = spell.StunDuration.ToString();
         spellIcon.sprite = spell.spellIcon;
         
     }

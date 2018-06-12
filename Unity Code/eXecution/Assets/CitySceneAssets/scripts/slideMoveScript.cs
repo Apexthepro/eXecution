@@ -29,6 +29,10 @@ public class slideMoveScript : MonoBehaviour {
         //determine the slide clicked and display it
         Slides = new GameObject[HeroIcons.Length];
         // print("slide[0].name "+Slides[0].name);
+        if (currentSlide == 0)
+        {
+            panelprevious.gameObject.SetActive(false);
+        }
         if (currentSlide > 0) {
             panelprevious.gameObject.SetActive(true);
         }
@@ -36,10 +40,7 @@ public class slideMoveScript : MonoBehaviour {
         {
             panelnext.gameObject.SetActive(true);
         }
-        if (currentSlide == 0)
-        {
-            panelprevious.gameObject.SetActive(false);
-        }
+        
         if (currentSlide == HeroIcons.Length-1)
         {
             panelnext.gameObject.SetActive(false);
@@ -81,10 +82,7 @@ public class slideMoveScript : MonoBehaviour {
 
     }
     public void nextSlide() {
-        if (currentSlide == HeroIcons.Length-1)
-        {
-            panelnext.gameObject.SetActive(false);
-        }
+        
         panelprevious.gameObject.SetActive(true);
 
         if (currentSlide + 1 < HeroIcons.Length)
@@ -93,6 +91,10 @@ public class slideMoveScript : MonoBehaviour {
             Slides[currentSlide].transform.position = new Vector3(2100, 400, 0);
             currentSlide++;
             Slides[currentSlide].transform.position = new Vector3(625, 400, 0);
+        }
+        if (currentSlide == HeroIcons.Length - 1)
+        {
+            panelnext.gameObject.SetActive(false);
         }
     }
     public void previousSlide()

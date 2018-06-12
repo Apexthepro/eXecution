@@ -8,6 +8,7 @@ public class slideScript : MonoBehaviour {
     public Hero Hero;
     public Text heroname, heath, healthregen, mana, manaregen, type, damage,armorstat;
     public Image spell1, spell2, spell3, spell4, helmet, armor, pant, boot, weapon1, weapon2;
+    public SpellInfoCardScript SpellInfoCardScript;
     // Use this for initialization
     void Start () {
         
@@ -28,6 +29,10 @@ public class slideScript : MonoBehaviour {
         spell2.sprite = Hero.Spells[1].spellIcon;
         spell3.sprite = Hero.Spells[2].spellIcon;
         spell4.sprite = Hero.Spells[3].spellIcon;
+    }
+    public void openSpellInfo(int spellclicked) {
+        SpellInfoCardScript.spell = Hero.Spells[spellclicked];
+
     }
 	// Update is called once per frame
 	void Update () {
