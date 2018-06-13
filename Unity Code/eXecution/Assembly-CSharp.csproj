@@ -111,24 +111,32 @@
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\ForgeRecipie.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\forgerecipiescript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\Item.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\IconInfoScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\InventoryScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Pinch2Zoom.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\SettingsMenuScript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\slideMoveScript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\slideScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Todolist.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\UiCanvasScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\UpgradeMenuScript.cs" />
+    <Compile Include="Assets\dbinitscript.cs" />
     <Compile Include="Assets\LoadingSceneAssets\Scripts\LoadingScreenScript.cs" />
     <Compile Include="Assets\LoginScript.cs" />
+    <Compile Include="Assets\mouseDetect.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\CameraTarget.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\EffectController.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\EffectDemo.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\EffectShaderPropertyStr.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\RenderEffect.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\TransformExtension.cs" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\ChangeLog.txt" />
+    <None Include="Assets\Firebase\Plugins\link.xml" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Readme.txt" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\3D Items - Wand Pack\Read Me.txt" />
+    <None Include="Assets\sample.txt" />
     <None Include="Assets\Almgp_particle_vol_1\shaders\emmision_particle.shader" />
     <None Include="Assets\Almgp_particle_vol_1\shaders\multypower_particle.shader" />
     <None Include="Assets\Almgp_particle_vol_1\README.txt" />
@@ -137,11 +145,13 @@
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Blended Premmultiply.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticlePremultiplyBlend.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\READ ME.txt" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Online Documentation.txt" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
     <None Include="Assets\Almgp_particle_vol_1\shaders\mesh_dissolve_particel.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddEffect.shader" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Readme.txt" />
+    <None Include="Assets\Firebase\Plugins\Http\link.xml" />
     <None Include="Assets\Almgp_particle_vol_1\shaders\face_power_particle.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Additive.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleBlendEffect.shader" />
@@ -348,6 +358,30 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/samko/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.MiniJson">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Database">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Sharpen">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Platform">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Auth">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

@@ -74,6 +74,11 @@
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Editor\RenderEffectInspector.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Editor\ShaderCustomEditor\ShaderMaterialsEditor.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Editor\XUIUtils.cs" />
+    <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.64.0.txt" />
+    <None Include="Assets\Firebase\Editor\AppDependencies.xml" />
+    <None Include="Assets\Firebase\Editor\FirebaseAuth_v4.5.0_manifest.txt" />
+    <None Include="Assets\Firebase\Editor\AuthDependencies.xml" />
+    <None Include="Assets\Firebase\Editor\FirebaseDatabase_v4.5.0_manifest.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -334,6 +339,45 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.MiniJson">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Database">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Sharpen">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Platform">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl_v1.2.64.0">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.64.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Editor">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver_v1.2.64.0">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.64.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Auth">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver_v1.2.64.0">
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.64.0.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
