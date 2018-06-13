@@ -43,10 +43,10 @@ public class dbinitscript : MonoBehaviour {
                 while (a.GetEnumerator().MoveNext())
                 {
                     s=a.GetEnumerator().Current.GetRawJsonValue();
-                    print("s->" + s);
+                    //print("s->" + s);
                     //print("Key->"+a.GetEnumerator().Current.Key+"Value->"+ a.GetEnumerator().Current.Value);
                 }
-                print("b->"+b);
+                //print("b->"+b);
                 
        
           }
