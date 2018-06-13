@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
-
-using System;
-
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingsMenuScript : MonoBehaviour {
     public UiCanvasScript UiCanvasScript;
     public GameObject panel1;
-    public string webClientId = "100493588325-4i2jj4nbem22p2r87mo1afn0uhar670o.apps.googleusercontent.com";
     // public GameObject panel2;
     // Use this for initialization
     void Start () {
@@ -23,6 +21,8 @@ public class SettingsMenuScript : MonoBehaviour {
 		
 	}
     public void MenuButtonClick(GameObject panel) {
+        UiCanvasScript.activePanels[0] = panel1.gameObject;
+       // print("->panel1.gameObject " + panel1.gameObject.name);
         UiCanvasScript.activePanels[UiCanvasScript.currentPanel].SetActive(false);
         UiCanvasScript.currentPanel++;
         UiCanvasScript.activePanels[UiCanvasScript.currentPanel] = panel.gameObject;
@@ -31,8 +31,9 @@ public class SettingsMenuScript : MonoBehaviour {
     }
     //private GoogleSignInConfiguration configuration;
     public void Googlesigninclick() {
-  
+        
+        
         print("Access api here");
     }
-
+    
 }

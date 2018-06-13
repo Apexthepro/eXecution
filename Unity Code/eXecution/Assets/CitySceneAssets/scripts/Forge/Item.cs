@@ -10,7 +10,6 @@ public class Item : ScriptableObject
     public string Name;
     public Sprite Icon;
     public string Type;
-    public float[] forgetime;
     public float[] resourceQuantity;
     public float[] effectDuration;
     public int[] XpGained;

@@ -20,7 +20,7 @@ public class Spell : ScriptableObject
     public int ProjectileSpeed;
     public string damageType;
     public float Duration;
-
+    public float StunDuration;
     public void Print()
     {
         Debug.Log(name + ": " + description );
