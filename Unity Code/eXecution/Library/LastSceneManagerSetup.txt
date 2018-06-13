@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/ProjectileTestSceneAssets/Testing/Projectile testing.unity
+=======
+- path: Assets/Scenes/CastleScene.unity
+>>>>>>> aab8210a304ec2338f7d3ec71d67a3428e275bf1
   isLoaded: 1
   isActive: 1
