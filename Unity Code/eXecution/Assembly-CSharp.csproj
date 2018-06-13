@@ -386,30 +386,6 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/avish/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Compat">
-      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Database">
-      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Sharpen">
-      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Tasks">
-      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Auth">
-      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
-    </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
     </Reference>
