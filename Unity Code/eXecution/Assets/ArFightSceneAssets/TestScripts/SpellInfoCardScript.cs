@@ -20,7 +20,7 @@ public class SpellInfoCardScript : MonoBehaviour {
         
     }
     public void InstantiateSpellInfo() {
-
+        print("ENtred"+spell.name);
               spellName.text = spell.name;
               spellDescription.text = spell.description;
               spellmanaCost.text = spell.manaCost.ToString();
@@ -30,7 +30,7 @@ public class SpellInfoCardScript : MonoBehaviour {
               spellIcon.sprite = spell.spellIcon;
           
 
-        print("ENtred");
+        
     }
 	
 	// Update is called once per frame

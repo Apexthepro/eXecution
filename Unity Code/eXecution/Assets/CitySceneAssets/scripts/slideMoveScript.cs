@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class slideMoveScript : MonoBehaviour {
+public class slideMoveScript : MonoBehaviour
+{
     public Button previousHero;
     public Button nextHero;
     public GameObject panelprevious;
@@ -14,19 +14,68 @@ public class slideMoveScript : MonoBehaviour {
     public GameObject SlidePrefab;
     public GameObject[] HeroIcons;
     public GameObject[] Slides;
-    public GameObject[] Spell;
     public SpellInfoCardScript SpellInfoCardScript;
     public SettingsMenuScript SettingsMenuScript;
     public GameObject SpellInfo;
     public GameObject SpellInfoPrefab;
     public GameObject GridLayout;
+    GameObject spell;
     public bool spellSetFlag=false;
+    public int moveSlide=-1;
+    private float SlideMoveSpeed=4000;
     // Use this for initialization
     void Start () {
         
     }
+    private void Update()
+    {
+
+    //print("moveSlide " +moveSlide +" CurrentSlide "+ currentSlide);
+        if(moveSlide!=currentSlide  && moveSlide != -1)
+        {
+            if (moveSlide > currentSlide)
+            {
+
+                    Slides[currentSlide].transform.position = Vector3.MoveTowards(Slides[currentSlide].transform.position, new Vector3(-850, 400, 0), SlideMoveSpeed * Time.deltaTime);
+                    Slides[currentSlide + 1].transform.position = Vector3.MoveTowards(Slides[currentSlide + 1].transform.position, new Vector3(625, 400, 0), SlideMoveSpeed * Time.deltaTime);
+
+
+                print(Slides[currentSlide].transform.position.x);
+                if (Slides[currentSlide].transform.position.x <= -799)
+                {
+                    print("Entred next");
+                    currentSlide = currentSlide + 1;
+                }
+               print("move to next curent slide "+ currentSlide);
+            }
+            if (moveSlide < currentSlide) {
+                 print("move to prev curent slide " + currentSlide);
+                //new Vector3(-753, 400, 0)
+
+                if (Slides[currentSlide - 1].transform.position.x <= 2099) {
+                    Slides[currentSlide].transform.position = Vector3.MoveTowards(Slides[currentSlide].transform.position, new Vector3(2100, 400, 0), SlideMoveSpeed * Time.deltaTime);
+                    Slides[currentSlide - 1].transform.position = Vector3.MoveTowards(Slides[currentSlide - 1].transform.position, new Vector3(625, 400, 0), SlideMoveSpeed * Time.deltaTime);
+                }
+
+                print(Slides[currentSlide].transform.position.x);
+                if (Slides[currentSlide].transform.position.x >= 2099)
+                {
+                    print("Entred prev");
+                    currentSlide = currentSlide - 1;
+                }
+                
+                // if (Slides[currentSlide].transform.position.x <2100)
+                // Slides[currentSlide].transform.Translate(moveSpeed  * Time.deltaTime *10,0,0);
+               // print("translate "+ Slides[currentSlide].transform.position);
+                //Slides[currentSlide-1].transform.position = new Vector3(625, 400, 0);
+                //currentSlide = moveSlide;
+            }
+
+        }
+    }
     public void setCurrentSlide(int currentHeroIconIndex) {
         currentSlide = currentHeroIconIndex;
+        moveSlide = currentSlide;
         setUpSlides();
     }
     public void setUpSlides() {
@@ -69,7 +118,7 @@ public class slideMoveScript : MonoBehaviour {
               //  print("Position Before parent "+ Slides[i].transform.position);
                 Slides[i].transform.SetParent( SlideParent.transform);
                // print("Position after parent " + Slides[i].transform.position);
-                Slides[i].transform.position = new Vector3(-753, 400, 0);
+                Slides[i].transform.position = new Vector3(-850, 400, 0);
                 //print("after explicit stateting " + Slides[i].transform.position);
                 Slides[i].GetComponent<slideScript>().Hero = HeroIcons[i].GetComponent<IconInfoScript>().hero;
                 Slides[i].GetComponent<slideScript>().initiateSlide();
@@ -95,42 +144,52 @@ public class slideMoveScript : MonoBehaviour {
             }
         }
 
-        instantiateSlideButtons();
+      //  instantiateSlideButtons();
     }
     public void nextSlide() {
         
         panelprevious.gameObject.SetActive(true);
-
-        if (currentSlide + 1 < HeroIcons.Length)
+        if (moveSlide + 1 < HeroIcons.Length)
+        {
+            moveSlide++;
+            print("nextSLide moveSLide "+ moveSlide + " currentSlide "+ currentSlide);
+        }
+        /*if (currentSlide + 1 < HeroIcons.Length)
         {
          //   print("Going To next hero");
             Slides[currentSlide].transform.position = new Vector3(2100, 400, 0);
             currentSlide++;
             Slides[currentSlide].transform.position = new Vector3(625, 400, 0);
-        }
-        if (currentSlide == HeroIcons.Length - 1)
+        }*/
+        if (moveSlide == HeroIcons.Length - 1)
         {
             panelnext.gameObject.SetActive(false);
         }
     }
     public void previousSlide()
     {
-    //    print("Going To previous hero");
-        if (currentSlide - 1 >= 0)
+        //    print("Going To previous hero");
+        /*if (currentSlide - 1 >= 0)
         {
             Slides[currentSlide].transform.position = new Vector3(-753, 400, 0);
             currentSlide--;
             Slides[currentSlide].transform.position = new Vector3(625, 400, 0);
+        }*/
+        if (moveSlide - 1 >= 0)
+        {
+            moveSlide--;
+            print("prevSLide moveSLide " + moveSlide + " currentSlide " + currentSlide);
         }
         panelnext.gameObject.SetActive(true);
-        if (currentSlide == 0)
+        if (moveSlide == 0)
         {
             panelprevious.gameObject.SetActive(false);
         }
     }
     public void instantiateSlideButtons() {
+
         print("Instantiating spellinfo");
-        for (int i=0;i<Slides.Length;i++) {
+     /*   for (int i=0;i<Slides.Length;i++) {
             Slides[i].GetComponent<slideScript>().spell1.GetComponent<Button>().onClick.AddListener(() => SettingsMenuScript.MenuButtonClick(SpellInfo));
             Slides[i].GetComponent<slideScript>().spell2.GetComponent<Button>().onClick.AddListener(() => SettingsMenuScript.MenuButtonClick(SpellInfo));
             Slides[i].GetComponent<slideScript>().spell3.GetComponent<Button>().onClick.AddListener(() => SettingsMenuScript.MenuButtonClick(SpellInfo));
@@ -141,10 +200,38 @@ public class slideMoveScript : MonoBehaviour {
             Slides[i].GetComponent<slideScript>().spell4.GetComponent<Button>().onClick.AddListener(() => openSpellInfo(4));
 
         }
-
+        */
     }
-    public void openSpellInfo(int spellclicked)
+    public void closeSpellInfo() {
+        Destroy(spell);
+    }
+    public void openSpellInfo(GameObject spellButton)
     {
+        spell = new GameObject();
+        print("ENtred");
+        if (spellButton.name == "Spell 1") {
+            print("Spell 1 hovered");
+           // Spell[i] = Instantiate(SpellInfoPrefab);
+           // Spell[i].transform.SetParent(GridLayout.transform);
+        }
+        if (spellButton.name == "Spell 2")
+        {
+            spell = Instantiate(SpellInfoPrefab);
+            spell.transform.SetParent(spellButton.transform);
+            spell.transform.position += new Vector3(0,50f,0);
+            
+
+            print("Spell 2 hovered");
+        }
+        if (spellButton.name == "Spell 3")
+        {
+            print("Spell 3 hovered");
+        }
+        if (spellButton.name == "Spell 4")
+        {
+            print("Spell 4 hovered");
+        }
+        /*
         if (spellSetFlag == true)
         {
             for (int i = 0; i < Slides[currentSlide].GetComponent<slideScript>().Hero.Spells.Length; i++)
@@ -167,13 +254,12 @@ public class slideMoveScript : MonoBehaviour {
                 spellSetFlag = true;
             }
         
-
+    */
         
-        print("openning spells for "+ spellclicked);
 
     }
+
+
     // Update is called once per frame
-    void Update () {
-		
-	}
+
 }
