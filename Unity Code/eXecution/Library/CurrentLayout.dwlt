@@ -37,9 +37,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 423
     width: 820
     height: 212
+=======
+    y: 414
+    width: 818
+    height: 221
+>>>>>>> parent of d802fad... code v1.59
   m_MinSize: {x: 104, y: 121}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 20}
@@ -70,7 +76,11 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 342}
   m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 131
+=======
+  controlID: 11
+>>>>>>> parent of d802fad... code v1.59
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,7 +129,11 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 11
+=======
+  controlID: 136
+>>>>>>> parent of d802fad... code v1.59
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +157,11 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 129
+=======
+  controlID: 104
+>>>>>>> parent of d802fad... code v1.59
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -281,7 +299,11 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 130
+=======
+  controlID: 135
+>>>>>>> parent of d802fad... code v1.59
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,9 +404,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 64310000
     m_LastClickedID: 12644
     m_ExpandedIDs: 0000000040070000a8070000be2c0000e62d00002e2e0000702f0000ae2f000028300000b230000096320000a6330000de330000803500004a3600006e360000ca36000072370000883700003239000052390000f03a00009e3b0000303c0000ec3d0000f23d00005e3e0000d63e0000e2400000e4400000e6400000e8400000ea400000ec400000ee400000f0400000f2400000f4400000f6400000f8400000fa400000fc400000fe40000000410000024100000441000006410000084100000a4100000c4100000e41000010410000124100001441000016410000184100001a4100001c4100001e41000020410000224100002441000026410000284100002a4100002c4100002e41000030410000324100003441000036410000384100003a4100003c4100003e41000040410000424100004441000046410000484100004a4100004c4100004e41000050410000524100005441000056410000584100005a4100005c4100005e41000060410000624100006441000066410000684100006a4100006c4100006e41000070410000724100007441000076410000784100007a4100007c4100007e410000804100008241000084410000
+=======
+    m_SelectedIDs: c4320000
+    m_LastClickedID: 12996
+    m_ExpandedIDs: 00000000fc380000523900008e4d0000b04d00005e53000092540000d0550000f25600001e57000060570000ce5700005e590000165a00004a5a0000ce5b0000705c00008c5c0000e05c00006a5d00007e5d0000ec5e0000085f00005e600000fc6000008c610000066300005a6300006a630000026e0000046e0000066e0000086e00000a6e00000c6e00000e6e0000106e0000126e0000146e0000166e0000186e00001a6e00001c6e00001e6e0000206e0000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e00003c6e00003e6e0000406e0000426e0000446e0000466e0000486e00004a6e00004c6e00004e6e0000506e0000526e0000546e0000566e0000586e00005a6e00005c6e00005e6e0000606e0000626e0000646e0000666e0000686e00006a6e00006c6e00006e6e0000706e0000726e0000746e0000766e0000786e00007a6e00007c6e00007e6e0000806e0000826e0000846e0000866e0000886e00008a6e00008c6e00008e6e0000906e0000926e0000946e0000966e0000986e00009a6e00009c6e00009e6e0000a06e0000a26e0000a46e0000
+>>>>>>> parent of d802fad... code v1.59
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -409,10 +437,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 125}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 0000000040070000a8070000be2c0000e62d00002e2e0000702f0000ae2f000028300000b230000096320000a6330000de330000803500004a3600006e360000ca36000072370000883700003239000052390000f03a00009e3b0000303c0000ec3d0000f23d00005e3e0000d63e0000e2400000e4400000e6400000e8400000ea400000ec400000ee400000f0400000f2400000f4400000f6400000f8400000fa400000fc400000fe40000000410000024100000441000006410000084100000a4100000c4100000e41000010410000124100001441000016410000184100001a4100001c4100001e41000020410000224100002441000026410000284100002a4100002c4100002e41000030410000324100003441000036410000384100003a4100003c4100003e41000040410000424100004441000046410000484100004a4100004c4100004e41000050410000524100005441000056410000584100005a4100005c4100005e41000060410000624100006441000066410000684100006a4100006c4100006e41000070410000724100007441000076410000784100007a4100007c4100007e410000804100008241000084410000
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000fc380000523900008e4d0000b04d00005e53000092540000d0550000f25600001e57000060570000ce5700005e590000165a00004a5a0000ce5b0000705c00008c5c0000e05c00006a5d00007e5d0000ec5e0000085f00005e600000fc6000008c610000066300005a6300006a630000026e0000046e0000066e0000086e00000a6e00000c6e00000e6e0000106e0000126e0000146e0000166e0000186e00001a6e00001c6e00001e6e0000206e0000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e00003c6e00003e6e0000406e0000426e0000446e0000466e0000486e00004a6e00004c6e00004e6e0000506e0000526e0000546e0000566e0000586e00005a6e00005c6e00005e6e0000606e0000626e0000646e0000666e0000686e00006a6e00006c6e00006e6e0000706e0000726e0000746e0000766e0000786e00007a6e00007c6e00007e6e0000806e0000826e0000846e0000866e0000886e00008a6e00008c6e00008e6e0000906e0000926e0000946e0000966e0000986e00009a6e00009c6e00009e6e0000a06e0000a26e0000a46e0000
+>>>>>>> parent of d802fad... code v1.59
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -428,7 +463,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 4}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -527,24 +562,31 @@ MonoBehaviour:
     height: 264
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 4efbffff00000000
+=======
+    scrollPos: {x: 0, y: 81}
+    m_SelectedIDs: e8fc0000
+    m_LastClickedID: 64744
+    m_ExpandedIDs: 36fffeffd2fffeff5800ffff6c04ffff7404ffff7c04ffff8004ffff8804ffff720fffff7a0fffff820fffff860fffff8e0fffffbc96ffff00000000666700007c6b0000b4b9000070c40000aa020100ac0b0100320d0100660d010060110100
+>>>>>>> parent of d802fad... code v1.59
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: SlidePrefab(Clone)
+      m_OriginalName: SlidePrefab(Clone)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -89288
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
@@ -580,14 +622,24 @@ MonoBehaviour:
     height: 402
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
+<<<<<<< HEAD
   lastFramingTime: 0
+=======
+  lastFramingTime: 824.8404364644073
+>>>>>>> parent of d802fad... code v1.59
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 2.9628592, y: 2.7191777, z: -0.093322195}
     speed: 2
     m_Value: {x: 2.9628592, y: 2.7191777, z: -0.093322195}
+=======
+    m_Target: {x: 1120.0356, y: 490.22302, z: 12.258949}
+    speed: 2
+    m_Value: {x: 1120.0356, y: 490.22302, z: 12.258949}
+>>>>>>> parent of d802fad... code v1.59
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -619,9 +671,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 19.352823
     speed: 2
     m_Value: 19.352823
+=======
+    m_Target: 1662.6798
+    speed: 2
+    m_Value: 1662.6798
+>>>>>>> parent of d802fad... code v1.59
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -701,7 +759,11 @@ MonoBehaviour:
       width: 1551.7002
       height: 732.1134
     m_MinimalGUI: 1
+<<<<<<< HEAD
   m_defaultScale: 0.48125
+=======
+  m_defaultScale: 1
+>>>>>>> parent of d802fad... code v1.59
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 816, y: 402}

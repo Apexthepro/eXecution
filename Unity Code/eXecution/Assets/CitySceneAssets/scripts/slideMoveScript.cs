@@ -23,13 +23,9 @@ public class slideMoveScript : MonoBehaviour
     public bool spellSetFlag=false;
     public int moveSlide=-1;
     private float SlideMoveSpeed=4000;
-    private int CenterX, LeftX, RightX, Yaxis;
     // Use this for initialization
     void Start () {
-        CenterX = 950;
-        LeftX = 950;//-LeftX
-        Yaxis = 550;
-        RightX = 2550;
+        
     }
     private void Update()
     {
@@ -40,12 +36,12 @@ public class slideMoveScript : MonoBehaviour
             if (moveSlide > currentSlide)
             {
 
-                    Slides[currentSlide].transform.position = Vector3.MoveTowards(Slides[currentSlide].transform.position, new Vector3(-LeftX, Yaxis, 0), SlideMoveSpeed * Time.deltaTime);
-                    Slides[currentSlide + 1].transform.position = Vector3.MoveTowards(Slides[currentSlide + 1].transform.position, new Vector3(CenterX, Yaxis, 0), SlideMoveSpeed * Time.deltaTime);
+                    Slides[currentSlide].transform.position = Vector3.MoveTowards(Slides[currentSlide].transform.position, new Vector3(-850, 400, 0), SlideMoveSpeed * Time.deltaTime);
+                    Slides[currentSlide + 1].transform.position = Vector3.MoveTowards(Slides[currentSlide + 1].transform.position, new Vector3(625, 400, 0), SlideMoveSpeed * Time.deltaTime);
 
 
                 print(Slides[currentSlide].transform.position.x);
-                if (CenterX-2 <= Slides[currentSlide+1].transform.position.x  && Slides[currentSlide+1].transform.position.x <= CenterX+2)
+                if (Slides[currentSlide].transform.position.x <= -799)
                 {
                     print("Entred next");
                     currentSlide = currentSlide + 1;
@@ -54,24 +50,24 @@ public class slideMoveScript : MonoBehaviour
             }
             if (moveSlide < currentSlide) {
                  print("move to prev curent slide " + currentSlide);
-                //new Vector3(-753, Yaxis, 0)
+                //new Vector3(-753, 400, 0)
 
-
-                    Slides[currentSlide].transform.position = Vector3.MoveTowards(Slides[currentSlide].transform.position, new Vector3(RightX, Yaxis, 0), SlideMoveSpeed * Time.deltaTime);
-                    Slides[currentSlide - 1].transform.position = Vector3.MoveTowards(Slides[currentSlide - 1].transform.position, new Vector3(CenterX, Yaxis, 0), SlideMoveSpeed * Time.deltaTime);
-                
+                if (Slides[currentSlide - 1].transform.position.x <= 2099) {
+                    Slides[currentSlide].transform.position = Vector3.MoveTowards(Slides[currentSlide].transform.position, new Vector3(2100, 400, 0), SlideMoveSpeed * Time.deltaTime);
+                    Slides[currentSlide - 1].transform.position = Vector3.MoveTowards(Slides[currentSlide - 1].transform.position, new Vector3(625, 400, 0), SlideMoveSpeed * Time.deltaTime);
+                }
 
                 print(Slides[currentSlide].transform.position.x);
-                if (CenterX - 2 <= Slides[currentSlide-1].transform.position.x && Slides[currentSlide-1].transform.position.x <= CenterX + 2)
+                if (Slides[currentSlide].transform.position.x >= 2099)
                 {
                     print("Entred prev");
                     currentSlide = currentSlide - 1;
                 }
                 
-                // if (Slides[currentSlide].transform.position.x <RightX)
+                // if (Slides[currentSlide].transform.position.x <2100)
                 // Slides[currentSlide].transform.Translate(moveSpeed  * Time.deltaTime *10,0,0);
                // print("translate "+ Slides[currentSlide].transform.position);
-                //Slides[currentSlide-1].transform.position = new Vector3(CenterX, Yaxis, 0);
+                //Slides[currentSlide-1].transform.position = new Vector3(625, 400, 0);
                 //currentSlide = moveSlide;
             }
 
@@ -122,7 +118,7 @@ public class slideMoveScript : MonoBehaviour
               //  print("Position Before parent "+ Slides[i].transform.position);
                 Slides[i].transform.SetParent( SlideParent.transform);
                // print("Position after parent " + Slides[i].transform.position);
-                Slides[i].transform.position = new Vector3(-LeftX, Yaxis, 0);
+                Slides[i].transform.position = new Vector3(-850, 400, 0);
                 //print("after explicit stateting " + Slides[i].transform.position);
                 Slides[i].GetComponent<slideScript>().Hero = HeroIcons[i].GetComponent<IconInfoScript>().hero;
                 Slides[i].GetComponent<slideScript>().initiateSlide();
@@ -132,7 +128,7 @@ public class slideMoveScript : MonoBehaviour
             {
                 Slides[i] = Instantiate(SlidePrefab);
                 Slides[i].transform.SetParent(SlideParent.transform);
-                Slides[i].transform.position = new Vector3(CenterX, Yaxis, 0);//CenterX
+                Slides[i].transform.position = new Vector3(625, 400, 0);
                 Slides[i].GetComponent<slideScript>().Hero = HeroIcons[i].GetComponent<IconInfoScript>().hero;
                 Slides[i].GetComponent<slideScript>().initiateSlide();
 
@@ -141,7 +137,7 @@ public class slideMoveScript : MonoBehaviour
             {
                 Slides[i] = Instantiate(SlidePrefab);
                 Slides[i].transform.SetParent(SlideParent.transform);
-                Slides[i].transform.position = new Vector3(RightX, Yaxis, 0);
+                Slides[i].transform.position = new Vector3(2100, 400, 0);
                 Slides[i].GetComponent<slideScript>().Hero = HeroIcons[i].GetComponent<IconInfoScript>().hero;
                 Slides[i].GetComponent<slideScript>().initiateSlide();
 
@@ -161,9 +157,9 @@ public class slideMoveScript : MonoBehaviour
         /*if (currentSlide + 1 < HeroIcons.Length)
         {
          //   print("Going To next hero");
-            Slides[currentSlide].transform.position = new Vector3(RightX, Yaxis, 0);
+            Slides[currentSlide].transform.position = new Vector3(2100, 400, 0);
             currentSlide++;
-            Slides[currentSlide].transform.position = new Vector3(CenterX, Yaxis, 0);
+            Slides[currentSlide].transform.position = new Vector3(625, 400, 0);
         }*/
         if (moveSlide == HeroIcons.Length - 1)
         {
@@ -175,9 +171,9 @@ public class slideMoveScript : MonoBehaviour
         //    print("Going To previous hero");
         /*if (currentSlide - 1 >= 0)
         {
-            Slides[currentSlide].transform.position = new Vector3(-753, Yaxis, 0);
+            Slides[currentSlide].transform.position = new Vector3(-753, 400, 0);
             currentSlide--;
-            Slides[currentSlide].transform.position = new Vector3(CenterX, Yaxis, 0);
+            Slides[currentSlide].transform.position = new Vector3(625, 400, 0);
         }*/
         if (moveSlide - 1 >= 0)
         {
