@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class LoadingScreenScript : MonoBehaviour {
     public GameObject loadingScreenObject;
     public Image LoadingBar;
+    string path = "Assets/sam.txt";
     /*// Use this for initialization
 	void Start () {
     }
@@ -46,6 +48,16 @@ public class LoadingScreenScript : MonoBehaviour {
     AsyncOperation asyncLoad;
     IEnumerator LoadYourAsyncScene()
     {
+        using (StreamReader file = new StreamReader(path))
+        {
+            if (file.ReadLine() == null)
+            {
+                asyncLoad = SceneManager.LoadSceneAsync("LoginScene");
+            }
+            asyncLoad = SceneManager.LoadSceneAsync("CastleScene");
+            file.Close();
+
+        }
         // print("Before waiting");
         //asyncLoad = SceneManager.LoadSceneAsync("LoginScene");
         asyncLoad = SceneManager.LoadSceneAsync("CastleScene");

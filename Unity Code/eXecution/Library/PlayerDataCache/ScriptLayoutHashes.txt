@@ -3,6 +3,7 @@ PlayerPath?
 C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/game1.apk
 SceneListBegin?
 Assets/Scenes/LoadingScene.unity
+Assets/Scenes/LoginScene.unity
 Assets/Scenes/CastleScene.unity
 Assets/Scenes/ArMap.unity
 Assets/Scenes/ArFightScene.unity
@@ -96,6 +97,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 fdc0443b35ac83aea0df6779b0e2bdeb Assembly-CSharp.dll:DeepWolf.HungerThirstSystem.HungerSettings
+05524b8f659e7bfe5756d1335fec24ba Firebase.Platform.dll:Firebase.Platform.FirebaseMonoBehaviour
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 13bdb7c23815c33a33b37b0ba8dd39be UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -124,7 +126,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 fd2c4262b5bb8e1bd7697031fe4ba2c6 Assembly-CSharp.dll:.FixedJoystick
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-bc069f462370adf7a9b45783eca6b6ce Assembly-CSharp.dll:.Hero
+b1255523e3380b1b370cecaf973cfea5 Assembly-CSharp.dll:.Hero
 dc25902ea7b063eb05a6746a27c04a83 Assembly-CSharp.dll:DeepWolf.HungerThirstSystem.Examples.FoodItem
 9385b0c311ae0934ca52fe3db1f636e8 Assembly-CSharp.dll:.Pinch2Zoom
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
@@ -221,9 +223,9 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-354669e7ebee518563fdbba60251a691 Assembly-CSharp.dll:.LoginScript
+30b5652c8a7fae66781c0dee086df073 Assembly-CSharp.dll:.LoginScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.hidespellInfo
-57544de4230a4539aaecb383fc7516c1 Assembly-CSharp.dll:.Spell
+8939c493ce243fd8351d5ffeb0647f38 Assembly-CSharp.dll:.Spell
 7f9da48fbe8e9e1dc92c0cc6e4d0c626 Assembly-CSharp.dll:.ForgeRecipie
 bbf1f79d82441bd10c63f863afb21076 Assembly-CSharp.dll:.BuildingsGlobalScript
 fdfaee1b34d01bc0c3ad3999cf0a5646 Assembly-CSharp.dll:.CameraTarget
@@ -242,12 +244,16 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadScene
+780496881f31356fa3a944ebe3ae2363 Assembly-CSharp.dll:.mouseDetect
+09d45f2d53d35b6c8d7e07ca73738055 Assembly-CSharp.dll:.slideScript
 3e486d5f66331f38c080148adc5eeba4 Assembly-CSharp.dll:.CanvasControlScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FireBallDamageScript
-c441f4715c589e333928f7cabbd14bfd Assembly-CSharp.dll:.SpellInfoCardScript
+6ad4b4ac643b16e3a589a67af5de57f8 Assembly-CSharp.dll:.SpellInfoCardScript
 38950686062fbc7e1a1113b310361fd3 Assembly-CSharp.dll:DeepWolf.HungerThirstSystem.Examples.GameRuntime
 e7ec17895ab32b61ba574a2677295077 Assembly-CSharp.dll:.EffectController
+64d73e50f20b594f3ce302efaa1a56e2 Assembly-CSharp.dll:.IconInfoScript
 6d3ac593b841014d9e73b841fdd2e2a7 Assembly-CSharp.dll:.PlayerExample1
+bfea586dfb813a26964423e133c987d4 Assembly-CSharp.dll:.slideMoveScript
 0d9c283e48e76cdd0480da715502587f Assembly-CSharp.dll:.HeroScript
 b32b8e47613c59e4f99cf7161d145a18 Assembly-CSharp.dll:.SpellScript
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
@@ -263,7 +269,7 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 c5524a106b8e79ff1f58d0a595f49212 Assembly-CSharp.dll:.VariableJoystick
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UpgradeMenuScript
+63b964da2465c32c9027de354f91e1d8 Assembly-CSharp.dll:.UpgradeMenuScript
 83e56f00e0d1ca4962d9b27779bae183 Assembly-CSharp.dll:.Outline
 2a208de95ac861c6e63592cd40e818f0 Assembly-CSharp.dll:DeepWolf.HungerThirstSystem.Examples.PlayerHealth
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -272,9 +278,10 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-fd23df559d9b697883011260890a6022 Assembly-CSharp.dll:.SettingsMenuScript
+91f1a05f93de6290047753f45f5ece7b Assembly-CSharp.dll:.SettingsMenuScript
 a95ecf8c1067dadd3e88e5aceca545ad Assembly-CSharp.dll:.ShootLight
 0afde2503025847eb8cc14581ddb1d5d Assembly-CSharp.dll:DigitalRubyShared.DemoScript
+ad42152a149012a06a898846fd66a209 Assembly-CSharp.dll:.dbinitscript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:DigitalRubyShared.DemoAsteroidScript
 d86fba70758b5ac7e9bfb0038076a50e Assembly-CSharp.dll:.RenderEffect
 95af9a0a107d2b104902342c06f27114 Assembly-CSharp.dll:.BuildingInput
@@ -346,4 +353,3 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-ad42152a149012a06a898846fd66a209 Assembly-CSharp.dll:.dbinitscript

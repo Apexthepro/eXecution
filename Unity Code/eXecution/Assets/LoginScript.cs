@@ -3,18 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-//using MySql.Data.MySqlClient;
+using System.IO;
+using Newtonsoft.Json;
 public class LoginScript : MonoBehaviour {
-
+    public Firebase.Auth.FirebaseAuth auth;
+    Firebase.Auth.FirebaseUser user;
     // Use this for initialization
     public InputField id, pwd;
     public Text console;
     public GameObject consolePanel;
     string sid = "", spwd = "";
-    public Firebase.Auth.FirebaseAuth auth;
+    string path = "Assets/sam.txt";
+    public Text DisplayEmail;
     Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
     public void Start()
     {
+        data read = new data();
+        using (StreamReader file = new StreamReader(path))
+        {
+            read = JsonConvert.DeserializeObject<data>(file.ReadLine());
+            DisplayEmail.text = read.email;
+            file.Close();
+
+        }
         consolePanel.SetActive(false);
         console.text = "";
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
@@ -22,7 +33,7 @@ public class LoginScript : MonoBehaviour {
             if (dependencyStatus == Firebase.DependencyStatus.Available)
             {
                 // Handle initialization of the necessary firebase modules:
-                Debug.Log("Setting up Firebase Auth");
+                //Debug.Log("Setting up Firebase Auth");
                 auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
             }
             else {
@@ -34,12 +45,22 @@ public class LoginScript : MonoBehaviour {
 
 
 	    public void loginClick(){
-
-        
         sid = id.text;
         spwd = pwd.text;
-        print("Username is : " + sid + " Password is : " + spwd);
-        auth.SignInWithEmailAndPasswordAsync(sid, spwd).ContinueWith(task => {
+
+        //print("Username is : " + sid + " Password is : " + spwd);
+        data info = new data()
+        {
+            email = "furqan@gmail.com",//sid
+            pass = "furqan",//spwd
+            set = true
+        };
+        
+       
+
+
+
+        auth.SignInWithEmailAndPasswordAsync("furqan@gmail.com", "furqan").ContinueWith(task => {
             if (task.IsCanceled)
             {
                 error("SignInWithEmailAndPasswordAsync was canceled.");
@@ -55,7 +76,25 @@ public class LoginScript : MonoBehaviour {
             Firebase.Auth.FirebaseUser newUser = task.Result;
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
+            user = auth.CurrentUser;
+            if (user != null)
+            {
+                string name = user.DisplayName;
+                string email = user.Email;
+                System.Uri photo_url = user.PhotoUrl;
+                // The user's Id, unique to the Firebase project.
+                // Do NOT use this value to authenticate with your backend server, if you
+                // have one; use User.TokenAsync() instead.
+                string uid = user.UserId;
+                print("email->" + email + "uid-->" + uid);
+            }
+          
+            using (StreamWriter myFile = new StreamWriter(path))
+            {
+                myFile.Write(JsonConvert.SerializeObject(info));
+            }
             SceneManager.LoadScene("CastleScene");
+
         });
     }
 
@@ -76,11 +115,23 @@ public class LoginScript : MonoBehaviour {
                 error("CreateUserWithEmailAndPasswordAsync encountered an error: ");
                 return;
             }
-
-            Firebase.Auth.FirebaseUser newUser = task.Result;
-            Debug.LogFormat("User Registered successfully: {0} ({1})",
-                newUser.DisplayName, newUser.UserId);
-            SceneManager.LoadScene("CastleScene");
+            else
+            {
+                Firebase.Auth.FirebaseUser newUser = task.Result;
+                Debug.LogFormat("User Registered successfully: {0} ({1})",
+                    newUser.DisplayName, newUser.UserId);
+                data info = new data()
+                {
+                    email = "furqan@gmail.com",//sid
+                    pass = "furqan",//spwd
+                    set = true
+                };
+                using (StreamWriter myFile = new StreamWriter(path))
+                {
+                    myFile.Write(JsonConvert.SerializeObject(info));
+                }
+                //SceneManager.LoadScene("CastleScene");
+            }
         });
     }
 
@@ -93,5 +144,12 @@ public class LoginScript : MonoBehaviour {
     {
         consolePanel.SetActive(true);
         console.text = msg;
+    }
+    public class data
+    {
+        public string email { get; set; }
+        public string pass { get; set; }
+        public bool set { get; set; }
+        
     }
 }
