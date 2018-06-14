@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using System.IO;
+using Newtonsoft.Json;
 public class LoginScript : MonoBehaviour {
     public Firebase.Auth.FirebaseAuth auth;
     Firebase.Auth.FirebaseUser user;
@@ -12,10 +13,19 @@ public class LoginScript : MonoBehaviour {
     public Text console;
     public GameObject consolePanel;
     string sid = "", spwd = "";
-    
+    string path = "Assets/sam.txt";
+    public Text DisplayEmail;
     Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
     public void Start()
     {
+        data read = new data();
+        using (StreamReader file = new StreamReader(path))
+        {
+            read = JsonConvert.DeserializeObject<data>(file.ReadLine());
+            DisplayEmail.text = read.email;
+            file.Close();
+
+        }
         consolePanel.SetActive(false);
         console.text = "";
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
@@ -37,7 +47,19 @@ public class LoginScript : MonoBehaviour {
 	    public void loginClick(){
         sid = id.text;
         spwd = pwd.text;
+
         //print("Username is : " + sid + " Password is : " + spwd);
+        data info = new data()
+        {
+            email = "furqan@gmail.com",//sid
+            pass = "furqan",//spwd
+            set = true
+        };
+        
+       
+
+
+
         auth.SignInWithEmailAndPasswordAsync("furqan@gmail.com", "furqan").ContinueWith(task => {
             if (task.IsCanceled)
             {
@@ -66,6 +88,11 @@ public class LoginScript : MonoBehaviour {
                 string uid = user.UserId;
                 print("email->" + email + "uid-->" + uid);
             }
+          
+            using (StreamWriter myFile = new StreamWriter(path))
+            {
+                myFile.Write(JsonConvert.SerializeObject(info));
+            }
             SceneManager.LoadScene("CastleScene");
 
         });
@@ -88,11 +115,23 @@ public class LoginScript : MonoBehaviour {
                 error("CreateUserWithEmailAndPasswordAsync encountered an error: ");
                 return;
             }
-
-            Firebase.Auth.FirebaseUser newUser = task.Result;
-            Debug.LogFormat("User Registered successfully: {0} ({1})",
-                newUser.DisplayName, newUser.UserId);
-            //SceneManager.LoadScene("CastleScene");
+            else
+            {
+                Firebase.Auth.FirebaseUser newUser = task.Result;
+                Debug.LogFormat("User Registered successfully: {0} ({1})",
+                    newUser.DisplayName, newUser.UserId);
+                data info = new data()
+                {
+                    email = "furqan@gmail.com",//sid
+                    pass = "furqan",//spwd
+                    set = true
+                };
+                using (StreamWriter myFile = new StreamWriter(path))
+                {
+                    myFile.Write(JsonConvert.SerializeObject(info));
+                }
+                //SceneManager.LoadScene("CastleScene");
+            }
         });
     }
 
@@ -105,5 +144,12 @@ public class LoginScript : MonoBehaviour {
     {
         consolePanel.SetActive(true);
         console.text = msg;
+    }
+    public class data
+    {
+        public string email { get; set; }
+        public string pass { get; set; }
+        public bool set { get; set; }
+        
     }
 }
