@@ -576,6 +576,7 @@ MonoBehaviour:
   pwd: {fileID: 230878741}
   console: {fileID: 943637382}
   consolePanel: {fileID: 598277446}
+  DisplayEmail: {fileID: 0}
 --- !u!1 &862546710
 GameObject:
   m_ObjectHideFlags: 0
