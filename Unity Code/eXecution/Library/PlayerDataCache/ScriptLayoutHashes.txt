@@ -1,6 +1,10 @@
 Android
 PlayerPath?
+<<<<<<< HEAD
 C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/game1.apk
+=======
+C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/eXecution.apk
+>>>>>>> d802fad1b57d7de1e3c3630a733d257a24968f80
 SceneListBegin?
 Assets/Scenes/LoadingScene.unity
 Assets/Scenes/LoginScene.unity
