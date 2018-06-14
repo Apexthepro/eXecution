@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1981,7 +1981,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4154,7 +4154,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -5971,7 +5971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.9001465, y: -37.19995}
+  m_AnchoredPosition: {x: 5.9003906, y: -37.19995}
   m_SizeDelta: {x: -271, y: -278.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &405246535
@@ -6768,7 +6768,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -9868,12 +9868,12 @@ Prefab:
     - target: {fileID: 224300734673467358, guid: 848f6caee0b1db5498fec0740d292c6e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 88.55444
+      value: 88.55469
       objectReference: {fileID: 0}
     - target: {fileID: 224300734673467358, guid: 848f6caee0b1db5498fec0740d292c6e,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -77.387085
+      value: -77.38696
       objectReference: {fileID: 0}
     - target: {fileID: 224300734673467358, guid: 848f6caee0b1db5498fec0740d292c6e,
         type: 2}
@@ -17132,7 +17132,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -17350,12 +17350,12 @@ Prefab:
     - target: {fileID: 224300734673467358, guid: 848f6caee0b1db5498fec0740d292c6e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 241.41815
+      value: 241.41797
       objectReference: {fileID: 0}
     - target: {fileID: 224300734673467358, guid: 848f6caee0b1db5498fec0740d292c6e,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -77.38718
+      value: -77.38721
       objectReference: {fileID: 0}
     - target: {fileID: 224300734673467358, guid: 848f6caee0b1db5498fec0740d292c6e,
         type: 2}
@@ -18094,7 +18094,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1228834528}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
@@ -18105,7 +18105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.000000059604645, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1228834530
@@ -18151,7 +18151,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -21402,10 +21402,10 @@ RectTransform:
   m_Father: {fileID: 1994464768}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.3000488, y: -12.925049}
-  m_SizeDelta: {x: -113.4, y: -185.3}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1806.6, y: 894.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461819496
 MonoBehaviour:
@@ -24651,7 +24651,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
