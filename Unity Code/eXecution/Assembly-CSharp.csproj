@@ -124,6 +124,15 @@
     <Compile Include="Assets\LoadingSceneAssets\Scripts\LoadingScreenScript.cs" />
     <Compile Include="Assets\LoginScript.cs" />
     <Compile Include="Assets\mouseDetect.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Demo\DemoScript.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Demo\DemoScriptEditor.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireBaseScript.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireLightScript.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
+    <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\CameraTarget.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\EffectController.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\EffectDemo.cs" />
@@ -136,11 +145,14 @@
     <None Include="Assets\Firebase\Plugins\link.xml" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Readme.txt" />
     <None Include="Assets\ArFightSceneAssets\Extra assets\3D Items - Wand Pack\Read Me.txt" />
+    <None Include="Assets\sample.txt" />
     <None Include="Assets\Almgp_particle_vol_1\shaders\emmision_particle.shader" />
+    <None Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
     <None Include="Assets\Almgp_particle_vol_1\shaders\multypower_particle.shader" />
     <None Include="Assets\Almgp_particle_vol_1\README.txt" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\effect_distortion_mask.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddSoftEffect.shader" />
+    <None Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Readme.txt" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Blended Premmultiply.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticlePremultiplyBlend.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\READ ME.txt" />
@@ -350,15 +362,9 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-<<<<<<< HEAD
-=======
-    <Reference Include="Vuforia.UnityExtensions">
-      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Newtonsoft.Json.dll</HintPath>
     </Reference>
->>>>>>> 832f74b4df7d36b3def913b1c3218dd0c3927d5a
     <Reference Include="Firebase.App">
       <HintPath>C:/Users/samko/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
     </Reference>
@@ -390,11 +396,7 @@
       <HintPath>C:/Users/samko/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-<<<<<<< HEAD
       <HintPath>C:/Users/samko/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-=======
-      <HintPath>C:/Users/avish/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
->>>>>>> 832f74b4df7d36b3def913b1c3218dd0c3927d5a
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
