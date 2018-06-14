@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/LoginScene.unity
+=======
+- path: Assets/ProjectileTestSceneAssets/Testing/material/PyroParticles/Demo/DemoScene.unity
+>>>>>>> 1b57141e48418e4adf69b81bd361c7c6f47c5487
   isLoaded: 1
   isActive: 1
