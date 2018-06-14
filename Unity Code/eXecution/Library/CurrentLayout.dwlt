@@ -37,15 +37,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 423
-    width: 820
-    height: 212
-=======
-    y: 414
+    y: 424
     width: 818
-    height: 221
->>>>>>> parent of d802fad... code v1.59
+    height: 211
   m_MinSize: {x: 104, y: 121}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 20}
@@ -69,18 +63,14 @@ MonoBehaviour:
   - {fileID: 2}
   m_Position:
     serializedVersion: 2
-    x: 269
+    x: 268
     y: 0
-    width: 820
+    width: 818
     height: 635
   m_MinSize: {x: 204, y: 342}
   m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
-<<<<<<< HEAD
-  controlID: 131
-=======
-  controlID: 11
->>>>>>> parent of d802fad... code v1.59
+  controlID: 99
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -97,7 +87,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 285
-    width: 269
+    width: 268
     height: 350
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -124,16 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 269
+    width: 268
     height: 635
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-<<<<<<< HEAD
-  controlID: 11
-=======
-  controlID: 136
->>>>>>> parent of d802fad... code v1.59
+  controlID: 41
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,11 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-<<<<<<< HEAD
-  controlID: 129
-=======
-  controlID: 104
->>>>>>> parent of d802fad... code v1.59
+  controlID: 39
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,12 +158,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1089
+    x: 1086
     y: 0
-    width: 277
+    width: 280
     height: 635
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -203,10 +185,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 269
+    width: 268
     height: 285
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -294,16 +276,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1089
+    width: 1086
     height: 635
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 0
-<<<<<<< HEAD
-  controlID: 130
-=======
-  controlID: 135
->>>>>>> parent of d802fad... code v1.59
+  controlID: 40
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -320,10 +298,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 820
-    height: 423
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+    width: 818
+    height: 424
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
@@ -378,7 +356,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 377
-    width: 267
+    width: 266
     height: 329
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -404,15 +382,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-    m_SelectedIDs: 64310000
-    m_LastClickedID: 12644
-    m_ExpandedIDs: 0000000040070000a8070000be2c0000e62d00002e2e0000702f0000ae2f000028300000b230000096320000a6330000de330000803500004a3600006e360000ca36000072370000883700003239000052390000f03a00009e3b0000303c0000ec3d0000f23d00005e3e0000d63e0000e2400000e4400000e6400000e8400000ea400000ec400000ee400000f0400000f2400000f4400000f6400000f8400000fa400000fc400000fe40000000410000024100000441000006410000084100000a4100000c4100000e41000010410000124100001441000016410000184100001a4100001c4100001e41000020410000224100002441000026410000284100002a4100002c4100002e41000030410000324100003441000036410000384100003a4100003c4100003e41000040410000424100004441000046410000484100004a4100004c4100004e41000050410000524100005441000056410000584100005a4100005c4100005e41000060410000624100006441000066410000684100006a4100006c4100006e41000070410000724100007441000076410000784100007a4100007c4100007e410000804100008241000084410000
-=======
-    m_SelectedIDs: c4320000
-    m_LastClickedID: 12996
-    m_ExpandedIDs: 00000000fc380000523900008e4d0000b04d00005e53000092540000d0550000f25600001e57000060570000ce5700005e590000165a00004a5a0000ce5b0000705c00008c5c0000e05c00006a5d00007e5d0000ec5e0000085f00005e600000fc6000008c610000066300005a6300006a630000026e0000046e0000066e0000086e00000a6e00000c6e00000e6e0000106e0000126e0000146e0000166e0000186e00001a6e00001c6e00001e6e0000206e0000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e00003c6e00003e6e0000406e0000426e0000446e0000466e0000486e00004a6e00004c6e00004e6e0000506e0000526e0000546e0000566e0000586e00005a6e00005c6e00005e6e0000606e0000626e0000646e0000666e0000686e00006a6e00006c6e00006e6e0000706e0000726e0000746e0000766e0000786e00007a6e00007c6e00007e6e0000806e0000826e0000846e0000866e0000886e00008a6e00008c6e00008e6e0000906e0000926e0000946e0000966e0000986e00009a6e00009c6e00009e6e0000a06e0000a26e0000a46e0000
->>>>>>> parent of d802fad... code v1.59
+    m_SelectedIDs: c42c0000
+    m_LastClickedID: 11460
+    m_ExpandedIDs: 0000000040070000a8070000be2c0000e62d00002e2e0000702f0000ae2f000028300000b230000096320000a8330000e0330000843500004e36000072360000ce360000763700008c3700003639000056390000f43a0000a23b0000343c0000f03d0000f63d0000623e0000da3e0000da520000dc520000de520000e0520000e2520000e4520000e6520000e8520000ea520000ec520000ee520000f0520000f2520000f4520000f6520000f8520000fa520000fc520000fe52000000530000025300000453000006530000085300000a5300000c5300000e53000010530000125300001453000016530000185300001a5300001c5300001e53000020530000225300002453000026530000285300002a5300002c5300002e53000030530000325300003453000036530000385300003a5300003c5300003e53000040530000425300004453000046530000485300004a5300004c5300004e53000050530000525300005453000056530000585300005a5300005c5300005e53000060530000625300006453000066530000685300006a5300006c5300006e53000070530000725300007453000076530000785300007a5300007c530000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -437,17 +409,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-<<<<<<< HEAD
     scrollPos: {x: 0, y: 125}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000040070000a8070000be2c0000e62d00002e2e0000702f0000ae2f000028300000b230000096320000a6330000de330000803500004a3600006e360000ca36000072370000883700003239000052390000f03a00009e3b0000303c0000ec3d0000f23d00005e3e0000d63e0000e2400000e4400000e6400000e8400000ea400000ec400000ee400000f0400000f2400000f4400000f6400000f8400000fa400000fc400000fe40000000410000024100000441000006410000084100000a4100000c4100000e41000010410000124100001441000016410000184100001a4100001c4100001e41000020410000224100002441000026410000284100002a4100002c4100002e41000030410000324100003441000036410000384100003a4100003c4100003e41000040410000424100004441000046410000484100004a4100004c4100004e41000050410000524100005441000056410000584100005a4100005c4100005e41000060410000624100006441000066410000684100006a4100006c4100006e41000070410000724100007441000076410000784100007a4100007c4100007e410000804100008241000084410000
-=======
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc380000523900008e4d0000b04d00005e53000092540000d0550000f25600001e57000060570000ce5700005e590000165a00004a5a0000ce5b0000705c00008c5c0000e05c00006a5d00007e5d0000ec5e0000085f00005e600000fc6000008c610000066300005a6300006a630000026e0000046e0000066e0000086e00000a6e00000c6e00000e6e0000106e0000126e0000146e0000166e0000186e00001a6e00001c6e00001e6e0000206e0000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e00003c6e00003e6e0000406e0000426e0000446e0000466e0000486e00004a6e00004c6e00004e6e0000506e0000526e0000546e0000566e0000586e00005a6e00005c6e00005e6e0000606e0000626e0000646e0000666e0000686e00006a6e00006c6e00006e6e0000706e0000726e0000746e0000766e0000786e00007a6e00007c6e00007e6e0000806e0000826e0000846e0000866e0000886e00008a6e00008c6e00008e6e0000906e0000926e0000946e0000966e0000986e00009a6e00009c6e00009e6e0000a06e0000a26e0000a46e0000
->>>>>>> parent of d802fad... code v1.59
+    m_ExpandedIDs: 0000000040070000a8070000be2c0000e62d00002e2e0000702f0000ae2f000028300000b230000096320000a8330000e0330000843500004e36000072360000ce360000763700008c3700003639000056390000f43a0000a23b0000343c0000f03d0000f63d0000623e0000da3e0000da520000dc520000de520000e0520000e2520000e4520000e6520000e8520000ea520000ec520000ee520000f0520000f2520000f4520000f6520000f8520000fa520000fc520000fe52000000530000025300000453000006530000085300000a5300000c5300000e53000010530000125300001453000016530000185300001a5300001c5300001e53000020530000225300002453000026530000285300002a5300002c5300002e53000030530000325300003453000036530000385300003a5300003c5300003e53000040530000425300004453000046530000485300004a5300004c5300004e53000050530000525300005453000056530000585300005a5300005c5300005e53000060530000625300006453000066530000685300006a5300006c5300006e53000070530000725300007453000076530000785300007a5300007c530000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -463,7 +428,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 4}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -522,9 +487,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1091
+    x: 1088
     y: 92
-    width: 275
+    width: 278
     height: 614
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -558,40 +523,33 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 267
+    width: 266
     height: 264
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: c22c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 4efbffff00000000
-=======
-    scrollPos: {x: 0, y: 81}
-    m_SelectedIDs: e8fc0000
-    m_LastClickedID: 64744
-    m_ExpandedIDs: 36fffeffd2fffeff5800ffff6c04ffff7404ffff7c04ffff8004ffff8804ffff720fffff7a0fffff820fffff860fffff8e0fffffbc96ffff00000000666700007c6b0000b4b9000070c40000aa020100ac0b0100320d0100660d010060110100
->>>>>>> parent of d802fad... code v1.59
+    m_ExpandedIDs: 00e7ffff10e8ffff4efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SlidePrefab(Clone)
-      m_OriginalName: SlidePrefab(Clone)
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -89288
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
   m_ExpandedScenes:
-  - CastleScene
+  - LoadingScene
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -616,30 +574,20 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 271
+    x: 270
     y: 92
-    width: 816
-    height: 402
+    width: 814
+    height: 403
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-<<<<<<< HEAD
   lastFramingTime: 0
-=======
-  lastFramingTime: 824.8404364644073
->>>>>>> parent of d802fad... code v1.59
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-    m_Target: {x: 2.9628592, y: 2.7191777, z: -0.093322195}
+    m_Target: {x: 1.534529, y: 0.20115645, z: -0.0771271}
     speed: 2
-    m_Value: {x: 2.9628592, y: 2.7191777, z: -0.093322195}
-=======
-    m_Target: {x: 1120.0356, y: 490.22302, z: 12.258949}
-    speed: 2
-    m_Value: {x: 1120.0356, y: 490.22302, z: 12.258949}
->>>>>>> parent of d802fad... code v1.59
+    m_Value: {x: 1.534529, y: 0.20115645, z: -0.0771271}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -671,15 +619,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
-    m_Target: 19.352823
+    m_Target: 17.72196
     speed: 2
-    m_Value: 19.352823
-=======
-    m_Target: 1662.6798
-    speed: 2
-    m_Value: 1662.6798
->>>>>>> parent of d802fad... code v1.59
+    m_Value: 17.72196
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -711,10 +653,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 271
+    x: 270
     y: 92
-    width: 816
-    height: 402
+    width: 814
+    height: 403
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -734,7 +676,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 1
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
@@ -744,29 +686,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 816
-      height: 385
-    m_Scale: {x: 0.5258748, y: 0.5258748}
-    m_Translation: {x: 408, y: 199.9645}
+      width: 814
+      height: 386
+    m_Scale: {x: 0.4825, y: 0.4825}
+    m_Translation: {x: 407, y: 193}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -775.8501
-      y: -380.25116
-      width: 1551.7002
-      height: 732.1134
+      x: -843.5233
+      y: -400
+      width: 1687.0466
+      height: 800
     m_MinimalGUI: 1
-<<<<<<< HEAD
-  m_defaultScale: 0.48125
-=======
   m_defaultScale: 1
->>>>>>> parent of d802fad... code v1.59
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 816, y: 402}
+  m_LastWindowPixelSize: {x: 814, y: 403}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -790,8 +728,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 271
-    y: 515
-    width: 816
-    height: 191
+    x: 270
+    y: 516
+    width: 814
+    height: 190
   m_PersistentViewDataDictionary: {fileID: 0}
