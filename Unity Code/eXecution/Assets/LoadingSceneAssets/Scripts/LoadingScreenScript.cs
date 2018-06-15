@@ -54,8 +54,11 @@ public class LoadingScreenScript : MonoBehaviour {
             {
                 asyncLoad = SceneManager.LoadSceneAsync("LoginScene");
             }
-            asyncLoad = SceneManager.LoadSceneAsync("CastleScene");
-            file.Close();
+            else
+            {
+                asyncLoad = SceneManager.LoadSceneAsync("CastleScene");
+                file.Close();
+            }
 
         }
         // print("Before waiting");
