@@ -121,6 +121,7 @@
     <Compile Include="Assets\CitySceneAssets\scripts\UiCanvasScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\UpgradeMenuScript.cs" />
     <Compile Include="Assets\dbinitscript.cs" />
+    <Compile Include="Assets\GoogleMapScript.cs" />
     <Compile Include="Assets\LoadingSceneAssets\Scripts\LoadingScreenScript.cs" />
     <Compile Include="Assets\LoginScript.cs" />
     <Compile Include="Assets\mouseDetect.cs" />
