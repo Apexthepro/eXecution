@@ -35,7 +35,7 @@ public class UiCanvasScript : MonoBehaviour {
         backbutton.gameObject.SetActive(false);
 
         //UpgardeMenuStartScript
-        if (Menu.name == "UpgradeMenu")
+        if (Menu.name == "UpgradeMenu" || Menu.name == "DetailsMenu")
         {
             // print("BuildingsGlobalScript.currentBuilding.transform.position" + TestBuilding.transform.position);
             PreviousCameraPosition = MainCamera.transform.position;
@@ -63,7 +63,7 @@ public class UiCanvasScript : MonoBehaviour {
             activePanels[currentPanel].SetActive(false);
             currentPanel = 0;
         }
-        if (activeMenus.name == "UpgradeMenu")
+        if (activeMenus.name == "UpgradeMenu" || activeMenus.name == "DetailsMenu")
         {
             MainCamera.transform.position = PreviousCameraPosition;
             MainCamera.orthographicSize = PreviousOrthographicSize;
