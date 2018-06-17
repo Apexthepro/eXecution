@@ -113,6 +113,9 @@
     <Compile Include="Assets\CitySceneAssets\scripts\Forge\Item.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\IconInfoScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\InventoryScript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\LeftPanelChildScript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\MailScript.cs" />
+    <Compile Include="Assets\CitySceneAssets\scripts\MessagePrefabScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\Pinch2Zoom.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\SettingsMenuScript.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\slideMoveScript.cs" />
@@ -124,7 +127,6 @@
     <Compile Include="Assets\GoogleMapScript.cs" />
     <Compile Include="Assets\LoadingSceneAssets\Scripts\LoadingScreenScript.cs" />
     <Compile Include="Assets\LoginScript.cs" />
-    <Compile Include="Assets\MessageClickedScript.cs" />
     <Compile Include="Assets\mouseDetect.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireBaseScript.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
