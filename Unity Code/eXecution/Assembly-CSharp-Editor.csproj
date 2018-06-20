@@ -51,17 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Editor\FingersScriptEditor.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\Hunger Thirst\HungerThirstEditor.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\Hunger Thirst\Setting Drawers\HungerSettingDrawer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\Hunger Thirst\Setting Drawers\SettingDrawer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\Hunger Thirst\Setting Drawers\ThirstSettingDrawer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\Hunger Thirst\Setting Properties\HungerSettingProperty.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\Hunger Thirst\Setting Properties\SettingProperty.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\Hunger Thirst\Setting Properties\ThirstSettingProperty.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\SettingsCreator.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\SettingsEditor.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Editor\Utilities\EditorGUILayoutUtilities.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Editor\PyroParticlesEditor.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Editor\EffectControllerInspector.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Editor\EffectToolBar.cs" />

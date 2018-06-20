@@ -52,33 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Almgp_particle_vol_1\script\sprite_sheet.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Demo\DemoAsteroidScript.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Demo\DemoScript.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\FingersScript.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\DeviceInfo.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\GestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\LongPressGestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\OneTouchRotateGestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\OneTouchScaleGestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\PanGestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\RotateGestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\ScaleGestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\SwipeGestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Script\Gestures\TapGestureRecognizer.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\GameRuntime.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\HungerThirstUI.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\Movement\SimpleFPCamera.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\Movement\SimpleMovement.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\Pickup\Interacter.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\Pickup\IPickable.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\Pickup\Items\DrinkItem.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\Pickup\Items\FoodItem.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Example\Simple Survival\Scripts\PlayerHealth.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\HungerThirst.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Settings\HungerSettings.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Settings\SharedSettings.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Scripts\Settings\ThirstSettings.cs" />
-     <Compile Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\ArFightSceneAssets\Extra assets\Virtual Joystick Pack\Example\PlayerExample.cs" />
      <Compile Include="Assets\ArFightSceneAssets\Extra assets\Virtual Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\ArFightSceneAssets\Extra assets\Virtual Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
@@ -136,11 +109,7 @@
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\RenderEffect.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Script\TransformExtension.cs" />
      <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
-     <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
-     <None Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\ChangeLog.txt" />
      <None Include="Assets\Firebase\Plugins\link.xml" />
-     <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Readme.txt" />
-     <None Include="Assets\ArFightSceneAssets\Extra assets\3D Items - Wand Pack\Read Me.txt" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\emmision_particle.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\multypower_particle.shader" />
@@ -153,11 +122,8 @@
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticlePremultiplyBlend.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\READ ME.txt" />
      <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
-     <None Include="Assets\ArFightSceneAssets\Extra assets\Hunger &amp; Thirst System\Online Documentation.txt" />
-     <None Include="Assets\ArFightSceneAssets\Extra assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\mesh_dissolve_particel.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddEffect.shader" />
-     <None Include="Assets\ArFightSceneAssets\Extra assets\FingersLite\Readme.txt" />
      <None Include="Assets\Firebase\Plugins\Http\link.xml" />
      <None Include="Assets\Almgp_particle_vol_1\shaders\face_power_particle.shader" />
      <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Additive.shader" />
