@@ -7,17 +7,18 @@ public class GoogleMapScript : MonoBehaviour
 
     string url = ""; //will hold the completed  url request we make to the google maps api
 
-    public float lat = 24.917828f; //Insert your desired latitude
-    public float lon = 67.097096f; //Insert your desired longitude
-    public int zoom = 14;
-    public int mapWidth = 640;
-    public int mapHeight = 640;
+    public float lat = 0f; //Insert your desired latitude
+    public float lon = 0f; //Insert your desired longitude
+    public int zoom = 1;
+    public int mapWidth = 1920;
+    public int mapHeight = 1080;
     public MapUtils MapUtils;
     public enum mapType { roadmap, satellite, hybrid, terrain }; //choose map type to display
     public mapType mapSelected;
     public int scale;
     public int R = 6371;//Radius of earth
-
+    public Image sampleImage;
+    public float x,y,z;
     //Vector2 uv = new Vector2((float)myMarker.pixelCoords.x / (float)renderer.material.mainTexture.width, 1f - (float)myMarker.pixelCoords.y / (float)renderer.material.mainTexture.height);
     Vector2 uv;
 
@@ -27,12 +28,12 @@ public class GoogleMapScript : MonoBehaviour
 
 
     IEnumerator GetGoogleMap(float lat, float lon)
-    {/*
+    {
         url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
-            "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale
+            "&zoom=" + zoom + "&size=" + 1920 + "x" + 1080 + "&scale=" + scale
             + "&maptype=" + mapSelected +
-            "&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";*/
-        url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSW&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
+            "&markers=color:blue%7Clabel:S%7C1,0&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
+        //url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSW&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
        // url = "https://maps.googleapis.com/maps/api/staticmap?size=512x512&zoom=15&center=Brooklyn&style=feature:road.local%7Celement:geometry%7Ccolor:0x00ff00&style=feature:landscape%7Celement:geometry.fill%7Ccolor:0x000000&style=element:labels%7Cinvert_lightness:true&style=feature:road.arterial%7Celement:labels%7Cinvert_lightness:false&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
 
 
@@ -49,7 +50,15 @@ public class GoogleMapScript : MonoBehaviour
         mapCoroutine = GetGoogleMap(lat, lon);
         StartCoroutine(mapCoroutine);
         uv = new Vector2((float)608 / (float)MapUtils.LonToX(lon), 1f - (float)350 / (float)MapUtils.LatToY(lat));
+        print("Lat = " + lat + "lon = " + lon);
+        
+        x = ((float)(R * Math.Cos(lat) * Math.Cos(lon))/ 6.636458333333333f);
 
+        y = ((float)(R * Math.Cos(lat) * Math.Sin(lon)) / 11.79814814814815f);
+        print("x =" +x);
+        print("y =" +y);
+      //  print("z =" + R * Math.Sin(lat));
+        sampleImage.transform.position = new Vector3(x,y,0);
 
     }
 
@@ -59,19 +68,14 @@ public class GoogleMapScript : MonoBehaviour
         // print("UvTo3D" + UvTo3D(uv));
         //print("MapUtils lon to x" + MapUtils.LonToX(lon));
         //print("MapUtils lat to y" + MapUtils.LatToY(lat));
-        lat = 1;
-        lon = 0;
-        print("Lat = "+ lat +"lon = "+lon);
-        print("x ="+ R * Math.Cos(lat) * Math.Cos(lon));
-        print("y =" + R * Math.Cos(lat) * Math.Sin(lon));
-        print("z =" + R * Math.Sin(lat));
+
+        
      //   print("long =" + R * Math.Cos(lat) * Math.Cos(lon));
    //     print("lat =" + R * Math.Cos(lat) * Math.Cos(lon));
 
         if (Input.GetKeyDown(KeyCode.M))
         { //Example of how to update the map with a new set of coordinates
-            lat = 40.6786806f;
-            lon = -073.8644250f;
+
             mapCoroutine = GetGoogleMap(lat, lon); //redefine the coroutine with the new map coordinates (might be a better way to do this...let me know!)
             StartCoroutine(mapCoroutine); //restart the coroutine
         }
