@@ -494,8 +494,6 @@ GameObject:
   - component: {fileID: 53632312}
   - component: {fileID: 53632311}
   - component: {fileID: 53632310}
-  - component: {fileID: 53632313}
-  - component: {fileID: 53632314}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -535,6 +533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   lat: 2
   lon: 2
   zoom: 1
@@ -562,14 +561,20 @@ MonoBehaviour:
 =======
   lat: 90
   lon: 180
+=======
+  lat: 40.71435
+  lon: -74.005974
+>>>>>>> parent of a149c178... code v1.67
   zoom: 20
   mapWidth: 640
   mapHeight: 640
-  MapUtils: {fileID: 53632313}
   mapSelected: 0
   scale: 0
+<<<<<<< HEAD
   customIcon: {fileID: 21300000, guid: 9e2dc28492c4b454186d1bbdff766143, type: 3}
 >>>>>>> parent of 5bcbd46a... code v1.68
+=======
+>>>>>>> parent of a149c178... code v1.67
 --- !u!114 &53632311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,24 +607,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53632308}
---- !u!114 &53632313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53632308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc0422efde6f29744913f280f4919542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!33 &53632314
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53632308}
-  m_Mesh: {fileID: 0}
 --- !u!1 &103349802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1519,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 631249174}
+<<<<<<< HEAD
 --- !u!1 &740905800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,6 +1596,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 740905800}
+=======
+>>>>>>> parent of a149c178... code v1.67
 --- !u!1 &769192055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,9 +1957,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -1979,6 +1970,9 @@ MonoBehaviour:
 =======
   m_ReferenceResolution: {x: 1280, y: 720}
 >>>>>>> parent of 5bcbd46a... code v1.68
+=======
+  m_ReferenceResolution: {x: 800, y: 600}
+>>>>>>> parent of a149c178... code v1.67
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

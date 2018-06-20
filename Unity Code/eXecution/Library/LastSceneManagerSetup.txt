@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/ProjectileTestScene.unity
+=======
+- path: Assets/Scenes/CastleScene.unity
+>>>>>>> parent of a149c178... code v1.67
   isLoaded: 1
   isActive: 1
