@@ -32,13 +32,9 @@ public class GoogleMapScript : MonoBehaviour
         url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
             "&zoom=" + zoom + "&size=" + 1920 + "x" + 1080 + "&scale=" + scale
             + "&maptype=" + mapSelected +
-<<<<<<< HEAD
             "&markers=color:blue%7Clabel:S%7C1,0&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
         //url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSW&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
-=======
-            "&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
        // url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSWAIz&key=aSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
->>>>>>> 36cdbd5a57162d5e0e21f0861286b9f11114ac25
        // url = "https://maps.googleapis.com/maps/api/staticmap?size=512x512&zoom=15&center=Brooklyn&style=feature:road.local%7Celement:geometry%7Ccolor:0x00ff00&style=feature:landscape%7Celement:geometry.fill%7Ccolor:0x000000&style=element:labels%7Cinvert_lightness:true&style=feature:road.arterial%7Celement:labels%7Cinvert_lightness:false&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
 
 
@@ -73,17 +69,15 @@ public class GoogleMapScript : MonoBehaviour
         // print("UvTo3D" + UvTo3D(uv));
         //print("MapUtils lon to x" + MapUtils.LonToX(lon));
         //print("MapUtils lat to y" + MapUtils.LatToY(lat));
-<<<<<<< HEAD
 
         
-=======
+
         //lat = 1;
         //lon = 2;
         print("Lat = "+ lat +"lon = "+lon);
         print("x ="+ R * Math.Cos(lat) * Math.Cos(lon));
         print("y =" + R * Math.Cos(lat) * Math.Sin(lon));
         print("z =" + R * Math.Sin(lat));
->>>>>>> 36cdbd5a57162d5e0e21f0861286b9f11114ac25
      //   print("long =" + R * Math.Cos(lat) * Math.Cos(lon));
    //     print("lat =" + R * Math.Cos(lat) * Math.Cos(lon));
 
