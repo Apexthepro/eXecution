@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Mapbox/Examples/0_PrefabScenes/CitySimulator.unity
+=======
+- path: Assets/Scenes/ArMap.unity
+>>>>>>> parent of 5bcbd46a... code v1.68
   isLoaded: 1
   isActive: 1
