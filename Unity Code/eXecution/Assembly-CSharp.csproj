@@ -94,6 +94,7 @@
      <Compile Include="Assets\GoogleMapScript.cs" />
      <Compile Include="Assets\LoadingSceneAssets\Scripts\LoadingScreenScript.cs" />
      <Compile Include="Assets\LoginScript.cs" />
+     <Compile Include="Assets\MapUtils.cs" />
      <Compile Include="Assets\mouseDetect.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireBaseScript.cs" />
      <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
