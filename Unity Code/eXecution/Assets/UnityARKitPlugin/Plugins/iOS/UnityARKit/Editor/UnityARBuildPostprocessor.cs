@@ -23,7 +23,7 @@ public class UnityARBuildPostprocessor
 
 	private static UnityARKitPluginSettings LoadSettings()
 	{
-		UnityARKitPluginSettings loadedSettings = Resources.Load<UnityARKitPluginSettings> ("UnityARKitPlugin/ARKitSettings");
+		UnityARKitPluginSettings loadedSettings = UnityEngine.Resources.Load<UnityARKitPluginSettings> ("UnityARKitPlugin/ARKitSettings");
 		if (loadedSettings == null) {
 			loadedSettings = ScriptableObject.CreateInstance<UnityARKitPluginSettings> ();
 		}

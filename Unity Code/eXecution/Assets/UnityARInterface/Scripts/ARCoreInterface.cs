@@ -344,7 +344,7 @@ namespace UnityARInterface
             {
                 camera.gameObject.SetActive(false);
                 backgroundRenderer = camera.gameObject.AddComponent<ARCoreBackgroundRenderer>();
-                backgroundRenderer.BackgroundMaterial = Resources.Load("Materials/ARBackground", typeof(Material)) as Material;
+                backgroundRenderer.BackgroundMaterial = UnityEngine.Resources.Load("Materials/ARBackground", typeof(Material)) as Material;
                 camera.gameObject.SetActive(true);
             }
         }

@@ -104,7 +104,7 @@ namespace UnityARInterface
                     TextureFormat.RG16, false, true);
             }
 
-            Material YUVMaterial = Resources.Load("YUVMaterial", typeof(Material)) as Material;
+            Material YUVMaterial = UnityEngine.Resources.Load("YUVMaterial", typeof(Material)) as Material;
             YUVMaterial.SetMatrix("_DisplayTransform", GetDisplayTransform());
             YUVMaterial.SetTexture("_textureY", m_RemoteScreenYTexture);
             YUVMaterial.SetTexture("_textureCbCr", m_RemoteScreenUVTexture);

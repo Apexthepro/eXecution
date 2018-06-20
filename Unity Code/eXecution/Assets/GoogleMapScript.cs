@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class GoogleMapScript : MonoBehaviour
 {
@@ -15,9 +16,9 @@ public class GoogleMapScript : MonoBehaviour
     public enum mapType { roadmap, satellite, hybrid, terrain }; //choose map type to display
     public mapType mapSelected;
     public int scale;
-
+    public int R = 6371;
     private bool loadingMap = false; //keeps track of whether we're waiting for a texture to load in case we want to display some sort of loading message while user waits for the map to load
-
+    public Sprite customIcon;
     private IEnumerator mapCoroutine;
 
 
@@ -26,18 +27,13 @@ public class GoogleMapScript : MonoBehaviour
         url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
             "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale
             + "&maptype=" + mapSelected +
-<<<<<<< HEAD
             "&markers=color:blue%7Clabel:S%7C1,0&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
         //url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSW&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
        // url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSWAIz&key=aSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
-            "&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";*/
         url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSW&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
        // url = "https://maps.googleapis.com/maps/api/staticmap?size=512x512&zoom=15&center=Brooklyn&style=feature:road.local%7Celement:geometry%7Ccolor:0x00ff00&style=feature:landscape%7Celement:geometry.fill%7Ccolor:0x000000&style=element:labels%7Cinvert_lightness:true&style=feature:road.arterial%7Celement:labels%7Cinvert_lightness:false&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
 
 
-=======
-            "&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
->>>>>>> parent of a149c178... code v1.67
         loadingMap = true;
         WWW www = new WWW(url); //make the new request
         yield return www; //happens once we receive a response from the google maps api
@@ -54,7 +50,6 @@ public class GoogleMapScript : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
         //  print("uv" + uv);
         // print("UvTo3D" + UvTo3D(uv));
         //print("MapUtils lon to x" + MapUtils.LonToX(lon));
@@ -72,8 +67,7 @@ public class GoogleMapScript : MonoBehaviour
         print("z =" + R * Math.Sin(lat));
      //   print("long =" + R * Math.Cos(lat) * Math.Cos(lon));
    //     print("lat =" + R * Math.Cos(lat) * Math.Cos(lon));
-=======
->>>>>>> parent of a149c178... code v1.67
+
 
         if (Input.GetKeyDown(KeyCode.M))
         { //Example of how to update the map with a new set of coordinates

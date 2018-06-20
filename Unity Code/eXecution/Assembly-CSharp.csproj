@@ -181,7 +181,6 @@
     <Compile Include="Assets\GoogleMapScript.cs" />
     <Compile Include="Assets\LoadingSceneAssets\Scripts\LoadingScreenScript.cs" />
     <Compile Include="Assets\LoginScript.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\Mapbox\Core\cheap-ruler-cs\CheapRuler.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\DirectionResource.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Directions.cs" />
@@ -525,9 +524,6 @@
     <Compile Include="Assets\MapboxAR\Unity\Ar\SimpleAutomaticSynchronizationContextBehaviour.cs" />
     <Compile Include="Assets\MapboxAR\Unity\Ar\SnapAlignmentStrategy.cs" />
     <Compile Include="Assets\MapboxAR\Unity\Ar\Utilities\PlotRoute.cs" />
-    <Compile Include="Assets\MapUtils.cs" />
-=======
->>>>>>> parent of a149c178... code v1.67
     <Compile Include="Assets\mouseDetect.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireBaseScript.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
@@ -635,6 +631,7 @@
     <None Include="Assets\Mapbox\Shaders\MapboxStyles.shader" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddSoftEffect.shader" />
     <None Include="Assets\UnityARKitPlugin\ARKitRemote\ARKITREMOTE.txt" />
+    <None Include="Assets\Resources\Mapbox\MapboxConfiguration.txt" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Readme.txt" />
     <None Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Blended Premmultiply.shader" />
     <None Include="Assets\photon-chat-readme.txt" />
@@ -876,6 +873,12 @@
     <Reference Include="Google.Sharpen">
       <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
     </Reference>
+    <Reference Include="Mapbox.IO.Compression">
+      <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.Json">
+      <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.Json/Net35/Mapbox.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Compat">
       <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
     </Reference>
@@ -893,12 +896,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/avish/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Mapbox.IO.Compression">
-      <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
-    </Reference>
-    <Reference Include="Mapbox.Json">
-      <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.Json/Net35/Mapbox.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

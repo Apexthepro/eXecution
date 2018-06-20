@@ -285,7 +285,7 @@ namespace UnityARInterface
         public override void SetupCamera(Camera camera)
         {
             m_Camera = camera;
-            m_ClearMaterial = Resources.Load("YUVMaterial", typeof(Material)) as Material;
+            m_ClearMaterial = UnityEngine.Resources.Load("YUVMaterial", typeof(Material)) as Material;
 
             m_BackgroundRenderer = new ARBackgroundRenderer();
             m_BackgroundRenderer.backgroundMaterial = m_ClearMaterial;
