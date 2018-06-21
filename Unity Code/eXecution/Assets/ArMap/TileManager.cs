@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
-
+using Firebase;
+using Firebase.Database;
+using Firebase.Unity.Editor;
 public class TileManager : MonoBehaviour
 {
+    DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+    public dbinitscript dbinitscript;
+    public string currentUserId;
     [SerializeField]
     private Settings _settings;
 
@@ -34,9 +39,12 @@ public class TileManager : MonoBehaviour
             return lon;
         }
     }
-
+    
     IEnumerator Start()
     {
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        currentUserId = dbinitscript.userid;
         while (!Input.location.isEnabledByUser)
         {
             print("Activate gps");
@@ -71,7 +79,7 @@ public class TileManager : MonoBehaviour
         lat = Input.location.lastData.latitude;
         lon = Input.location.lastData.longitude;
 
-        StartCoroutine(loadTiles(_settings.zoom));
+        StartCoroutine(loadTiles(_settings.zoom));//calling gps for the first time
 
         while (Input.location.isEnabledByUser)
         {
@@ -85,14 +93,15 @@ public class TileManager : MonoBehaviour
 
     public IEnumerator loadTiles(int zoom)
     {
-        int size = _settings.size;
+        int width = _settings.width;
+        int height = _settings.height;
         string key = _settings.key;
         string style = _settings.style;
 
         lat = Input.location.lastData.latitude;
         lon = Input.location.lastData.longitude;
 
-        string url = String.Format("https://api.mapbox.com/v4/mapbox.{5}/{0},{1},{2}/{3}x{3}@2x.png?access_token={4}", lon, lat, zoom, size, key, style);
+        string url = String.Format("https://api.mapbox.com/v4/mapbox.{6}/{0},{1},{2}/{3}x{4}@2x.png?access_token={5}", lon, lat, zoom, width,height, key, style);
 
         WWW www = new WWW(url);
         yield return www;
@@ -149,12 +158,21 @@ public class TileManager : MonoBehaviour
 
         oldLat = lat;
         oldLon = lon;
-
+       
         while (oldLat == lat && oldLon == lon)
         {
             lat = Input.location.lastData.latitude;
             lon = Input.location.lastData.longitude;
-            yield return new WaitForSeconds(0.5f);
+
+            //store lat lon
+            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lat").SetValueAsync(lat);
+            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lon").SetValueAsync(lon);
+            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("altitude").SetValueAsync(Input.location.lastData.altitude);
+            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("horizontalAccuracy").SetValueAsync(Input.location.lastData.horizontalAccuracy);
+            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("timestamp").SetValueAsync(Input.location.lastData.timestamp);
+            //print("Location: lat:" + lat + " lon: " + lon+ " altitude: " + Input.location.lastData.altitude + " horizontalAccuracy: " + Input.location.lastData.horizontalAccuracy + " timestamps: " + Input.location.lastData.timestamp);
+
+            yield return new WaitForSeconds(1f);//wait time befoe next location check
         }
 
         yield return new WaitUntil(() => (oldLat != lat || oldLon != lon));
@@ -269,7 +287,9 @@ public class TileManager : MonoBehaviour
         [SerializeField]
         public int zoom = 18;
         [SerializeField]
-        public int size = 640;
+        public int width = 1920;
+        [SerializeField]
+        public int height = 1080;
         [SerializeField]
         public float scale = 1f;
         [SerializeField]
