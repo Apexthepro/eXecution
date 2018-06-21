@@ -787,6 +787,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     zoom: 20
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1280
     height: 1280
 =======
@@ -794,6 +795,10 @@ MonoBehaviour:
     width: 1000
     height: 1000
 >>>>>>> f2c0d054ae250635c190bb5f288057e60c55feaa
+=======
+    width: 1000
+    height: 1000
+>>>>>>> parent of d233dc76... code v1.74
 =======
     width: 1000
     height: 1000
