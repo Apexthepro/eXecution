@@ -14,11 +14,26 @@ public class TileManager : MonoBehaviour
     private Texture2D texture;
     private GameObject tile;
 
-    [SerializeField]
-    private GameObject service;
 
-    private float oldLat, oldLon;
-    private float lat, lon;
+    private float oldLat = 0f, oldLon = 0f;
+    private float lat = 0f, lon = 0f;
+
+
+    public float getLat
+    {
+        get
+        {
+            return lat;
+        }
+    }
+
+    public float getLon
+    {
+        get
+        {
+            return lon;
+        }
+    }
 
     IEnumerator Start()
     {
@@ -65,6 +80,7 @@ public class TileManager : MonoBehaviour
         }
 
         yield return StartCoroutine(Start());
+        yield break;
     }
 
     public IEnumerator loadTiles(int zoom)
@@ -91,63 +107,73 @@ public class TileManager : MonoBehaviour
             tile.GetComponent<Renderer>().material = _settings.material;
             tile.transform.parent = transform;
         }
-        if (oldLat != 0 && oldLon != 0) {
+
+        if (oldLat != 0 && oldLon != 0)
+        {
             float x, y;
             Vector3 position = Vector3.zero;
-            geodeticOffsetInv(lat *Mathf.Deg2Rad, lon * Mathf.Deg2Rad,oldLat * lat * Mathf.Deg2Rad,oldLon * lat * Mathf.Deg2Rad,out x,out y);
+
+            geodeticOffsetInv(lat * Mathf.Deg2Rad, lon * Mathf.Deg2Rad, oldLat * Mathf.Deg2Rad, oldLon * Mathf.Deg2Rad, out x, out y);
+
             if ((oldLat - lat) < 0 && (oldLon - lon) > 0 || (oldLat - lat) > 0 && (oldLon - lon) < 0)
             {
-                position = new Vector3(x, 0.25f, y);
+                position = new Vector3(x, .5f, y);
+            }
+            else
+            {
+                position = new Vector3(-x, .5f, -y);
+            }
 
-            }
-            else {
-                position = new Vector3(-x, 0.25f, -y);
-            }
             position.x *= 0.300122f;
             position.z *= 0.123043f;
+
             target.position = position;
+
+            /*float[] ll = px (lat, lon, _settings.zoom);
+			float[] oll = px (oldLat, oldLon, _settings.zoom);
+			x = ll [0] - oll [0];
+			y = ll [0] - oll [0];
+
+			float ps = 10 * _settings.scale / _settings.size;
+			x *= ps;
+			y *= ps;
+
+			Debug.Log (x + " / " + y);*/
         }
+
+     //   pokeManager.UpdatePokemonPosition();
+
         tile.GetComponent<Renderer>().material.mainTexture = texture;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         oldLat = lat;
         oldLon = lon;
-        while (oldLat == lat && oldLon == lon) {
+
+        while (oldLat == lat && oldLon == lon)
+        {
             lat = Input.location.lastData.latitude;
             lon = Input.location.lastData.longitude;
-            yield return new WaitForSeconds(1f);//after every second chek for user current position
+            yield return new WaitForSeconds(0.5f);
         }
-        yield return new WaitUntil( () => oldLat != lat || oldLon != lon);
+
+        yield return new WaitUntil(() => (oldLat != lat || oldLon != lon));
+
         yield return StartCoroutine(loadTiles(_settings.zoom));
+        yield break;
     }
 
-    void Update()
-    {
-        service.SetActive(!Input.location.isEnabledByUser);
-        target.position = Vector3.Lerp(target.position, new Vector3(0, 0.25f, 0), 0.2f * Time.deltaTime);
-    }
+    /*float[] px (float lat, float lon, int zoom) {
+		float d = (_settings.size / 2 * Mathf.Pow (2, _settings.zoom));
+		float f = Mathf.Min(Mathf.Max(Mathf.Sin(Mathf.Deg2Rad * lat), -0.9999f), 0.9999f);
+		float x = Mathf.Round(d + lon * (_settings.size / 360 * Mathf.Pow (2, _settings.zoom)));
+		float y = Mathf.Round(d + 0.5f * Mathf.Log((1 + f) / (1 - f)) * (-(_settings.size / (2 * Mathf.PI) * Mathf.Pow (2, _settings.zoom))));
+		float[] result = new float[2];
+		result [0] = x;
+		result [1] = y;
+		return result;
+	}*/
 
-    [Serializable]
-    public class Settings
-    {
-        [SerializeField]
-        public Vector2 centerPosition;
-        [SerializeField]
-        public Material material;
-        [SerializeField]
-        public int zoom = 18;
-        [SerializeField]
-        public int size = 640;
-        [SerializeField]
-        public float scale = 1f;
-        [SerializeField]
-        public int range = 1;
-        [SerializeField]
-        public string key = "KEY_HERE";
-        [SerializeField]
-        public string style = "emerald";
-    }
     //SOURCE: http://stackoverflow.com/questions/4953150/convert-lat-longs-to-x-y-co-ordinates
 
     float GD_semiMajorAxis = 6378137.000000f;
@@ -226,5 +252,31 @@ public class TileManager : MonoBehaviour
         float bearing = Mathf.Atan2(cosU2 * sinLambda, cosU1 * sinU2 - sinU1 * cosU2 * cosLambda);
         xOffset = Mathf.Sin(bearing) * s;
         yOffset = Mathf.Cos(bearing) * s;
+    }
+
+    void Update()
+    {
+        target.position = Vector3.Lerp(target.position, new Vector3(0, .5f, 0), 2.0f * Time.deltaTime);
+    }
+
+    [Serializable]
+    public class Settings
+    {
+        [SerializeField]
+        public Vector2 centerPosition;
+        [SerializeField]
+        public Material material;
+        [SerializeField]
+        public int zoom = 18;
+        [SerializeField]
+        public int size = 640;
+        [SerializeField]
+        public float scale = 1f;
+        [SerializeField]
+        public int range = 1;
+        [SerializeField]
+        public string key = "KEY_HERE";
+        [SerializeField]
+        public string style = "emerald";
     }
 }

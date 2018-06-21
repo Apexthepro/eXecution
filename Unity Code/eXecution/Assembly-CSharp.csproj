@@ -78,6 +78,7 @@
     <Compile Include="Assets\ArFightSceneAssets\TestScripts\Spell.cs" />
     <Compile Include="Assets\ArFightSceneAssets\TestScripts\SpellInfoCardScript.cs" />
     <Compile Include="Assets\ArFightSceneAssets\TestScripts\SpellScript.cs" />
+    <Compile Include="Assets\ArMap\RotateBySwipe.cs" />
     <Compile Include="Assets\ArMap\TileManager.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\BuildingInput.cs" />
     <Compile Include="Assets\CitySceneAssets\scripts\BuildingsGlobalScript.cs" />
