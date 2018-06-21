@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/CastleScene.unity
+=======
+- path: Assets/Mapbox/Examples/0_PrefabScenes/LocationBasedGame.unity
+>>>>>>> d35ac9ff4ed7a0f104b81bba48905ed98b6f54ea
   isLoaded: 1
   isActive: 1
