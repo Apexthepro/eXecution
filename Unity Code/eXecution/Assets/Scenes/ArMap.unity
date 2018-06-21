@@ -784,7 +784,7 @@ MonoBehaviour:
   _settings:
     centerPosition: {x: 4.800803, y: 52.44165}
     material: {fileID: 2100000, guid: 13e04441294b1c34c8af6fc79ee3bfa9, type: 2}
-    zoom: 20
+    zoom: 18
     width: 1000
     height: 1000
     scale: 2

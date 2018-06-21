@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/CastleScene.unity
-=======
-- path: Assets/Scenes/ArMap.unity
->>>>>>> 54bafa1158ff3f6cf47d7e362b5f56665f0b753c
+- path: Assets/Scenes/LoginScene.unity
   isLoaded: 1
   isActive: 1

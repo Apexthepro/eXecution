@@ -39,7 +39,7 @@ public class TileManager : MonoBehaviour
             return lon;
         }
     }
-    
+
     IEnumerator Start()
     {
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
@@ -101,7 +101,7 @@ public class TileManager : MonoBehaviour
         lat = Input.location.lastData.latitude;
         lon = Input.location.lastData.longitude;
 
-        string url = String.Format("https://api.mapbox.com/v4/mapbox.{6}/{0},{1},{2}/{3}x{4}@2x.png?access_token={5}", lon, lat, zoom, width,height, key, style);
+        string url = String.Format("https://api.mapbox.com/v4/mapbox.{6}/{0},{1},{2}/{3}x{4}@2x.png?access_token={5}", lon, lat, zoom, width, height, key, style);
 
         WWW www = new WWW(url);
         yield return www;
@@ -150,7 +150,7 @@ public class TileManager : MonoBehaviour
 			Debug.Log (x + " / " + y);*/
         }
 
-     //   pokeManager.UpdatePokemonPosition();
+        //   pokeManager.UpdatePokemonPosition();
 
         tile.GetComponent<Renderer>().material.mainTexture = texture;
 
@@ -158,7 +158,7 @@ public class TileManager : MonoBehaviour
 
         oldLat = lat;
         oldLon = lon;
-       
+
         while (oldLat == lat && oldLon == lon)
         {
             lat = Input.location.lastData.latitude;
