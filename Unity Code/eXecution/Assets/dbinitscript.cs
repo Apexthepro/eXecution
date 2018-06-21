@@ -13,6 +13,7 @@ using Newtonsoft.Json.Linq;
 
 public class dbinitscript : MonoBehaviour
 {
+    public string userid;
     public Text resource1;
     data read = new data();
     string path = "Assets/sam.txt";
@@ -27,6 +28,7 @@ public class dbinitscript : MonoBehaviour
             if (read.email == null)
                 SceneManager.LoadScene("LoginScene");
             //DisplayEmail.text = read.email;
+            userid =read.uid;
             file.Close();
         }
         auth.SignInWithEmailAndPasswordAsync(read.email, read.pass).ContinueWith(task1 =>
