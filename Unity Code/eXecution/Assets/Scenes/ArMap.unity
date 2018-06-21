@@ -605,7 +605,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1920}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -786,6 +786,7 @@ MonoBehaviour:
     material: {fileID: 2100000, guid: 13e04441294b1c34c8af6fc79ee3bfa9, type: 2}
 <<<<<<< HEAD
     zoom: 20
+<<<<<<< HEAD
     width: 1280
     height: 1280
 =======
@@ -793,8 +794,12 @@ MonoBehaviour:
     width: 1000
     height: 1000
 >>>>>>> f2c0d054ae250635c190bb5f288057e60c55feaa
+=======
+    width: 1000
+    height: 1000
+>>>>>>> parent of d233dc76... code v1.74
     scale: 2
-    range: 0
+    range: 3
     key: pk.eyJ1IjoiYXBleHRoZXBybyIsImEiOiJjamhwNXV1azMxNzJzMzdxamNidHFoNTVoIn0.BcVoWifK7Wgail79Urw2Pw
     style: pirates
   target: {fileID: 2029920165}
