@@ -15,17 +15,14 @@ public class GoogleMapScript : MonoBehaviour
     public int mapHeight = 640;
     public enum mapType { roadmap, satellite, hybrid, terrain }; //choose map type to display
     public mapType mapSelected;
-    public int scale;
-<<<<<<< HEAD
+
     public int R = 6371;//Radius of earth
     public Image sampleImage;
     public float x, y, z;
     //Vector2 uv = new Vector2((float)myMarker.pixelCoords.x / (float)renderer.material.mainTexture.width, 1f - (float)myMarker.pixelCoords.y / (float)renderer.material.mainTexture.height);
     Vector2 uv;
+   
 
-=======
-    public int R = 6371;
->>>>>>> d35ac9ff4ed7a0f104b81bba48905ed98b6f54ea
     private bool loadingMap = false; //keeps track of whether we're waiting for a texture to load in case we want to display some sort of loading message while user waits for the map to load
     public Sprite customIcon;
     private IEnumerator mapCoroutine;
@@ -33,19 +30,18 @@ public class GoogleMapScript : MonoBehaviour
 
     IEnumerator GetGoogleMap(float lat, float lon)
     {
-        url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
-            "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale
-            + "&maptype=" + mapSelected +
-            "&markers=color:blue%7Clabel:S%7C1,0&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
+       /// url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
+          //  "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale + "&maptype=" + mapSelected +
+            //"&markers=color:blue%7Clabel:S%7C1,0&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
         //url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSW&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
-<<<<<<< HEAD
+
         // url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSWAIz&key=aSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
         // url = "https://maps.googleapis.com/maps/api/staticmap?size=512x512&zoom=15&center=Brooklyn&style=feature:road.local%7Celement:geometry%7Ccolor:0x00ff00&style=feature:landscape%7Celement:geometry.fill%7Ccolor:0x000000&style=element:labels%7Cinvert_lightness:true&style=feature:road.arterial%7Celement:labels%7Cinvert_lightness:false&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
-=======
+
        // url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSWAIz&key=aSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
         url = "https://maps.googleapis.com/maps/api/staticmap?&size=1280x720&style=visibility:on&style=feature:water%7Celement:geometr%7Cvisibility:on&style=feature:landscape%7Celement:geometry%7Cvisibility:on&markers=icon:"+customIcon+"%7CCanberra+ACT&markers=icon:http://tinyurl.com/jrhlvu6%7CMelbourne+VIC+&markers=icon:https://goo.gl/1oTJ9Y%7CSydney+NSW&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
        // url = "https://maps.googleapis.com/maps/api/staticmap?size=512x512&zoom=15&center=Brooklyn&style=feature:road.local%7Celement:geometry%7Ccolor:0x00ff00&style=feature:landscape%7Celement:geometry.fill%7Ccolor:0x000000&style=element:labels%7Cinvert_lightness:true&style=feature:road.arterial%7Celement:labels%7Cinvert_lightness:false&key=AIzaSyAG_VbAh7y2sSRfTRCRlL_ge4EThjjqoRk";
->>>>>>> d35ac9ff4ed7a0f104b81bba48905ed98b6f54ea
+
 
 
         loadingMap = true;
@@ -60,8 +56,8 @@ public class GoogleMapScript : MonoBehaviour
     {
         mapCoroutine = GetGoogleMap(lat, lon);
         StartCoroutine(mapCoroutine);
-<<<<<<< HEAD
-        uv = new Vector2((float)608 / (float)MapUtils.LonToX(lon), 1f - (float)350 / (float)MapUtils.LatToY(lat));
+
+       // uv = new Vector2((float)608 / (float)MapUtils.LonToX(lon), 1f - (float)350 / (float)MapUtils.LatToY(lat));
         print("Lat = " + lat + "lon = " + lon);
 
         x = ((float)(R * Math.Cos(lat) * Math.Cos(lon)) / 6.636458333333333f);
@@ -72,8 +68,7 @@ public class GoogleMapScript : MonoBehaviour
         //  print("z =" + R * Math.Sin(lat));
         sampleImage.transform.position = new Vector3(x, y, 0);
 
-=======
->>>>>>> d35ac9ff4ed7a0f104b81bba48905ed98b6f54ea
+
     }
 
     void Update()
@@ -83,7 +78,6 @@ public class GoogleMapScript : MonoBehaviour
         //print("MapUtils lon to x" + MapUtils.LonToX(lon));
         //print("MapUtils lat to y" + MapUtils.LatToY(lat));
 
-<<<<<<< HEAD
 
 
         //lat = 1;
@@ -94,7 +88,7 @@ public class GoogleMapScript : MonoBehaviour
         print("z =" + R * Math.Sin(lat));
         //   print("long =" + R * Math.Cos(lat) * Math.Cos(lon));
         //     print("lat =" + R * Math.Cos(lat) * Math.Cos(lon));
-=======
+
         
 
         //lat = 1;
@@ -107,7 +101,7 @@ public class GoogleMapScript : MonoBehaviour
         print("z =" + R * Math.Sin(lat));
      //   print("long =" + R * Math.Cos(lat) * Math.Cos(lon));
    //     print("lat =" + R * Math.Cos(lat) * Math.Cos(lon));
->>>>>>> d35ac9ff4ed7a0f104b81bba48905ed98b6f54ea
+
 
 
         if (Input.GetKeyDown(KeyCode.M))
