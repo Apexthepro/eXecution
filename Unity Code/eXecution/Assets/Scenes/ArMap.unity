@@ -784,9 +784,15 @@ MonoBehaviour:
   _settings:
     centerPosition: {x: 4.800803, y: 52.44165}
     material: {fileID: 2100000, guid: 13e04441294b1c34c8af6fc79ee3bfa9, type: 2}
+<<<<<<< HEAD
     zoom: 20
     width: 1280
     height: 1280
+=======
+    zoom: 18
+    width: 1000
+    height: 1000
+>>>>>>> f2c0d054ae250635c190bb5f288057e60c55feaa
     scale: 2
     range: 0
     key: pk.eyJ1IjoiYXBleHRoZXBybyIsImEiOiJjamhwNXV1azMxNzJzMzdxamNidHFoNTVoIn0.BcVoWifK7Wgail79Urw2Pw

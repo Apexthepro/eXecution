@@ -10,6 +10,7 @@ namespace loginscript
 {
     public class LoginScript : MonoBehaviour
     {
+
         public Firebase.Auth.FirebaseAuth auth;
         Firebase.Auth.FirebaseUser user;
         // Use this for initialization
@@ -22,6 +23,8 @@ namespace loginscript
         Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
         public void Start()
         {
+            FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
+            DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
             data read = new data();
             using (StreamReader file = new StreamReader(path))
             {
@@ -108,78 +111,90 @@ namespace loginscript
 
         public void onRegister()
         {
-            string[] bname = new string[8] { "Castle", "Wall", "Forge", "Laboratory", "Hero Ground", "Storage", "Trade Hall", "Dragon Tomb" };
-            FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
             // Get the root reference location of the database.
-            DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
-            sid = id.text;
-            spwd = pwd.text;
-            auth.CreateUserWithEmailAndPasswordAsync(sid, spwd).ContinueWith(task =>
+
+            string userid="";
+            sid = "avish@gmail.com";//id.text;
+            spwd = "avish123";//pwd.text;
+            auth.CreateUserWithEmailAndPasswordAsync(sid, spwd).ContinueWith(task1 =>
             {
-                if (task.IsCanceled)
+                if (task1.IsCanceled)
                 {
                     error(" CreateUserWithEmailAndPasswordAsync was canceled.");
                     return;
                 }
-                if (task.IsFaulted)
+                if (task1.IsFaulted)
                 {
-                    Debug.Log(task.Exception);
+                    Debug.Log(task1.Exception);
                     error("CreateUserWithEmailAndPasswordAsync encountered an error: ");
                     return;
                 }
                 else
                 {
-                    Firebase.Auth.FirebaseUser newUser = task.Result;
+                    Firebase.Auth.FirebaseUser newUser = task1.Result;
                     Debug.LogFormat("User Registered successfully: {0} ({1})",
                         newUser.DisplayName, newUser.UserId);
+                    userid = newUser.UserId;
                     data info = new data()
                     {
                         email = sid,//sid
                         pass = spwd,//spwd
+                        uid = newUser.UserId,
                         set = true
                     };
                     using (StreamWriter myFile = new StreamWriter(path))
                     {
                         myFile.Write(JsonConvert.SerializeObject(info));
+                        myFile.Close();
                     }
 
 
                     //SceneManager.LoadScene("CastleScene");
                 }
+                if (task1.IsCompleted) { CreateUserData(userid); }
             });
+            
+            
+            
+        }
+        public void CreateUserData(string userid)
+        {
+            DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+            string[] bname = new string[8] { "Castle", "Wall", "Forge", "Laboratory", "Hero Ground", "Storage", "Trade Hall", "Dragon Tomb" };
+            print(sid + "---------------" + spwd);
             auth.SignInWithEmailAndPasswordAsync(sid, spwd).ContinueWith(task =>
-             {
-                 if (task.IsCanceled)
-                 {
-                     error("SignInWithEmailAndPasswordAsync was canceled.");
-                     return;
-                 }
-                 if (task.IsFaulted)
-                 {
+                {
+                    if (task.IsCanceled)
+                    {
+                        error("SignInWithEmailAndPasswordAsync was canceled.");
+                        return;
+                    }
+                    if (task.IsFaulted)
+                    {
 
-                     error("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
-                     return;
-                 }
+                        error("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                        return;
+                    }
 
-                 Firebase.Auth.FirebaseUser newUser = task.Result;
-                 print("user id------------>" + newUser.UserId);
+                    Firebase.Auth.FirebaseUser newUser = task.Result;
+                    print("user id------------>" + newUser.UserId);
 
 
-                 for (int i = 0; i < 8; i++)
-                 {
-                     reference.Child((newUser.UserId).ToString()).Child("Buildings").Child(bname[i]).Child("lev").SetValueAsync(1);
-                 }
-            //Resources
-            reference.Child((newUser.UserId).ToString()).Child("Resources").Child("Resource A").SetValueAsync(10000);
-                 reference.Child((newUser.UserId).ToString()).Child("Resources").Child("Resource B").SetValueAsync(10000);
-            //Reference
-            reference.Child((newUser.UserId).ToString()).Child("Reference Code").Child("Player Code").Child("code of the Player").SetValueAsync(18756);
-                 reference.Child((newUser.UserId).ToString()).Child("Reference Code").Child("Player Code").Child("Players who use the code").Child("users").SetValueAsync("avish@gmail.com");
-            //Social
-            reference.Child((newUser.UserId).ToString()).Child("Social").Child("Friends").SetValueAsync("avish@gmail.com");
-            //reference.Child((sid).ToString()).Child("Social").Child("mail").Child("avish@gmail.com").SetValueAsync(true);
-        });
-
+                    for (int i = 0; i < 8; i++)
+                    {
+                        reference.Child((newUser.UserId).ToString()).Child("Buildings").Child(bname[i]).Child("lev").SetValueAsync(1);
+                    }
+                    //Resources
+                    reference.Child((newUser.UserId).ToString()).Child("Resources").Child("Resource A").SetValueAsync(10000);
+                    reference.Child((newUser.UserId).ToString()).Child("Resources").Child("Resource B").SetValueAsync(10000);
+                    //Reference
+                    reference.Child((newUser.UserId).ToString()).Child("Reference Code").Child("Player Code").Child("code of the Player").SetValueAsync(29930);
+                    reference.Child((newUser.UserId).ToString()).Child("Reference Code").Child("Player Code").Child("Players who use the code").Child("users").SetValueAsync("avish@gmail.com");
+                    //Social
+                    reference.Child((newUser.UserId).ToString()).Child("Social").Child("Friends").SetValueAsync("fluxi@gmail.com");
+                    //reference.Child((sid).ToString()).Child("Social").Child("mail").Child("avish@gmail.com").SetValueAsync(true);
+                });
+            
         }
 
         public void switchAccount()
