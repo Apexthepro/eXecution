@@ -117,8 +117,8 @@ public class UiCanvasScript : MonoBehaviour {
     {
         Application.Quit();
     }
-    public void OpenAr() {
+    public void OpenScene(string scenename) {
         //SceneManager.LoadSceneAsync(0);
-        SceneManager.LoadScene("ArMap");
+        SceneManager.LoadScene("\""+scenename+ "\"");
     }
 }

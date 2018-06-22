@@ -6,19 +6,19 @@ using Firebase.Database;
 using Firebase.Unity.Editor;
 public class TileManager : MonoBehaviour
 {
-    DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+   // DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
     public dbinitscript dbinitscript;
     public ObjectSpawnScript ObjectSpawnScript;
-    public string currentUserId;
-    [SerializeField]
-    private Settings _settings;
+  //  public string currentUserId;
 
-    [SerializeField]
-    private Transform target;
+    public Settings _settings;
 
-    [SerializeField]
-    private Texture2D texture;
-    private GameObject tile;
+
+    public Transform target;
+
+
+    public Texture2D texture;
+    public GameObject tile;
 
 
     private float oldLat = 0f, oldLon = 0f;
@@ -46,8 +46,8 @@ public class TileManager : MonoBehaviour
     IEnumerator Start()
     {
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
-        currentUserId = dbinitscript.userid;
+      //  reference = FirebaseDatabase.DefaultInstance.RootReference;
+      //  currentUserId = dbinitscript.userid;
         while (!Input.location.isEnabledByUser)
         {
             print("Activate gps");
@@ -168,11 +168,11 @@ public class TileManager : MonoBehaviour
             lon = Input.location.lastData.longitude;
 
             //store lat lon
-            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lat").SetValueAsync(lat);
-            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lon").SetValueAsync(lon);
-            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("altitude").SetValueAsync(Input.location.lastData.altitude);
-            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("horizontalAccuracy").SetValueAsync(Input.location.lastData.horizontalAccuracy);
-            reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("timestamp").SetValueAsync(Input.location.lastData.timestamp);
+          //  reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lat").SetValueAsync(lat);
+           // reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lon").SetValueAsync(lon);
+            //reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("altitude").SetValueAsync(Input.location.lastData.altitude);
+            //reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("horizontalAccuracy").SetValueAsync(Input.location.lastData.horizontalAccuracy);
+            //reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("timestamp").SetValueAsync(Input.location.lastData.timestamp);
             //print("Location: lat:" + lat + " lon: " + lon+ " altitude: " + Input.location.lastData.altitude + " horizontalAccuracy: " + Input.location.lastData.horizontalAccuracy + " timestamps: " + Input.location.lastData.timestamp);
             ObjectSpawnScript.tempfunc();//spawbn obkect on map
             yield return new WaitForSeconds(1f);//wait time befoe next location check
@@ -280,26 +280,18 @@ public class TileManager : MonoBehaviour
         target.position = Vector3.Lerp(target.position, new Vector3(0, .2f, 0), 2.0f * Time.deltaTime);
     }
 
-    [Serializable]
+
     public class Settings
     {
-        [SerializeField]
+
         public Vector2 centerPosition;
-        [SerializeField]
         public Material material;
-        [SerializeField]
         public int zoom = 18;
-        [SerializeField]
         public int width = 1920;
-        [SerializeField]
         public int height = 1080;
-        [SerializeField]
         public float scale = 1f;
-        [SerializeField]
         public int range = 1;
-        [SerializeField]
         public string key = "KEY_HERE";
-        [SerializeField]
         public string style = "emerald";
     }
 

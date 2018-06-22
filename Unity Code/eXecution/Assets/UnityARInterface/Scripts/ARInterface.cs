@@ -111,13 +111,8 @@ namespace UnityARInterface
         {
             if (m_Interface == null)
             {
-#if UNITY_EDITOR
                 m_Interface = new AREditorInterface();
-#elif UNITY_IOS
-                m_Interface = new ARKitInterface();
-#elif UNITY_ANDROID
-                m_Interface = new ARCoreInterface();
-#endif
+
             }
 
             return m_Interface;

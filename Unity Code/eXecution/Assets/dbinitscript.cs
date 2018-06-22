@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-public class dbinitscript : MonoBehaviour
+public class dbinitscript 
 {
     public string userid;
     public Text resource1;
@@ -40,11 +40,11 @@ public class dbinitscript : MonoBehaviour
             if (task1.IsFaulted)
             {
                 // Handle the error...
-                print("Faulted");
+                Debug.Log("Faulted");
             }
             else if (task1.IsCompleted)
             {
-                print("user logged in while initialzing");
+                Debug.Log("user logged in while initialzing");
                 DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
                 FirebaseDatabase.DefaultInstance.GetReference(read.uid).GetValueAsync().ContinueWith(task2 =>
                 {
@@ -52,22 +52,22 @@ public class dbinitscript : MonoBehaviour
                     // Do something with snapshot...
                     var a = snapshot.Children;
                     jsondatac data = JsonConvert.DeserializeObject<jsondatac>(snapshot.GetRawJsonValue());
-                    print("values--->" + data.Buildings.Castle.lev.ToString());
+                    Debug.Log("values--->" + data.Buildings.Castle.lev.ToString());
                     string s;
                     if (task2.IsCompleted)
                     {
                         while (a.GetEnumerator().MoveNext())
                         {
                             s = a.GetEnumerator().Current.GetRawJsonValue();
-                            print("s->" + s);
-                            print("Key->" + a.GetEnumerator().Current.Key + "Value->" + a.GetEnumerator().Current.Value);
+                            Debug.Log("s->" + s);
+                            Debug.Log("Key->" + a.GetEnumerator().Current.Key + "Value->" + a.GetEnumerator().Current.Value);
                         }
                     }
 
                 });
             }
         });
-        //print("text is from" + resource1.text);
+        //Debug.Log("text is from" + resource1.text);
         //resource1.text = "123m";
 
     }

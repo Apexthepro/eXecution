@@ -18,13 +18,9 @@ public class ObjectSpawnScript : MonoBehaviour {
         
     }
     public void tempfunc() {
-<<<<<<< HEAD
         float newLat = TileManager.getLat + 0.00063f;//+ UnityEngine.Random.Range (-0.0002f, 0.0002f);//0.00073f
         float newLon = TileManager.getLon ;//+ UnityEngine.Random.Range (-0.0002f, 0.0002f);//-0.000315f
-=======
-        float newLat = TileManager.getLat;//+ UnityEngine.Random.Range (-0.0002f, 0.0002f);//0.00073f
-        float newLon = TileManager.getLon;//+ UnityEngine.Random.Range (-0.0002f, 0.0002f);//-0.000315f
->>>>>>> f8666e49f2202d5c5caa2f351f546f3f0429ca17
+
         print("initial lat: " + newLat + " lon: " + newLon);
         SpawnObject(newLat, newLon);
 
