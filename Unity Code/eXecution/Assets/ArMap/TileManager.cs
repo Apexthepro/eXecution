@@ -8,6 +8,7 @@ public class TileManager : MonoBehaviour
 {
     DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
     public dbinitscript dbinitscript;
+    public ObjectSpawnScript ObjectSpawnScript;
     public string currentUserId;
     [SerializeField]
     private Settings _settings;
@@ -28,6 +29,7 @@ public class TileManager : MonoBehaviour
     {
         get
         {
+
             return lat;
         }
     }
@@ -36,6 +38,7 @@ public class TileManager : MonoBehaviour
     {
         get
         {
+
             return lon;
         }
     }
@@ -126,11 +129,11 @@ public class TileManager : MonoBehaviour
 
             if ((oldLat - lat) < 0 && (oldLon - lon) > 0 || (oldLat - lat) > 0 && (oldLon - lon) < 0)
             {
-                position = new Vector3(x, .5f, y);
+                position = new Vector3(x, .0f, y);
             }
             else
             {
-                position = new Vector3(-x, .5f, -y);
+                position = new Vector3(-x, .0f, -y);
             }
 
             position.x *= 0.300122f;
@@ -171,7 +174,7 @@ public class TileManager : MonoBehaviour
             reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("horizontalAccuracy").SetValueAsync(Input.location.lastData.horizontalAccuracy);
             reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("timestamp").SetValueAsync(Input.location.lastData.timestamp);
             //print("Location: lat:" + lat + " lon: " + lon+ " altitude: " + Input.location.lastData.altitude + " horizontalAccuracy: " + Input.location.lastData.horizontalAccuracy + " timestamps: " + Input.location.lastData.timestamp);
-
+            ObjectSpawnScript.tempfunc();//spawbn obkect on map
             yield return new WaitForSeconds(1f);//wait time befoe next location check
         }
 
@@ -198,7 +201,7 @@ public class TileManager : MonoBehaviour
     float GD_TranMercB = 6356752.314245f;
     float GD_geocentF = 0.003352810664f;
 
-    void geodeticOffsetInv(float refLat, float refLon,
+    public void geodeticOffsetInv(float refLat, float refLon,
         float lat, float lon,
         out float xOffset, out float yOffset)
     {
@@ -274,7 +277,7 @@ public class TileManager : MonoBehaviour
 
     void Update()
     {
-        target.position = Vector3.Lerp(target.position, new Vector3(0, .5f, 0), 2.0f * Time.deltaTime);
+        target.position = Vector3.Lerp(target.position, new Vector3(0, .2f, 0), 2.0f * Time.deltaTime);
     }
 
     [Serializable]
@@ -299,4 +302,5 @@ public class TileManager : MonoBehaviour
         [SerializeField]
         public string style = "emerald";
     }
+
 }
