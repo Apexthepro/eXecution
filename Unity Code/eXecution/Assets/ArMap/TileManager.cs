@@ -9,16 +9,17 @@ public class TileManager : MonoBehaviour
    // DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
     public dbinitscript dbinitscript;
     public ObjectSpawnScript ObjectSpawnScript;
-  //  public string currentUserId;
+    //  public string currentUserId;
 
-    public Settings _settings;
+    [SerializeField]
+    private Settings _settings;
 
+    [SerializeField]
+    private Transform target;
 
-    public Transform target;
-
-
-    public Texture2D texture;
-    public GameObject tile;
+    [SerializeField]
+    private Texture2D texture;
+    private GameObject tile;
 
 
     private float oldLat = 0f, oldLon = 0f;
@@ -96,15 +97,14 @@ public class TileManager : MonoBehaviour
 
     public IEnumerator loadTiles(int zoom)
     {
-        int width = _settings.width;
-        int height = _settings.height;
+        int size = _settings.size;
         string key = _settings.key;
         string style = _settings.style;
 
         lat = Input.location.lastData.latitude;
         lon = Input.location.lastData.longitude;
 
-        string url = String.Format("https://api.mapbox.com/v4/mapbox.{6}/{0},{1},{2}/{3}x{4}@2x.png?access_token={5}", lon, lat, zoom, width, height, key, style);
+        string url = String.Format("https://api.mapbox.com/v4/mapbox.{5}/{0},{1},{2}/{3}x{3}@2x.png?access_token={4}", lon, lat, zoom, size, key, style);
 
         WWW www = new WWW(url);
         yield return www;
@@ -281,17 +281,24 @@ public class TileManager : MonoBehaviour
     }
 
 
+    [Serializable]
     public class Settings
     {
-
+        [SerializeField]
         public Vector2 centerPosition;
+        [SerializeField]
         public Material material;
+        [SerializeField]
         public int zoom = 18;
-        public int width = 1920;
-        public int height = 1080;
+        [SerializeField]
+        public int size = 640;
+        [SerializeField]
         public float scale = 1f;
+        [SerializeField]
         public int range = 1;
+        [SerializeField]
         public string key = "KEY_HERE";
+        [SerializeField]
         public string style = "emerald";
     }
 

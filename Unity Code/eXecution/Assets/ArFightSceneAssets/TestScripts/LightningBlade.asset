@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: LightningBlade
   description: 3 Consecutive attack on base damage
-  ParticlePrefab: {fileID: 1210694104164130, guid: 2842a17a0c772074e945b70ae34e4620,
+  ParticlePrefab: {fileID: 1675964948248938, guid: 06af566f449889142aa5021836af140c,
     type: 2}
   ParticleCollider: {fileID: 135429284446613602, guid: 06af566f449889142aa5021836af140c,
     type: 2}

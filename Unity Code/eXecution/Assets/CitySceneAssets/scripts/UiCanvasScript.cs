@@ -119,6 +119,6 @@ public class UiCanvasScript : MonoBehaviour {
     }
     public void OpenScene(string scenename) {
         //SceneManager.LoadSceneAsync(0);
-        SceneManager.LoadScene("\""+scenename+ "\"");
+        SceneManager.LoadScene(scenename);
     }
 }

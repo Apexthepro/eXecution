@@ -17,13 +17,13 @@ public class testscript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        lat = Tilemanager.getLat;
-        lon = Tilemanager.getLon;
-        X = lat + rx;
-        var y = (Math.Pow((X - lat),2))/Math.Pow(rx,2);
-        var z=Math.Pow((Y- lon),2) / Math.Pow(ry, 2);
-        print("result----------------------->" + y+z);
+        /*
+                lat = Tilemanager.getLat;
+                lon = Tilemanager.getLon;
+                 X = lat + rx;
+                 var y = (Math.Pow((X - lat),2))/Math.Pow(rx,2);
+                 var z=Math.Pow((Y- lon),2) / Math.Pow(ry, 2);
+                 print("result----------------------->" + y+z);*/
 
     }
 }
