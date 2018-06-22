@@ -1,20 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ObjectSpawnScript : MonoBehaviour {
     public TileManager TileManager;
     public GameObject cube;
+    public GameObject cube2;
     private float lat = 0f, lon = 0f;
+
+    //1.408598 pixels = 0.0001lat  z axis
+    //1z pixel = 0.00007099257lat
+    //3.23192 pixels = 0.0001lon x axis
+    //1x pixel = 0.00003094135lon
     void Start()
     {
         
     }
     public void tempfunc() {
+<<<<<<< HEAD
         float newLat = TileManager.getLat + 0.00063f;//+ UnityEngine.Random.Range (-0.0002f, 0.0002f);//0.00073f
         float newLon = TileManager.getLon ;//+ UnityEngine.Random.Range (-0.0002f, 0.0002f);//-0.000315f
+=======
+        float newLat = TileManager.getLat;//+ UnityEngine.Random.Range (-0.0002f, 0.0002f);//0.00073f
+        float newLon = TileManager.getLon;//+ UnityEngine.Random.Range (-0.0002f, 0.0002f);//-0.000315f
+>>>>>>> f8666e49f2202d5c5caa2f351f546f3f0429ca17
         print("initial lat: " + newLat + " lon: " + newLon);
         SpawnObject(newLat, newLon);
+
     }
     public void SpawnObject(float _lat, float _lon)
     {
@@ -31,11 +44,11 @@ public class ObjectSpawnScript : MonoBehaviour {
 
         if ((lat - TileManager.getLat) < 0 && (lon - TileManager.getLon) > 0 || (lat - TileManager.getLat) > 0 && (lon - TileManager.getLon) < 0)
         {
-            position = new Vector3(x, 0, y);
+            position = new Vector3(Mathf.Round(x), 0, Mathf.Round(y));
         }
         else
         {
-            position = new Vector3(-x, 0, -y);
+            position = new Vector3(-Mathf.Round(x), 0, -Mathf.Round(y));
         }
         print("x"+x+"y"+y);
         position.x *= 0.300122f;

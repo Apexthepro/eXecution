@@ -4,9 +4,9 @@ using System.Collections;
 public class RotateBySwipe : MonoBehaviour
 {
     [SerializeField]
-    private Vector3 angles;
+    public Vector3 angles;
     private Vector2 start;
-
+    public bool rotate;
     private float xMultiplier, yMultiplier;
     private float x, y, z;
     private Vector3 newRot;
@@ -21,7 +21,11 @@ public class RotateBySwipe : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount == 1)
+        if (Input.touchCount == 0)
+        {
+            rotate = true;
+        }
+            if (Input.touchCount == 1 && rotate == true)
         {
             Touch touch = Input.GetTouch(0);
 
