@@ -101,6 +101,7 @@
     <Compile Include="Assets\CitySceneAssets\scripts\UpgradeMenuScript.cs" />
     <Compile Include="Assets\dbinitscript.cs" />
     <Compile Include="Assets\DetailsMenuScript.cs" />
+    <Compile Include="Assets\DragCube.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\ComputerVisionController.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\EdgeDetector.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\TextureReader.cs" />
