@@ -46,7 +46,7 @@ public class TileManager : MonoBehaviour
 
     IEnumerator Start()
     {
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
+     //   FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
       //  reference = FirebaseDatabase.DefaultInstance.RootReference;
       //  currentUserId = dbinitscript.userid;
         while (!Input.location.isEnabledByUser)

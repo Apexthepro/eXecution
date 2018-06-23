@@ -251,7 +251,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 e7ec17895ab32b61ba574a2677295077 Assembly-CSharp.dll:.EffectController
 64d73e50f20b594f3ce302efaa1a56e2 Assembly-CSharp.dll:.IconInfoScript
 6d3ac593b841014d9e73b841fdd2e2a7 Assembly-CSharp.dll:.PlayerExample1
-bfea586dfb813a26964423e133c987d4 Assembly-CSharp.dll:.slideMoveScript
+3db2aacc7da5ded32f4c87008415891c Assembly-CSharp.dll:.slideMoveScript
 0d9c283e48e76cdd0480da715502587f Assembly-CSharp.dll:.HeroScript
 b32b8e47613c59e4f99cf7161d145a18 Assembly-CSharp.dll:.SpellScript
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback

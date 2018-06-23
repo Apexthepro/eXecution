@@ -9055,10 +9055,10 @@ RectTransform:
   m_Father: {fileID: 1994464768}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.9001465, y: -37.19995}
-  m_SizeDelta: {x: -271, y: -278.7}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -29}
+  m_SizeDelta: {x: 1009, y: 521.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &405246535
 CanvasRenderer:
@@ -32217,10 +32217,10 @@ RectTransform:
   m_Father: {fileID: 1994464768}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.3000488, y: -12.925049}
-  m_SizeDelta: {x: -113.4, y: -185.3}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -18}
+  m_SizeDelta: {x: 1166.6, y: 614.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461819496
 MonoBehaviour:
@@ -47540,6 +47540,10 @@ MonoBehaviour:
   GridLayout: {fileID: 1077774635}
   spellSetFlag: 0
   moveSlide: -1
+  leftx: 0
+  centerx: 0
+  rightx: 0
+  y: 0
 --- !u!1 &1998504498
 GameObject:
   m_ObjectHideFlags: 0
