@@ -58,67 +58,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Mapbox\Core\probe-extractor-cs\Tests\Editor\MapboxUnitTests_ProbeExtractorCs.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\AddMonoBehavioursModifierDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\AtlasTemplateGenerator.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\Build\Mapbox_iOS_build.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\ClearFileCache.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\FactoryDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\FactoryEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\FeatureBehaviourEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\FeatureSubLayerTreeView.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\GeocodeAttributeDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\GeocodeAttributeSearchWindow.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\LayerModifierEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\MapboxConfigurationWindow.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\MapImageFactoryEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\MapManagerEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\MapVisualizerEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\MaterialModifierEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\MergedModifierStackEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\ModifierStackEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\NodeEditor\Connection.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\NodeEditor\ConnectionPoint.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\NodeEditor\EditorZoomArea.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\NodeEditor\Node.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\NodeEditor\NodeBasedEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PopupSelectionMenu.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\CameraBoundsTileProviderOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\ColliderOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\CoreVectorLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\ElevationLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\ElevationModificationOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\ElevationRequiredOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\FeaturesSubLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\GeometryExtrusionOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\GeometryMaterialOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\ImageryLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\ImageryRasterOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\LayerPerformanceOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\LayerSourceOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\MapExtentOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\MapLocationOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\MapOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\MapPlacementOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\MapScalingOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\MaterialListDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\PointsOfInterestSubLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\PrefabItemOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\RangeAroundTransformTileProviderOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\RangeTileProviderOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\SpawnPrefabOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\StyleOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\StyleSearchAttributeDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\TerrainSideWallOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\UnityLayerOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\VectorFilterOptionsDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\PropertyDrawers\VectorLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\ScenesListEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\ScriptableCreatorWindow.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\ScriptablePaletteEditor.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\StyleSearchWindow.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\UnitTests\MapboxUnitTests_CircularBuffer.cs" />
-    <Compile Include="Assets\Mapbox\Unity\Editor\VectorSubLayerTreeView.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\material\PyroParticles\Prefab\Editor\PyroParticlesEditor.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Editor\EffectControllerInspector.cs" />
     <Compile Include="Assets\ProjectileTestSceneAssets\Testing\Particlecollection_Free samples\Plugins\Effect\Editor\EffectToolBar.cs" />
@@ -413,12 +352,6 @@
     <Reference Include="Google.Sharpen">
       <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
     </Reference>
-    <Reference Include="Mapbox.IO.Compression">
-      <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
-    </Reference>
-    <Reference Include="Mapbox.Json">
-      <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.Json/Net35/Mapbox.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Compat">
       <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
     </Reference>
@@ -436,9 +369,6 @@
     </Reference>
     <Reference Include="Google.VersionHandlerImpl_v1.2.64.0">
       <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.64.0.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Plugins/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/avish/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>

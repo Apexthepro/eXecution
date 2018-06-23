@@ -23,5 +23,5 @@ MonoBehaviour:
   effectDuration:
   - 4
   - 8
-  XpGained: c800000090010000
-  Description: 'send the consumer in a frenzy increasing their attack speed '
+  XpGained: 1400000028000000
+  Description: Increases Attack Speed

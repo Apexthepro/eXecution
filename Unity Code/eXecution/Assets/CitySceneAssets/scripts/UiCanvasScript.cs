@@ -8,6 +8,7 @@ public class UiCanvasScript : MonoBehaviour {
     public Text console;
     public GameObject activeMenus;
     public static GameObject[] activePanels;
+    public GameObject[] Menus;
     public static int currentPanel;
     public GameObject backbutton;
     public Pinch2Zoom Pinch2Zoom;
@@ -28,7 +29,19 @@ public class UiCanvasScript : MonoBehaviour {
     }
 
     public void OpenMenu(GameObject Menu) {
-       // print("Opening "+Menu);
+        // print("Opening "+Menu);
+        if (Menu.name == "ArenaMenu")
+        {
+            backbutton = Menu.transform.GetChild(1).transform.GetChild(3).gameObject;
+        }
+        else {
+            if (Menu.transform.GetChild(1).transform.GetChild(0).gameObject.name == "BackButton") {
+                backbutton = Menu.transform.GetChild(1).transform.GetChild(3).gameObject;
+            }
+        }
+        backbutton.SetActive(false);
+
+
         activeMenus = Menu.gameObject;
         activeMenus.SetActive(true);
         BuildingsGlobalScript.BuildingsArr[0].SetActive(false);
@@ -48,7 +61,55 @@ public class UiCanvasScript : MonoBehaviour {
                 activePanels[currentPanel].SetActive(true);
         }
     }
-    
+    public void openEnterMenu() {
+      //  print("Building CLicked -->"+BuildingsGlobalScript.BuildingsArr[BuildingsGlobalScript.CurrentBuildingIndex].name);
+        if (BuildingsGlobalScript.BuildingsArr[BuildingsGlobalScript.CurrentBuildingIndex].name == "Forge")
+        {
+            for (int i = 0; i < Menus.Length; i++)
+            {
+                if (Menus[i].name == "ForgeEnterMenu")
+                {
+                    OpenMenu(Menus[i]);
+                }
+            }
+        }
+        else if (BuildingsGlobalScript.BuildingsArr[BuildingsGlobalScript.CurrentBuildingIndex].name == "Hero Ground")
+        {
+            for (int i = 0; i < Menus.Length; i++)
+            {
+                if (Menus[i].name == "HeroGroundMenu")
+                {
+                    OpenMenu(Menus[i]);
+                }
+            }
+
+        }
+        else if (BuildingsGlobalScript.BuildingsArr[BuildingsGlobalScript.CurrentBuildingIndex].name == "Arena")
+        {
+            for (int i = 0; i < Menus.Length; i++)
+            {
+                print("Menus[i].name "+ Menus[i].name);
+                if (Menus[i].name == "ArenaMenu")
+                {
+                    OpenMenu(Menus[i]);
+                }
+            }
+
+        }
+        else {
+            for (int i = 0; i < Menus.Length; i++)
+            {
+                if (Menus[i].name == "UnderConstructionMenu")
+                {
+                    OpenMenu(Menus[i]);
+                }
+            }
+
+        }
+
+
+
+    }
     public void LoginClick()
     {
         //add to activemenu aray

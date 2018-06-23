@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/avish/Documents/GitHub/eXecution/Unity Code/eXecution/eXecution.apk
+C:/Users/avish/Documents/GitHub/eXecution/eXecution-Ar MMo Rpg.apk
 SceneListBegin?
 Assets/Scenes/CastleScene.unity
 Assets/Scenes/ArMap.unity
@@ -24,7 +24,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 ce85484de4c1b014c6ae8699f5d4e9fa Assembly-CSharp.dll:.MailScript
 d07cbf0f5dba1e72f1a7722a56a95b08 Assembly-CSharp.dll:.GyroScript
-868298ecca45cae098d24708444b57df Assembly-CSharp.dll:.UiCanvasScript
+f6bb17666b7dd32773af7ee4c0fea0a6 Assembly-CSharp.dll:.UiCanvasScript
 c56d179b7ddbf8df9879d64295fc16ea Assembly-CSharp.dll:.InventoryScript
 c5b4d5c1c129080051d2e374fd449615 Assembly-CSharp.dll:.Item
 fd2c4262b5bb8e1bd7697031fe4ba2c6 Assembly-CSharp.dll:.Joystick
@@ -278,6 +278,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 91f1a05f93de6290047753f45f5ece7b Assembly-CSharp.dll:.SettingsMenuScript
 a95ecf8c1067dadd3e88e5aceca545ad Assembly-CSharp.dll:.ShootLight
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OpenScene
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:DigitalRuby.PyroParticles.FireCollisionForwardScript
 410470017b163de6ebdb282038ffaaf8 Assembly-CSharp.dll:.TileManager
 d86fba70758b5ac7e9bfb0038076a50e Assembly-CSharp.dll:.RenderEffect
@@ -351,4 +352,3 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.OpenScene

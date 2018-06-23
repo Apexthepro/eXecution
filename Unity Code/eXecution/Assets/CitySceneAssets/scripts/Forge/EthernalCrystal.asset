@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Name: EthernalCrystal
   m_EditorClassIdentifier: 
   Name: EthernalCrystal
-  Description: Used for upgrading Builings
   Icon: {fileID: 21300000, guid: 3a895a09f8fda8c4f871996b23914ac4, type: 3}
   Type: Resource
   forgetime:
@@ -21,9 +20,10 @@ MonoBehaviour:
   - 12
   - 24
   resourceQuantity:
+  - 50
+  - 160
+  - 300
   - 500
-  - 1600
-  - 3000
-  - 5000
-  buffDuration: []
-  XpGained: 6400000096000000fa00000090010000
+  effectDuration: []
+  XpGained: 0a0000000f0000001900000028000000
+  Description: Forges Ethernal Crystals

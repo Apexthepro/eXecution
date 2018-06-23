@@ -34969,6 +34969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   console: {fileID: 218882038}
   activeMenus: {fileID: 0}
+  Menus: []
   backbutton: {fileID: 191571513}
   Pinch2Zoom: {fileID: 0}
   MainCamera: {fileID: 0}
@@ -47163,7 +47164,7 @@ MonoBehaviour:
     scale: 2
     range: 1
     key: pk.eyJ1IjoiYXBleHRoZXBybyIsImEiOiJjamhwNXV1azMxNzJzMzdxamNidHFoNTVoIn0.BcVoWifK7Wgail79Urw2Pw
-    style: light
+    style: pirates
   target: {fileID: 2029920165}
   texture: {fileID: 0}
 --- !u!4 &2120255232
