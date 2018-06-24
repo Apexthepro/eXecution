@@ -37248,7 +37248,6 @@ GameObject:
   - component: {fileID: 1638549539}
   - component: {fileID: 1638549540}
   - component: {fileID: 1638549541}
-  - component: {fileID: 1638549542}
   m_Layer: 9
   m_Name: Ui Canavas
   m_TagString: Untagged
@@ -37313,17 +37312,6 @@ MonoBehaviour:
   BuildingsGlobalScript: {fileID: 1803425854}
   TestBuilding: {fileID: 108344072}
   DisplayBuildingNames: 0
---- !u!114 &1638549542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1638549538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75ec4afdda675fd46ad44ce549229b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1641451523
 GameObject:
   m_ObjectHideFlags: 0
