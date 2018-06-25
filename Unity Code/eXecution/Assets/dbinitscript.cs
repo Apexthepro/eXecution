@@ -1,15 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
 using System.IO;
-using UnityEditor;
 using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 public class dbinitscript 
 {
