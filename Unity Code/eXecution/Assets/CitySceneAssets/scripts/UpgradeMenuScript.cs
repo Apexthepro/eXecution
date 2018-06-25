@@ -22,7 +22,7 @@ public class UpgradeMenuScript : MonoBehaviour {
        // string[] bname = new string[7] { "Castle", "Wall", "Forge", "Laboratory", "Hero Ground", "Storage", "Trade Hall" };
     var watch = new System.Diagnostics.Stopwatch();
         watch.Start();
-        //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
+       // FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
         // Get the root reference location of the database.
         //DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
         prevresourceA = 5000;
