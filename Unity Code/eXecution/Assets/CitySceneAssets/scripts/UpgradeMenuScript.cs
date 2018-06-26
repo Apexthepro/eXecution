@@ -19,12 +19,12 @@ public class UpgradeMenuScript : MonoBehaviour {
         float[] resA = new float[35];
         float[] time = new float[7] {0.01f,0.1f,1,2,3,4,5};
         float newtime;
-       // string[] bname = new string[7] { "Castle", "Wall", "Forge", "Laboratory", "Hero Ground", "Storage", "Trade Hall" };
+       string[] bname = new string[7] { "Castledetails", "Walldetails", "Forgedetails", "Laboratorydetails", "Hero Grounddetails", "Storagedetails", "Trade Halldetails" };
     var watch = new System.Diagnostics.Stopwatch();
         watch.Start();
-       // FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
         // Get the root reference location of the database.
-        //DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
         prevresourceA = 5000;
         buildingImpactFactor = 1;
         for (int i = 0; i < 35; i++) {
@@ -51,15 +51,30 @@ public class UpgradeMenuScript : MonoBehaviour {
                 if (j == 6)
                     buildingImpactFactor = 3.2f;
                 prevresourceA=(resA[i]/ buildingImpactFactor)*ugfactor;
-            //    reference.Child((i + 1).ToString()).Child(bname[j]).Child("resourceA").SetValueAsync(Math.Round(prevresourceA, 3));
-             //   reference.Child((i + 1).ToString()).Child(bname[j]).Child("resourceB").SetValueAsync(Math.Round(prevresourceA, 3));
+
+                //    reference.Child((i + 1).ToString()).Child(bname[j]).Child("resourceA").SetValueAsync(Math.Round(prevresourceA, 3));
+                //   reference.Child((i + 1).ToString()).Child(bname[j]).Child("resourceB").SetValueAsync(Math.Round(prevresourceA, 3));
 
                 /**********************************Done*************************************/
             }
+
         }
         for (int i = 0; i < 7; i++)
         {
-           // reference.Child((i + 1).ToString()).Child(bname[0]).Child("ugtime").SetValueAsync(Math.Round(time[i], 3));
+            reference.Child((i + 1).ToString()).Child(bname[0]).Child("ugtime").SetValueAsync(Math.Round(time[i], 3));
+
+            reference.Child("BuildingsInfo").Child(bname[i]).Child("Details").SetValueAsync("This is Forge.It can be used to Forge new Crystals to Help in Upgrades");
+            for (int k = 1; k <=35; k++)
+            {
+                
+                reference.Child("BuildingsInfo").Child(bname[i]).Child("levels").Child(k.ToString()).Child("buff1").SetValueAsync("0.2");
+                reference.Child("BuildingsInfo").Child(bname[i]).Child("levels").Child(k.ToString()).Child("buff2").SetValueAsync("0.5");
+                reference.Child("BuildingsInfo").Child(bname[i]).Child("levels").Child(k.ToString()).Child("prestige").SetValueAsync("500");
+            }
+            reference.Child("BuildingsInfo").Child(bname[i]).Child("buff1desc").SetValueAsync("buff1 description");
+            reference.Child("BuildingsInfo").Child(bname[i]).Child("lev").SetValueAsync("1");
+            reference.Child("BuildingsInfo").Child(bname[i]).Child("buff2desc").SetValueAsync("buff2 description");
+
 
         }
         for (int j = 1; j <7; j++)
@@ -81,8 +96,8 @@ public class UpgradeMenuScript : MonoBehaviour {
             {
                 newtime = time[k] / buildingImpactFactor;
                 //reference.Child((k + 1).ToString()).Child(bname[j]).Child("ugtime").SetValueAsync(Math.Round(newtime, 3));
-                print(newtime + "=" + time[k] + "/" + buildingImpactFactor);
-                print("newtime ->" + newtime);
+                //print(newtime + "=" + time[k] + "/" + buildingImpactFactor);
+                //print("newtime ->" + newtime);
             }
         }
                 /*  for (int i = 0; i < 35; i++)
@@ -141,6 +156,6 @@ public class UpgradeMenuScript : MonoBehaviour {
                    }
                  */
                 watch.Stop();        
-        print($"Execution Time: {watch.ElapsedMilliseconds} ms");
+        //print($"Execution Time: {watch.ElapsedMilliseconds} ms");
     }
 }

@@ -61,11 +61,11 @@
      <Compile Include="Assets\ThirdPartyAssets\WoLfulus\LineEnding\Editor\FileMonitor.cs" />
      <Compile Include="Assets\ThirdPartyAssets\WoLfulus\LineEnding\Editor\LogEntries.cs" />
      <Compile Include="Assets\ThirdPartyAssets\WoLfulus\LineEnding\Editor\LogEntry.cs" />
-     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.64.0.txt" />
+     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.73.0.txt" />
+     <None Include="Assets\Firebase\Editor\FirebaseDatabase_v5.0.0_manifest.txt" />
      <None Include="Assets\Firebase\Editor\AppDependencies.xml" />
-     <None Include="Assets\Firebase\Editor\FirebaseAuth_v4.5.0_manifest.txt" />
+     <None Include="Assets\Firebase\Editor\FirebaseAuth_v5.0.0_manifest.txt" />
      <None Include="Assets\Firebase\Editor\AuthDependencies.xml" />
-     <None Include="Assets\Firebase\Editor\FirebaseDatabase_v4.5.0_manifest.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
@@ -351,17 +351,17 @@
  <Reference Include="Unity.Tasks">
  <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
  </Reference>
- <Reference Include="Google.IOSResolver_v1.2.64.0">
- <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.64.0.dll</HintPath>
+ <Reference Include="Google.IOSResolver_v1.2.73.0">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.73.0.dll</HintPath>
  </Reference>
- <Reference Include="Google.JarResolver_v1.2.64.0">
- <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.64.0.dll</HintPath>
+ <Reference Include="Google.JarResolver_v1.2.73.0">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.73.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
  <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
- <Reference Include="Google.VersionHandlerImpl_v1.2.64.0">
- <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.64.0.dll</HintPath>
+ <Reference Include="Google.VersionHandlerImpl_v1.2.73.0">
+ <HintPath>C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.73.0.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/furqa/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>

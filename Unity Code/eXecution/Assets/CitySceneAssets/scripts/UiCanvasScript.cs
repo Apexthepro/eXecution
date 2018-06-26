@@ -18,6 +18,7 @@ public class UiCanvasScript : MonoBehaviour {
     public BuildingsGlobalScript BuildingsGlobalScript;
     public GameObject TestBuilding;
     public bool DisplayBuildingNames;
+    public DetailsMenuScript DetailsMenuScript;
     // Use this for initialization
     void Start () {
         activePanels = new GameObject[25];
@@ -59,6 +60,10 @@ public class UiCanvasScript : MonoBehaviour {
         else {
             if (activePanels[currentPanel] != null)
                 activePanels[currentPanel].SetActive(true);
+        }
+        if (Menu.name == "DetailsMenu")
+        {
+            DetailsMenuScript.MenuOpened();
         }
     }
     public void openEnterMenu() {
