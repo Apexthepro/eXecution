@@ -185,13 +185,17 @@ namespace loginscript
                         reference.Child((newUser.UserId).ToString()).Child("Buildings").Child(bname[i]).Child("lev").SetValueAsync(1);
                     }
                     //Resources
-                    reference.Child((newUser.UserId).ToString()).Child("Resources").Child("Resource A").SetValueAsync(10000);
-                    reference.Child((newUser.UserId).ToString()).Child("Resources").Child("Resource B").SetValueAsync(10000);
+                    reference.Child((newUser.UserId).ToString()).Child("Resources").Child("ResourceA").SetValueAsync(10000);
+                    reference.Child((newUser.UserId).ToString()).Child("Resources").Child("ResourceB").SetValueAsync(10000);
                     //Reference
-                    reference.Child((newUser.UserId).ToString()).Child("Reference Code").Child("Player Code").Child("code of the Player").SetValueAsync(29930);
-                    reference.Child((newUser.UserId).ToString()).Child("Reference Code").Child("Player Code").Child("Players who use the code").Child("users").SetValueAsync("avish@gmail.com");
+                    reference.Child((newUser.UserId).ToString()).Child("ReferenceCode").Child("PlayerCode").Child("code_of_the_Player").SetValueAsync(29930);
+                    reference.Child((newUser.UserId).ToString()).Child("ReferenceCode").Child("PlayerCode").Child("Players_who_use_the_code").Child("users").SetValueAsync("avish@gmail.com");
                     //Social
                     reference.Child((newUser.UserId).ToString()).Child("Social").Child("Friends").SetValueAsync("fluxi@gmail.com");
+                    reference.Child((newUser.UserId).ToString()).Child("Buffs").Child("UpgradeSpeed").SetValueAsync("0");
+                    reference.Child((newUser.UserId).ToString()).Child("Buffs").Child("UpgradeResources").SetValueAsync("0.1");
+                    reference.Child((newUser.UserId).ToString()).Child("Buffs").Child("ResearchSpeed").SetValueAsync("0.1");
+                    reference.Child((newUser.UserId).ToString()).Child("Buffs").Child("ResearchResources").SetValueAsync("0.1");
                     //reference.Child((sid).ToString()).Child("Social").Child("mail").Child("avish@gmail.com").SetValueAsync(true);
                 });
             

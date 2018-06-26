@@ -13,7 +13,8 @@ using Newtonsoft.Json.Linq;
 
 public class dbinitscript : MonoBehaviour
 {
-    public Text resource1;
+    public DataSnapshot details_snapshot = null;
+    public Text resource1,resource2;
     data read = new data();
     public jsondetailsdata jddata = new jsondetailsdata();
     public jsondatac data = new jsondatac();
@@ -52,7 +53,7 @@ public class dbinitscript : MonoBehaviour
                     // Do something with snapshot...
                     var a = snapshot.Children;
                     data = JsonConvert.DeserializeObject<jsondatac>(snapshot.GetRawJsonValue());
-                    print("outside func values--->" + data.Buildings.Castle.lev.ToString());
+                    //print("values--->" + data.Buffs.ResearchResources.ToString());
                     string s;
                     if (task2.IsCompleted)
                     {
@@ -62,35 +63,43 @@ public class dbinitscript : MonoBehaviour
                             //print("s->" + s);
                             //print("Key->" + a.GetEnumerator().Current.Key + "Value->" + a.GetEnumerator().Current.Value);
                         }
+                        resource1.text = data.Resources.ResourceA.ToString();
+                        resource2.text = data.Resources.ResourceB.ToString();
                     }
 
                 });
             }
         });
-        //print("text is from" + resource1.text);
-        //resource1.text = "123m";
-        db_read("BuildingsInfo");
     }
     public void db_read(string read)
     {
-
-        DataSnapshot snapshot = null;
+        
         DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
-        FirebaseDatabase.DefaultInstance.GetReference(read).GetValueAsync().ContinueWith(task2 =>
+        //FirebaseDatabase.DefaultInstance.GetReference("BuildingsInfo").Child(read).Child("levels").GetValueAsync().ContinueWith(task2 =>
+        FirebaseDatabase.DefaultInstance.GetReference("BuildingsInfo").Child(read).GetValueAsync().ContinueWith(task2 =>
         {
-            snapshot = task2.Result;
-            // Do something with snapshot...
-            var a = snapshot.Children;
-            jddata = JsonConvert.DeserializeObject<jsondetailsdata>(snapshot.GetRawJsonValue());
-            print("inside func values--->" + jddata.Forgedetails.Details.ToString());
-            string s;
-            if (task2.IsCompleted)
-            {
+        details_snapshot = task2.Result;
+        // Do something with snapshot...
+        var a = details_snapshot.Children;
+        if (task2.IsCompleted)
+        {
+            //print("new Values-->" + details_snapshot.GetRawJsonValue());
+                while (a.GetEnumerator().MoveNext())
+                {
+                    if (a.GetEnumerator().Current.Key == "levels")
+                    {
+                        print(a.GetEnumerator().Current.GetRawJsonValue().ToString());
+                    }
+                }
 
-            }
+                jddata = JsonConvert.DeserializeObject<jsondetailsdata>(details_snapshot.GetRawJsonValue());
+                print(jddata.Details.ToString());
+         }
 
         });
+
     }
+
 }
 
 public class data
@@ -101,12 +110,22 @@ public class data
     public bool set { get; set; }
 
 }
+
 public class jsondatac
 {
+    public Buffs Buffs { get; set; }
     public Buildings Buildings { get; set; }
     public ReferenceCode ReferenceCode { get; set; }
     public Resources Resources { get; set; }
     public Social Social { get; set; }
+}
+
+public class Buffs
+{
+    public string ResearchResources { get; set; }
+    public string ResearchSpeed { get; set; }
+    public string UpgradeResources { get; set; }
+    public string UpgradeSpeed { get; set; }
 }
 
 public class Buildings
@@ -189,89 +208,11 @@ public class Social
 }
 
 
+
+
 public class jsondetailsdata
 {
-    public Castledetails Castledetails { get; set; }
-    public Forgedetails Forgedetails { get; set; }
-    public HeroGrounddetails HeroGrounddetails { get; set; }
-    public Laboratorydetails Laboratorydetails { get; set; }
-    public Storagedetails Storagedetails { get; set; }
-    public TradeHalldetails TradeHalldetails { get; set; }
-    public Walldetails Walldetailsdetails { get; set; }
-}
-
-public class Castledetails
-{
-    public string buff1 { get; set; }
     public string Details { get; set; }
-    public string buff2 { get; set; }
-    public string Prestige { get; set; }
-    public string lev { get; set; }
-    public string buff1desc { get; set; }
-    public string buff2desc { get; set; }
-}
-
-public class Forgedetails
-{
-    public string buff1 { get; set; }
-    public string Details { get; set; }
-    public string buff2 { get; set; }
-    public string Prestige { get; set; }
-    public string lev { get; set; }
-    public string buff1desc { get; set; }
-    public string buff2desc { get; set; }
-}
-
-public class HeroGrounddetails
-{
-    public string buff1 { get; set; }
-    public string Details { get; set; }
-    public string buff2 { get; set; }
-    public string Prestige { get; set; }
-    public string lev { get; set; }
-    public string buff1desc { get; set; }
-    public string buff2desc { get; set; }
-}
-
-public class Laboratorydetails
-{
-    public string buff1 { get; set; }
-    public string Details { get; set; }
-    public string buff2 { get; set; }
-    public string Prestige { get; set; }
-    public string lev { get; set; }
-    public string buff1desc { get; set; }
-    public string buff2desc { get; set; }
-}
-
-public class Storagedetails
-{
-    public string buff1 { get; set; }
-    public string Details { get; set; }
-    public string buff2 { get; set; }
-    public string Prestige { get; set; }
-    public string lev { get; set; }
-    public string buff1desc { get; set; }
-    public string buff2desc { get; set; }
-}
-
-public class TradeHalldetails
-{
-    public string BonusSpeed { get; set; }
-    public string Details { get; set; }
-    public string buff2 { get; set; }
-    public string Prestige { get; set; }
-    public string lev { get; set; }
-    public string buff1desc { get; set; }
-    public string buff2desc { get; set; }
-}
-
-public class Walldetails
-{
-    public string BonusSpeed { get; set; }
-    public string Details { get; set; }
-    public string buff2 { get; set; }
-    public string Prestige { get; set; }
     public string lev { get; set; }
     public string buff1desc { get; set; }
     public string buff2desc { get; set; }
