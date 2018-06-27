@@ -2,7 +2,9 @@ Android
 PlayerPath?
 C:/Users/avish/Documents/GitHub/eXecution/eXecution-Ar MMo Rpg.apk
 SceneListBegin?
+Assets/Scenes/CastleScene.unity
 Assets/Scenes/ArMap.unity
+Assets/Scenes/ArFightScene.unity
 SceneListEnd?
 a6a1dfb16741b8062e4dfb541ceb33de Assembly-CSharp.dll:.RotateBySwipe
 5e23029b7574e33b588880b072e31837 Assembly-CSharp.dll:.PlayerExample
