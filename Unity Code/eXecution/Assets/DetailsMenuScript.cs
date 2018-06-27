@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Firebase.Database;
+using Newtonsoft.Json;
 public class DetailsMenuScript : MonoBehaviour {
     public Text BuildingDescription;
     public Text BuildingBuffInformation;
@@ -23,38 +24,71 @@ public class DetailsMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        
+    }
     public void OpenMenu(GameObject somemenu)
     {
-        print("Click Detected");
         somemenu.SetActive(true);
     }
     public void MenuOpened() {
-        
-        for (int i = 0; i < BuildingGlocalScript.BuildingsArr.Length; i++)
+        DataSnapshot details_snapshot;
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+        FirebaseDatabase.DefaultInstance.GetReference("BuildingsInfo").Child(BuildingGlocalScript.BuildingsArr[BuildingGlocalScript.CurrentBuildingIndex].name + "details").GetValueAsync().ContinueWith(task2 =>
         {
-            if (BuildingGlocalScript.BuildingsArr[i].name == "Forge") {
-                print("forge details opened");
-                BuildingDescription.text = dbinitscript.jddata.Forgedetails.Details.ToString();
-                CurrentlevelText.text="Current Level " +dbinitscript.jddata.Forgedetails.lev.ToString();
-                TableBuildingName.text = BuildingGlocalScript.BuildingsArr[i].name + " Details";
-                BuildinglevText.text = BuildingGlocalScript.BuildingsArr[i].name + " Lvl "+ dbinitscript.jddata.Forgedetails.lev.ToString();
-                buff1desc.text = dbinitscript.jddata.Forgedetails.buff1desc.ToString();
-                buff2desc.text = dbinitscript.jddata.Forgedetails.buff2desc.ToString();
-          //   science reserchspedd 5% +0.05%
+            details_snapshot = task2.Result;
+            if (task2.IsCompleted)
+            {
+                var a = details_snapshot.Children;
+                dbinitscript.jddata = JsonConvert.DeserializeObject<jsondetailsdata>(details_snapshot.GetRawJsonValue());
+                BuildingDescription.text = dbinitscript.jddata.Details.ToString();
+                CurrentlevelText.text = "Current Level " + dbinitscript.jddata.lev.ToString();
+                TableBuildingName.text = BuildingGlocalScript.BuildingsArr[BuildingGlocalScript.CurrentBuildingIndex].name + " Details";
+                BuildinglevText.text = BuildingGlocalScript.BuildingsArr[BuildingGlocalScript.CurrentBuildingIndex].name + " Lvl " + dbinitscript.jddata.lev.ToString();
+                buff1desc.text = dbinitscript.jddata.buff1desc.ToString();
+                buff2desc.text = dbinitscript.jddata.buff2desc.ToString();
+                InfoText.text = BuildingDescription.text;
+                //while (a.GetEnumerator().MoveNext())
+                {
+                    //print("Key->" + a.GetEnumerator().Current.Key + "Value->" + a.GetEnumerator().Current.Child("buff1").Value);
+                }
+                /*
+                           //   science reserchspedd 5% +0.05%
+                           while (a.GetEnumerator().MoveNext())
+                           {
+                               if (a.GetEnumerator().Current.Key == dbinitscript.data.Buildings.Forge.lev.ToString())
+                               {
+                                   a.GetEnumerator().MoveNext();
+                                   BuildingBuffInformation.text =
+                                   //dbinitscript.jddata.Forgedetails.buff1desc.ToString() +" "+ dbinitscript.data.Buffs.ResearchResources.ToString()+
+                                   "+"+ a.GetEnumerator().Current.Child("buff1").Value.ToString();
+                                   break;
+                               }
+
+                           }*/
+          
                 foreach (Transform child in rowParent.transform)
                 {
                     GameObject.Destroy(child.gameObject);
                 }
-                for (int j = 0; j < nooflevels; j++)//no of rows
+                a.GetEnumerator().Reset();
+                var en = a.GetEnumerator();
+                while (en.MoveNext())//no of rows
                 {
-                    CreateRow(dbinitscript.jddata.Forgedetails.lev, dbinitscript.jddata.Forgedetails.Prestige, dbinitscript.jddata.Forgedetails.buff1, dbinitscript.jddata.Forgedetails.buff2);//row content
+                    print("Keys-->"+a.GetEnumerator().Current.Key);
+                    if (en.Current.Key.Equals("levels"))
+                        a = en.Current.Children;
+                    //CreateRow(a.GetEnumerator().Current.Key.ToString(), a.GetEnumerator().Current.Child("prestige").Value.ToString(), a.GetEnumerator().Current.Child("buff1").Value.ToString(), a.GetEnumerator().Current.Child("buff2").Value.ToString());//row content                    
                 }
-                
+                while(a.GetEnumerator().MoveNext())
+                {
+                    CreateRow(a.GetEnumerator().Current.Key.ToString(), a.GetEnumerator().Current.Child("prestige").Value.ToString(), a.GetEnumerator().Current.Child("buff1").Value.ToString(), a.GetEnumerator().Current.Child("buff2").Value.ToString());//row content                    
+                    //print(a.GetEnumerator().Current.Key.ToString() + "," + a.GetEnumerator().Current.Child("prestige").Value.ToString() + "," + a.GetEnumerator().Current.Child("buff1").Value.ToString() + "," + a.GetEnumerator().Current.Child("buff2").Value.ToString());//row content                    
+
+                }
             }
+        });
+
         }
-    }
     public void close() {
         MoreInfomationPanel.SetActive(false);
     }

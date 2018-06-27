@@ -19,7 +19,7 @@ public class UpgradeMenuScript : MonoBehaviour {
         float[] resA = new float[35];
         float[] time = new float[7] {0.01f,0.1f,1,2,3,4,5};
         float newtime;
-       string[] bname = new string[7] { "Castledetails", "Walldetails", "Forgedetails", "Laboratorydetails", "Hero Grounddetails", "Storagedetails", "Trade Halldetails" };
+       string[] bname = new string[7] { "Castledetails", "Walldetails", "Forgedetails", "Laboratorydetails", "HeroGrounddetails", "Storagedetails", "TradeHalldetails" };
     var watch = new System.Diagnostics.Stopwatch();
         watch.Start();
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://game-205318.firebaseio.com/");
@@ -59,7 +59,7 @@ public class UpgradeMenuScript : MonoBehaviour {
             }
 
         }
-        for (int i = 0; i < 7; i++)
+        /*for (int i = 0; i < 7; i++)
         {
             reference.Child((i + 1).ToString()).Child(bname[0]).Child("ugtime").SetValueAsync(Math.Round(time[i], 3));
 
@@ -74,6 +74,7 @@ public class UpgradeMenuScript : MonoBehaviour {
             reference.Child("BuildingsInfo").Child(bname[i]).Child("buff1desc").SetValueAsync("buff1 description");
             reference.Child("BuildingsInfo").Child(bname[i]).Child("lev").SetValueAsync("1");
             reference.Child("BuildingsInfo").Child(bname[i]).Child("buff2desc").SetValueAsync("buff2 description");
+
 
 
         }
