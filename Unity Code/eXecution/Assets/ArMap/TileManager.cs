@@ -7,7 +7,7 @@ using Firebase.Unity.Editor;
 public class TileManager : MonoBehaviour
 {
    // DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
-    public dbinitscript dbinitscript;
+   // public dbinitscript dbinitscript;
     public ObjectSpawnScript ObjectSpawnScript;
     //  public string currentUserId;
 
@@ -82,7 +82,6 @@ public class TileManager : MonoBehaviour
 
         lat = Input.location.lastData.latitude;
         lon = Input.location.lastData.longitude;
-
         StartCoroutine(loadTiles(_settings.zoom));//calling gps for the first time
 
         while (Input.location.isEnabledByUser)
@@ -161,20 +160,19 @@ public class TileManager : MonoBehaviour
 
         oldLat = lat;
         oldLon = lon;
-
         while (oldLat == lat && oldLon == lon)
         {
             lat = Input.location.lastData.latitude;
             lon = Input.location.lastData.longitude;
 
             //store lat lon
-          //  reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lat").SetValueAsync(lat);
-           // reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lon").SetValueAsync(lon);
+            //  reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lat").SetValueAsync(lat);
+            // reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("lon").SetValueAsync(lon);
             //reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("altitude").SetValueAsync(Input.location.lastData.altitude);
             //reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("horizontalAccuracy").SetValueAsync(Input.location.lastData.horizontalAccuracy);
             //reference.Child((currentUserId).ToString()).Child("CurrentLocation").Child("timestamp").SetValueAsync(Input.location.lastData.timestamp);
-            //print("Location: lat:" + lat + " lon: " + lon+ " altitude: " + Input.location.lastData.altitude + " horizontalAccuracy: " + Input.location.lastData.horizontalAccuracy + " timestamps: " + Input.location.lastData.timestamp);
-            ObjectSpawnScript.tempfunc();//spawbn obkect on map
+            print("Location: lat:" + lat + " lon: " + lon+ " altitude: " + Input.location.lastData.altitude + " horizontalAccuracy: " + Input.location.lastData.horizontalAccuracy + " timestamps: " + Input.location.lastData.timestamp);
+            ObjectSpawnScript.tempfunc();//spawn object on map
             yield return new WaitForSeconds(1f);//wait time befoe next location check
         }
 
