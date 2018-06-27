@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: f88846312ecfd1f4899be53af21ffb98
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Roboto
+  fontNames:
+  - Roboto
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: dd21f4e097d8ab242b9bc941c1cd4d8d, type: 3}
+  - {fileID: 12800000, guid: 5949e50141c09ca47a28e7cbe3f16c1d, type: 3}
+  - {fileID: 12800000, guid: e8ff0371b08c4b04a9453ea978ebfa8a, type: 3}
+  - {fileID: 12800000, guid: 64578972a00b9a94683d417224b5f1fb, type: 3}
+  - {fileID: 12800000, guid: 7debd9f2169618f4085349d4bb97ed43, type: 3}
+  - {fileID: 12800000, guid: a0c25f23b7bc8f0429b98e746ca2d0e2, type: 3}
+  - {fileID: 12800000, guid: cc7c991435e551e459cb4f90e4e7b8d3, type: 3}
+  - {fileID: 12800000, guid: 55c17e34b14ec7442a04a25ef6597748, type: 3}
+  - {fileID: 12800000, guid: 87b1af46a4e1d9e48944c4504ba3f495, type: 3}
+  - {fileID: 12800000, guid: 3896050854bd80f42bb8c933a592af2c, type: 3}
+  - {fileID: 12800000, guid: 7ebd0868a1c242c44b7f39b35097d5cc, type: 3}
+  - {fileID: 12800000, guid: d26915a848a536d4a8db0390e4166fae, type: 3}
+  - {fileID: 12800000, guid: f301e81936d60a747a55cac586f87a33, type: 3}
+  - {fileID: 12800000, guid: 26f8be191dbe7764c93ea43eaca261cc, type: 3}
+  - {fileID: 12800000, guid: a8e0e28911fd44c46b7a2045e01943b9, type: 3}
+  - {fileID: 12800000, guid: ca651e2aa96f97449b9ce504c586d2f0, type: 3}
+  - {fileID: 12800000, guid: b948b04ba7713ab4fa1d92270a98f948, type: 3}
+  - {fileID: 12800000, guid: 8e06c29b59da432409d499a27ee74cbb, type: 3}
+  - {fileID: 12800000, guid: bfafca6dfa1d3bc4b8d8329e55b7e344, type: 3}
+  - {fileID: 12800000, guid: e930119e7925b414ba5d2b9307c23b5b, type: 3}
+  - {fileID: 12800000, guid: 6c9a192f65314c14ca2dc61c2cfd5837, type: 3}
+  - {fileID: 12800000, guid: dcfb2b5f9dccab64da30edb849b4a9bb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
