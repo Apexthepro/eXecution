@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/avish/Documents/GitHub/eXecution/eXecution-Ar MMo Rpg.apk
+C:/Users/furqa/OneDrive/Documents/GitHub/eXecution/Unity Code/eXecution/game1.apk
 SceneListBegin?
 Assets/Scenes/CastleScene.unity
 Assets/Scenes/ArMap.unity
